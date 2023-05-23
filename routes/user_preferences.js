@@ -11,8 +11,20 @@ const readFileData = () => {
 
 readFileData();
 
+const writeFileData = () => {
+  const data = JSON.stringify(upreferences, null, 2);
+  fs.writeFileSync("./data/user_preferences.json", data, "utf8");
+};
+
 router.get("/", (req, res) => {
   res.send(upreferences);
+});
+
+router.post("/", (req, res) => {
+    upreferences.push(req.body);
+    writeFileData();
+
+  res.send(`Saved`);
 });
 
 module.exports = router;

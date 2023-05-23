@@ -1,19 +1,36 @@
 [
-    {
-        "id_user": "59e1cd02-a422-4269-a7e5-a7cfdde41f85",
-        "goals": "Maintaining Weight",
-        "height": "165",
-        "weight": "41",
-        "gender": "Male",
-        "birthdate": "8 March 2002",
-        "activityLevel": "sedentary",
-        "disease": [
-            "diabetes",
-            "Obesitas"
-        ],
-        "favoriteFood": [
-            "soup",
-            "chicken"
-        ]
-    }
+  {
+    "id_user": "59e1cd02-a422-4269-a7e5-a7cfdde41f85",
+    "goals": "Maintaining Weight",
+    "height": "165",
+    "weight": "41",
+    "gender": "Male",
+    "birthdate": "8 March 2002",
+    "activityLevel": "sedentary",
+    "disease": [
+      "diabetes",
+      "Obesitas"
+    ],
+    "favoriteFood": [
+      "soup",
+      "chicken"
+    ]
+  },
+  {
+    "id_user": "59e1cd02-a422-4269-a7e5-a7cfdde41f85",
+    "goals": "Maintaining Weight",
+    "height": "165",
+    "weight": "41",
+    "gender": "Male",
+    "birthdate": "8 March 2002",
+    "activityLevel": "sedentary",
+    "disease": [
+      "diabetes",
+      "Obesitas"
+    ],
+    "favoriteFood": [
+      "soup",
+      "chicken"
+    ]
+  }
 ]
