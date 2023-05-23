@@ -40,9 +40,7 @@ router.patch("/:id", (req, res) => {
     favoriteFood,
   } = req.body;
 
-  const upreference = upreferences.find(
-    (upreference) => upreference.id_user === id
-  );
+  const upreference = upreferences.find((upreference) => upreference.id_user === id);
 
   if (goals) upreference.goals = goals;
   if (height) upreference.height = height;
@@ -58,5 +56,13 @@ router.patch("/:id", (req, res) => {
   res.send(`Updated id ${id}`);
 });
 
+router.delete("/:id", (req, res) => {
+  const { id } = req.params;
+  upreferences = upreferences.filter((upreference) => upreference.id_user !== id);
+
+  writeFileData();
+
+  res.send(`Deleted id ${id}`);
+});
 
 module.exports = router;
