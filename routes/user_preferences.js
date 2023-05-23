@@ -1,20 +1,18 @@
 const express = require("express");
 const router = express.Router();
+const fs = require("fs");
 
 let upreferences = [];
 
+const readFileData = () => {
+  const data = fs.readFileSync("./data/user_preferences.json", "utf8");
+  upreferences = JSON.parse(data);
+};
+
+readFileData();
+
 router.get("/", (req, res) => {
   res.send(upreferences);
-});
-
-router.post("/", (req, res) => {
-  const upreference = req.body;
-
-  const upreferenceWithId = { ...upreference };
-
-  upreferences.push(upreferenceWithId);
-
-  res.send(`${upreference.name}, has been added to the list!`);
 });
 
 module.exports = router;
