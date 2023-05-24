@@ -1,0 +1,19 @@
+[
+  {
+    "id_user": "59e1cd02a4224269a7e5a7cfdde41f85",
+    "goals": "Maintaining Weight",
+    "height": "168",
+    "weight": "46",
+    "gender": "Male",
+    "birthdate": "8 March 2002",
+    "activityLevel": "sedentary",
+    "disease": [
+      "diabetes",
+      "Obesitas"
+    ],
+    "favoriteFood": [
+      "soup",
+      "chicken"
+    ]
+  }
+]
