@@ -7,6 +7,11 @@
         "id_makanan": "3454",
         "nama_makanan": "nasi padang",
         "kalori": "200"
+      },
+      {
+        "id_makanan": "3454",
+        "nama_makanan": "nasi goreng",
+        "kalori": "1000"
       }
     ],
     "tanggal": "2001-3-2",

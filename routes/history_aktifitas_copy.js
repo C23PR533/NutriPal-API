@@ -43,16 +43,17 @@ router.post('/', (req, res) => {
     sisa_kalori
 } = req.body;
 
+const newMakanan = {
+  id_makanan: id_makanan,
+  nama_makanan: nama_makanan,
+  kalori: kalori
+};
+
+
 const newAktivitas = {
-  id_user:id_user,
-  kalori_harian:kalori_harian,
-  kalori_masuk: [
-    {
-      id_makanan: id_makanan,
-      nama_makanan: nama_makanan,
-      kalori: kalori
-    }
-  ],
+  id_user: id_user,
+  kalori_harian: kalori_harian,
+  kalori_masuk: [],
   tanggal: tanggal,
   kalori_keluar: [
     {
@@ -64,68 +65,22 @@ const newAktivitas = {
   "Sisa Kalori": sisa_kalori
 };
 
+// Mengubah format kalori_masuk
+const makananCount = id_makanan.length;
+for (let i = 0; i < makananCount; i++) {
+  const newMakanan = {
+    id_makanan: id_makanan[i],
+    nama_makanan: nama_makanan[i],
+    kalori: kalori[i]
+  };
+  newAktivitas.kalori_masuk.push(newMakanan);
+}
+
+
   const dataHistory = loadHistory();
   dataHistory.push(newAktivitas);
   saveHistory(dataHistory);
   res.status(201).json(newAktivitas);
-});
-
-router.post('/', (req, res) => {
-  fs.readFile(filePath, 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-      res.status(500).json({ message: 'Internal Server Error' });
-      return;
-    }
-
-    const existingData = JSON.parse(data);
-    const { 
-        id_user,
-        kalori_harian,
-        id_makanan,
-        nama_makanan,
-        kalori,
-        tanggal,
-        nama_exercise,
-        duration,
-        kalori_terbakar,
-        sisa_kalori
-    } = req.body;
-    const newAktivitas = {
-      id_user:id_user,
-      kalori_harian:kalori_harian,
-      kalori_masuk: [
-        {
-          id_makanan: id_makanan,
-          nama_makanan: nama_makanan,
-          kalori: kalori
-        }
-      ],
-      tanggal: tanggal,
-      kalori_keluar: [
-        {
-          nama_exercise: nama_exercise,
-          duration: duration,
-          kalori_terbakar: kalori_terbakar
-        }
-      ],
-      "Sisa Kalori": sisa_kalori
-    };
-
-    existingData.aktivitas_user = newAktivitas;
-
-    const updatedData = JSON.stringify(existingData, null, 2);
-
-    fs.writeFile(filePath, updatedData, 'utf8', (err) => {
-      if (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Internal Server Error' });
-        return;
-      }
-
-      res.status(201).json({ message: 'Aktivitas berhasil ditambahkan.' });
-    });
-  });
 });
 
 function saveHistory(dataHistory) {
