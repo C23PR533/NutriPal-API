@@ -52,6 +52,27 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-
+router.put("/:id", async (req, res) => {
+  try {
+    const userpredb = db
+      .collection("userPreferences")
+      .doc(req.params.id)
+      .update({
+        id_user: req.body.id_user,
+        goals: req.body.goals,
+        height: req.body.height,
+        weight: req.body.weight,
+        gender: req.body.gender,
+        birthdate: req.body.birthdate,
+        activityLevel: req.body.activityLevel,
+        disease: req.body.disease || [],
+        favoriteFood: req.body.favoriteFood || [],
+      });
+    res.send("Updated");
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
 
 module.exports = router;
