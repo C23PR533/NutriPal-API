@@ -26,8 +26,6 @@ router.get('/', (req, res) => {
 });
 
 
-// create
-
 // ini endpoint path untuk menambahkan data 
 router.post('/', (req, res) => {
   const { 
@@ -80,7 +78,7 @@ for (let i = 0; i < makananCount; i++) {
   const dataHistory = loadHistory();
   dataHistory.push(newAktivitas);
   saveHistory(dataHistory);
-  res.status(201).json(newAktivitas);
+  res.status(201).json({ message: 'data berhasil di tambahkan' });
 });
 
 function saveHistory(dataHistory) {
