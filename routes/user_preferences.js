@@ -54,6 +54,7 @@ router.get("/:id", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
   try {
+    const idParams = req.params.id;
     const userpredb = db
       .collection("userPreferences")
       .doc(req.params.id)
@@ -68,7 +69,21 @@ router.put("/:id", async (req, res) => {
         disease: req.body.disease || [],
         favoriteFood: req.body.favoriteFood || [],
       });
-    res.send("Updated");
+    res.send("${idParams}'s data has been Updated");
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  try {
+    const idParams = req.params.id;
+    const userpredb = db
+      .collection("userPreferences")
+      .doc(req.params.id)
+      .delete();
+    res.send(`${idParams}'s data has been deleted`);
   } catch (error) {
     console.log(error);
     res.send(error);
