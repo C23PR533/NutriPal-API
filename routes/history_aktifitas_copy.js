@@ -41,13 +41,6 @@ router.post('/', (req, res) => {
     sisa_kalori
 } = req.body;
 
-const newMakanan = {
-  id_makanan: id_makanan,
-  nama_makanan: nama_makanan,
-  kalori: kalori
-};
-
-
 const newAktivitas = {
   id_user: id_user,
   kalori_harian: kalori_harian,

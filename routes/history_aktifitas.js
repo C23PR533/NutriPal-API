@@ -13,23 +13,33 @@ function loadHistory() {
     return "error woy";
   }
 }
+
 router.use(express.urlencoded({ extended: true }));
 
 router.get('/', (req, res) => {
   const history = loadHistory();
   res.json(history);
 });
+
 router.post('/', (req, res) => {
   const { 
     id_user,
     kalori_harian,
-    kalori_masuk,
+    id_makanan,
+    nama_makanan,
+    kalori,
     tanggal,
     nama_exercise,
     duration,
     kalori_terbakar,
     sisa_kalori
   } = req.body;
+
+  const newMakanan = {
+    id_makanan: id_makanan,
+    nama_makanan: nama_makanan,
+    kalori: kalori
+  };
 
   const newAktivitas = {
     id_user: id_user,
@@ -46,19 +56,18 @@ router.post('/', (req, res) => {
     "Sisa Kalori": sisa_kalori
   };
 
-  const makananCount = kalori_masuk.length;
-  if (makananCount > 0) {
+  if (Array.isArray(id_makanan)) {
+    const makananCount = id_makanan.length;
     for (let i = 0; i < makananCount; i++) {
-      const { id_makanan, nama_makanan, kalori } = kalori_masuk[i];
-      if (id_makanan && nama_makanan && kalori) {
-        const newMakanan = {
-          id_makanan: id_makanan,
-          nama_makanan: nama_makanan,
-          kalori: kalori
-        };
-        newAktivitas.kalori_masuk.push(newMakanan);
-      }
+      const newMakanan = {
+        id_makanan: id_makanan[i],
+        nama_makanan: nama_makanan[i],
+        kalori: kalori[i]
+      };
+      newAktivitas.kalori_masuk.push(newMakanan);
     }
+  } else {
+    newAktivitas.kalori_masuk.push(newMakanan);
   }
 
   const dataHistory = loadHistory();
