@@ -4,6 +4,8 @@ const { Firestore } = require("@google-cloud/firestore");
 
 const db = new Firestore();
 
+router.use(express.urlencoded({ extended: true }));
+
 router.post("/", async (req, res) => {
   try {
     const id = req.body.id_user;
