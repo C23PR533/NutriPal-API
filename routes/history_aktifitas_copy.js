@@ -21,6 +21,7 @@ router.get('/', (req, res) => {
   res.json(history);
 });
 
+
 router.post('/', (req, res) => {
   const { 
     id_user,
