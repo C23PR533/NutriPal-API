@@ -4,7 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const dataDiriRoutes = require("./routes/data_diri_copy");
-const userPreference = require("./routes/user_preferences");
+// const userPreference = require("./routes/user_preferences");
 
 const app = express();
 const cors = require("cors");
@@ -28,6 +28,6 @@ admin.initializeApp({
 const db = admin.firestore();
 
 app.use("/datadiri", dataDiriRoutes);
-app.use("/userpreferences", userPreference);
+// app.use("/userpreferences", userPreference);
 
 app.listen(PORT, () => console.log(`Server berjalan di ${PORT}`));

@@ -4,9 +4,10 @@ const { Firestore } = require("@google-cloud/firestore");
 const fs = require('fs');
 const path = require('path');
 const db = new Firestore();
+router.use(express.urlencoded({ extended: true }));
 
 // ini kode untuk mencari path data_diri.json
-const dataDiriPath = path.join(__dirname, '..', 'data_diri.json');
+// const dataDiriPath = path.join(__dirname, '..', 'data_diri.json');
 
 // ini function untuk load data dari data_diri.json
 function loadDataDiri() {
@@ -39,24 +40,6 @@ router.get('/:id', (req, res) => {
 
 
 // ini endpoint path untuk menambahkan data 
-router.post('/', (req, res) => {
-  const { id_user, nama, nomor_hp, email, foto_profile, gender, birthdate } = req.body;
-
-  const newDataDiri = {
-    id_user,
-    nama,
-    nomor_hp,
-    email,
-    foto_profile,
-    gender,
-    birthdate,
-  };
-
-  const dataDiri = loadDataDiri();
-  dataDiri.push(newDataDiri);
-  saveDataDiri(dataDiri);
-  res.status(201).json(newDataDiri);
-});
 
 router.post("/", async (req, res) => {
   try {
