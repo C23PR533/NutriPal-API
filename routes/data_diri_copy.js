@@ -55,7 +55,9 @@ router.post("/", async (req, res) => {
       birthdate,
     };
     const response = await db.collection("dataDiri").doc(id).set(newDataDiri);
-    res.send(response);
+    // res.status(201).json({code:200, message: 'data berhasil di tambahkan'});
+    // res.send(response);
+    res.status(201).json({ code: 200, message: 'Data berhasil ditambahkan'});
   } catch (error) {
     console.log(error);
     res.send(error);
