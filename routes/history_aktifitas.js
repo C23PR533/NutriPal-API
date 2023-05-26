@@ -41,18 +41,18 @@ router.post('/', (req, res) => {
     kalori: kalori
   };
 
+  const newExercise = {
+    nama_exercise: nama_exercise,
+    duration: duration,
+    kalori_terbakar: kalori_terbakar
+  };
+
   const newAktivitas = {
     id_user: id_user,
     kalori_harian: kalori_harian,
     kalori_masuk: [],
     tanggal: tanggal,
-    kalori_keluar: [
-      {
-        nama_exercise: nama_exercise,
-        duration: duration,
-        kalori_terbakar: kalori_terbakar
-      }
-    ],
+    kalori_keluar: [],
     "Sisa Kalori": sisa_kalori
   };
 
@@ -68,6 +68,22 @@ router.post('/', (req, res) => {
     }
   } else {
     newAktivitas.kalori_masuk.push(newMakanan);
+  }
+
+  // logika excercise
+
+  if (Array.isArray(nama_exercise)) {
+    const exerciseCount = nama_exercise.length;
+    for (let i = 0; i < exerciseCount; i++) {
+      const newExercise = {
+        nama_exercise: nama_exercise[i],
+        duration: duration[i],
+        kalori_terbakar: kalori_terbakar[i]
+      };
+      newAktivitas.kalori_keluar.push(newExercise);
+    }
+  } else {
+    newAktivitas.kalori_keluar.push(newExercise);
   }
 
   const dataHistory = loadHistory();

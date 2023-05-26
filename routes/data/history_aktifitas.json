@@ -1,24 +1,5 @@
 [
   {
-    "id_user": "1",
-    "kalori_harian": "200",
-    "kalori_masuk": [
-      {
-        "id_makanan": "3454",
-        "nama_makanan": "nasi padang",
-        "kalori": "200"
-      }
-    ],
-    "tanggal": "2001-3-2",
-    "kalori_keluar": [
-      {
-        "nama_exercise": "lari",
-        "duration": "1 jam",
-        "kalori_terbakar": ""
-      }
-    ]
-  },
-  {
     "id_user": "2",
     "kalori_harian": "200",
     "kalori_masuk": [

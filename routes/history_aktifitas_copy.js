@@ -4,7 +4,6 @@ const path = require('path');
 const router = express.Router();
 
 const historyPath = path.join(__dirname, 'data', 'history_aktifitas.json');
-// const filePath = path.join(__dirname, 'data', 'history_aktifitas.json');
 
 function loadHistory() {
   try {
@@ -14,19 +13,14 @@ function loadHistory() {
     return "error woy";
   }
 }
-// console.log(filePath);
 
-// Middleware untuk memparsing URL-encoded data
 router.use(express.urlencoded({ extended: true }));
 
-// READ
 router.get('/', (req, res) => {
   const history = loadHistory();
   res.json(history);
 });
 
-
-// ini endpoint path untuk menambahkan data 
 router.post('/', (req, res) => {
   const { 
     id_user,
@@ -39,34 +33,58 @@ router.post('/', (req, res) => {
     duration,
     kalori_terbakar,
     sisa_kalori
-} = req.body;
+  } = req.body;
 
-const newAktivitas = {
-  id_user: id_user,
-  kalori_harian: kalori_harian,
-  kalori_masuk: [],
-  tanggal: tanggal,
-  kalori_keluar: [
-    {
-      nama_exercise: nama_exercise,
-      duration: duration,
-      kalori_terbakar: kalori_terbakar
-    }
-  ],
-  "Sisa Kalori": sisa_kalori
-};
-
-// Mengubah format kalori_masuk
-const makananCount = id_makanan.length;
-for (let i = 0; i < makananCount; i++) {
   const newMakanan = {
-    id_makanan: id_makanan[i],
-    nama_makanan: nama_makanan[i],
-    kalori: kalori[i]
+    id_makanan: id_makanan,
+    nama_makanan: nama_makanan,
+    kalori: kalori
   };
-  newAktivitas.kalori_masuk.push(newMakanan);
-}
 
+  const newExercise = {
+    nama_exercise: nama_exercise,
+    duration: duration,
+    kalori_terbakar: kalori_terbakar
+  };
+
+  const newAktivitas = {
+    id_user: id_user,
+    kalori_harian: kalori_harian,
+    kalori_masuk: [],
+    tanggal: tanggal,
+    kalori_keluar: [],
+    "Sisa Kalori": sisa_kalori
+  };
+
+  if (Array.isArray(id_makanan)) {
+    const makananCount = id_makanan.length;
+    for (let i = 0; i < makananCount; i++) {
+      const newMakanan = {
+        id_makanan: id_makanan[i],
+        nama_makanan: nama_makanan[i],
+        kalori: kalori[i]
+      };
+      newAktivitas.kalori_masuk.push(newMakanan);
+    }
+  } else {
+    newAktivitas.kalori_masuk.push(newMakanan);
+  }
+
+  // logika excercise
+
+  if (Array.isArray(nama_exercise)) {
+    const exerciseCount = nama_exercise.length;
+    for (let i = 0; i < exerciseCount; i++) {
+      const newExercise = {
+        nama_exercise: nama_exercise[i],
+        duration: duration[i],
+        kalori_terbakar: kalori_terbakar[i]
+      };
+      newAktivitas.kalori_keluar.push(newExercise);
+    }
+  } else {
+    newAktivitas.kalori_keluar.push(newExercise);
+  }
 
   const dataHistory = loadHistory();
   dataHistory.push(newAktivitas);
