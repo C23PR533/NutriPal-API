@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
+    "upload-food": "node upload/uploadFoodData.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
