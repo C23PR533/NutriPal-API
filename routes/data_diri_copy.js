@@ -20,24 +20,55 @@ function loadDataDiri() {
 }
 
 // ini alamat untuk mendapatkan semua data get data all
-router.get('/', (req, res) => {
-  const dataDiri = loadDataDiri();
-  res.json(dataDiri);
-});
+// router.get('/', (req, res) => {
+//   const dataDiri = loadDataDiri();
+//   res.json(dataDiri);
+// });
 
-// ini endpoint untuk mendapatkan detail data sesuai dengan id
-router.get('/:id', (req, res) => {
-  const { id } = req.params;
-  const dataDiri = loadDataDiri();
-  const result = dataDiri.find((data) => data.id_user === id);
+// get all baru start 
 
-  if (result) {
-    res.json(result);
-  } else {
-    res.status(404).json({ message: 'Data diri tidak ditemukan' });
+router.get("/", async (req, res) => {
+  try {
+      const userpredb = db.collection("dataDiri");
+      const response = await userpredb.get();
+      let responseArr = [];
+      response.forEach(doc => {
+        responseArr.push(doc.data());
+      });
+      res.send(responseArr);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
   }
 });
 
+// get baru end
+
+
+// ini endpoint untuk mendapatkan detail data sesuai dengan id
+// router.get('/:id', (req, res) => {
+//   const { id } = req.params;
+//   const dataDiri = loadDataDiri();
+//   const result = dataDiri.find((data) => data.id_user === id);
+
+//   if (result) {
+//     res.json(result);
+//   } else {
+//     res.status(404).json({ message: 'Data diri tidak ditemukan' });
+//   }
+// });
+// get data by id start
+router.get("/:id", async (req, res) => {
+  try {
+    const userpredb = db.collection("dataDiri").doc(req.params.id);
+    const response = await userpredb.get(userpredb);
+    res.send(response.data());
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+// get data by id end
 
 // ini endpoint path untuk menambahkan data 
 
