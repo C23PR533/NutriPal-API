@@ -9,14 +9,41 @@ const directoryPath = path.join(__dirname, "data", "foods.json");
 
 router.post("/fromjson", async (req, res) => {
   try {
-    const userJson = () => {
-      const data = fs.readFileSync(directoryPath, "utf8");
-      const jsonData = JSON.parse(data);
-      const id = jsonData.food_id; 
-      return { ...jsonData, id_user: id }; 
-    };
+  const userJson = () => {
+    const data = fs.readFileSync(directoryPath, "utf8");
+    const jsonData = JSON.parse(data);
+    const foodData = jsonData[2];
+    const id = foodData.food_id;
+    return { ...foodData, id: id };
+  };
+
     const response = await db.collection("food").doc(userJson().id).set(userJson());
 
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+
+router.post("/", async (req, res) => {
+  try {
+    const id = req.body.id_user;
+    const userJson = {
+      id_user: req.body.id_user,
+      goals: req.body.goals,
+      height: req.body.height,
+      weight: req.body.weight,
+      gender: req.body.gender,
+      birthdate: req.body.birthdate,
+      activityLevel: req.body.activityLevel,
+      disease: req.body.disease || [],
+      favoriteFood: req.body.favoriteFood || [],
+    };
+    const response = await db
+      .collection("userPreferences")
+      .doc(id)
+      .set(userJson);
     res.send(response);
   } catch (error) {
     console.log(error);
