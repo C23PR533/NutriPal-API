@@ -71,11 +71,18 @@ router.get("/:id", async (req, res) => {
 // get data by id end
 
 // ini endpoint path untuk menambahkan data 
-
 router.post("/", async (req, res) => {
   try {
     const id = req.body.id_user;
     const { id_user, nama, nomor_hp, email, foto_profile, gender, birthdate } = req.body;
+
+    if (!id_user) {
+      throw new Error('id user tidak boleh kosong');
+    }
+    if (!nama) {
+      throw new Error('nama tidak boleh kosong');
+    }
+
     const newDataDiri = {
       id_user,
       nama,
@@ -86,12 +93,10 @@ router.post("/", async (req, res) => {
       birthdate,
     };
     const response = await db.collection("dataDiri").doc(id).set(newDataDiri);
-    // res.status(201).json({code:200, message: 'data berhasil di tambahkan'});
-    // res.send(response);
-    res.status(201).json({ code: 200, message: 'Data berhasil ditambahkan'});
+    res.status(200).json({ code: 200, message: 'Data berhasil ditambahkan'});
   } catch (error) {
     console.log(error);
-    res.send(error);
+    res.status(400).json({ code: 400, message: error.message });
   }
 });
 // post baru start
