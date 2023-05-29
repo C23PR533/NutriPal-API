@@ -3,7 +3,7 @@ const fs = require("fs");
 const { Firestore } = require("@google-cloud/firestore");
 var admin = require("firebase-admin");
 
-var serviceAccount = require("./key.json");
+var serviceAccount = require("../key.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -12,7 +12,7 @@ admin.initializeApp({
 const db = admin.firestore();
 
 const path = require("path");
-const directoryPath = path.join(__dirname, "./data", "data_makanan (satu serving).json");
+const directoryPath = path.join(__dirname, "data");
 
 fs.readdir(directoryPath, function (err, files) {
   if (err) {
@@ -22,11 +22,11 @@ fs.readdir(directoryPath, function (err, files) {
   files.forEach(function (file) {
     var lastDotIndex = file.lastIndexOf(".");
 
-    var menu = require("./data/" + file);
+    var dataMakanan = require("./data/" + file);
 
-    menu.forEach(function (obj) {
+    dataMakanan.forEach(function (obj) {
       db.collection(file.substring(0, lastDotIndex))
-        .doc(obj.itemID)
+        .doc(obj.food_id)
         .set(obj)
         .then(function (docRef) {
           console.log("Document written");
