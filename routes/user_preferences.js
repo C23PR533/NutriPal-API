@@ -1,68 +1,111 @@
 const express = require("express");
 const router = express.Router();
-const fs = require("fs");
+const { Firestore } = require("@google-cloud/firestore");
 
-let upreferences = [];
+const db = new Firestore();
 
-const readFileData = () => {
-  const data = fs.readFileSync("./data/user_preferences.json", "utf8");
-  upreferences = JSON.parse(data);
-};
+router.use(express.urlencoded({ extended: true }));
 
-readFileData();
+router.post("/", async (req, res) => {
+  try {
+    const id = req.body.id_user;
+    const userJson = {
+      id_user: req.body.id_user,
+      goals: req.body.goals,
+      height: req.body.height,
+      weight: req.body.weight,
+      gender: req.body.gender,
+      birthdate: req.body.birthdate,
+      activityLevel: req.body.activityLevel,
+      disease: req.body.disease || [],
+      favoriteFood: req.body.favoriteFood || [],
+    };
 
-const writeFileData = () => {
-  const data = JSON.stringify(upreferences, null, 2);
-  fs.writeFileSync("./data/user_preferences.json", data, "utf8");
-};
+    for (const field in userJson) {
+      if (!userJson[field]) {
+        res.status(401).json({
+          error: true,
+          message: `${field} harus diisi`,
+        });
+      }
+    }
 
-router.get("/", (req, res) => {
-  res.send(upreferences);
+    await db.collection("userPreferences").doc(id).set(userJson);
+    res.status(200).json({
+      error: false,
+      message: "Data telah ditambahkan",
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
+  }
 });
 
-router.post("/", (req, res) => {
-  upreferences.push(req.body);
-  writeFileData();
-
-  res.send(`Saved`);
+router.get("/", async (req, res) => {
+  try {
+    const userpredb = db.collection("userPreferences");
+    const response = await userpredb.get();
+    let responseArr = [];
+    response.forEach((doc) => {
+      responseArr.push(doc.data());
+    });
+    res.send(responseArr);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
 });
 
-router.patch("/:id", (req, res) => {
-  const { id } = req.params;
-  const {
-    goals,
-    height,
-    weight,
-    gender,
-    birthdate,
-    activityLevel,
-    disease,
-    favoriteFood,
-  } = req.body;
-
-  const upreference = upreferences.find((upreference) => upreference.id_user === id);
-
-  if (goals) upreference.goals = goals;
-  if (height) upreference.height = height;
-  if (weight) upreference.weight = weight;
-  if (gender) upreference.gender = gender;
-  if (birthdate) upreference.birthdate = birthdate;
-  if (activityLevel) upreference.activityLevel = activityLevel;
-  if (disease) upreference.disease = disease;
-  if (favoriteFood) upreference.favoriteFood = favoriteFood;
-
-  writeFileData();
-
-  res.send(`Updated id ${id}`);
+router.get("/:id", async (req, res) => {
+  try {
+    const userpredb = db.collection("userPreferences").doc(req.params.id);
+    const response = await userpredb.get(userpredb);
+    res.send(response.data());
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
 });
 
-router.delete("/:id", (req, res) => {
-  const { id } = req.params;
-  upreferences = upreferences.filter((upreference) => upreference.id_user !== id);
+router.put("/:id", async (req, res) => {
+  try {
+    const idParams = req.params.id;
+    const userpredb = db
+      .collection("userPreferences")
+      .doc(req.params.id)
+      .update({
+        id_user: req.body.id_user,
+        goals: req.body.goals,
+        height: req.body.height,
+        weight: req.body.weight,
+        gender: req.body.gender,
+        birthdate: req.body.birthdate,
+        activityLevel: req.body.activityLevel,
+        disease: req.body.disease || [],
+        favoriteFood: req.body.favoriteFood || [],
+      });
+    res.send("${idParams}'s data has been Updated");
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
 
-  writeFileData();
-
-  res.send(`Deleted id ${id}`);
+router.delete("/:id", async (req, res) => {
+  try {
+    const idParams = req.params.id;
+    const userpredb = db
+      .collection("userPreferences")
+      .doc(req.params.id)
+      .delete();
+    res.send(`${idParams}'s data has been deleted`);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
 });
 
 module.exports = router;
