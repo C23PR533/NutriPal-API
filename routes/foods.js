@@ -12,7 +12,7 @@ router.post("/fromjson", async (req, res) => {
   const userJson = () => {
     const data = fs.readFileSync(directoryPath, "utf8");
     const jsonData = JSON.parse(data);
-    const foodData = jsonData[2];
+    const foodData = jsonData[3];
     const id = foodData.food_id;
     return { ...foodData, id: id };
   };
@@ -54,19 +54,12 @@ router.get("/:id", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
   try {
-    const idParams = req.params.id;
-    const userpredb = db
-      .collection("food")
-      .doc(req.params.id)
-      .update({
-        food_id: req.body.food_id,
-        food_name: req.body.food_name,
-        food_type: req.body.food_type || [],
-        food_url: req.body.food_url,
-        img_url: req.body.img_url,
-        favoriteFood: req.body.favoriteFood || [],
-      });
-    res.send("${idParams}'s data has been Updated");
+    const id = req.params.id;
+    const updatedData = req.body;
+
+    const response = await db.collection("food").doc(id).update(updatedData);
+
+    res.send(response);
   } catch (error) {
     console.log(error);
     res.send(error);
