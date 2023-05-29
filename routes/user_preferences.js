@@ -20,23 +20,39 @@ router.post("/", async (req, res) => {
       disease: req.body.disease || [],
       favoriteFood: req.body.favoriteFood || [],
     };
-    const response = await db.collection("userPreferences").doc(id).set(userJson);
-    res.send(response);
+
+    for (const field in userJson) {
+      if (!userJson[field]) {
+        res.status(401).json({
+          error: true,
+          message: `${field} harus diisi`,
+        });
+      }
+    }
+
+    await db.collection("userPreferences").doc(id).set(userJson);
+    res.status(200).json({
+      error: false,
+      message: "Data telah ditambahkan",
+    });
   } catch (error) {
     console.log(error);
-    res.send(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
   }
 });
 
 router.get("/", async (req, res) => {
   try {
-      const userpredb = db.collection("userPreferences");
-      const response = await userpredb.get();
-      let responseArr = [];
-      response.forEach(doc => {
-        responseArr.push(doc.data());
-      });
-      res.send(responseArr);
+    const userpredb = db.collection("userPreferences");
+    const response = await userpredb.get();
+    let responseArr = [];
+    response.forEach((doc) => {
+      responseArr.push(doc.data());
+    });
+    res.send(responseArr);
   } catch (error) {
     console.log(error);
     res.send(error);
