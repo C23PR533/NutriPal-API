@@ -1,3 +1,11 @@
 [
-    
+  {
+    "id_user": "1",
+    "nama": "hambar",
+    "nomor_hp": "1212121212",
+    "email": "hambarr2@gmail.com",
+    "foto_profile": "https://example.com/profile1.jpg",
+    "gender": "Male",
+    "birthdate": "2001-4-3"
+  }
 ]
