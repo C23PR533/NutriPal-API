@@ -9,15 +9,18 @@ const directoryPath = path.join(__dirname, "data", "foods.json");
 
 router.post("/fromjson", async (req, res) => {
   try {
-  const userJson = () => {
-    const data = fs.readFileSync(directoryPath, "utf8");
-    const jsonData = JSON.parse(data);
-    const foodData = jsonData[3];
-    const id = foodData.food_id;
-    return { ...foodData, id: id };
-  };
+    const userJson = () => {
+      const data = fs.readFileSync(directoryPath, "utf8");
+      const jsonData = JSON.parse(data);
+      const foodData = jsonData[3];
+      const id = foodData.food_id;
+      return { ...foodData, id: id };
+    };
 
-    const response = await db.collection("food").doc(userJson().id).set(userJson());
+    const response = await db
+      .collection("food")
+      .doc(userJson().id)
+      .set(userJson());
 
     res.send(response);
   } catch (error) {
@@ -43,12 +46,59 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
-    const userpredb = db.collection("food").doc(req.params.id);
+    const idParams = req.params.id;
+    const userpredb = db.collection("foods").doc(req.params.id);
     const response = await userpredb.get(userpredb);
-    res.send(response.data());
+
+    if (!response.exists) {
+      return res.status(404).json({
+        error: true,
+        message: `Data User Preference dengan id ${idParams} tidak ditemukan`,
+      });
+    }
+    res.status(200).json({
+      error: false,
+      message: `Data Makanan dengan id ${idParams} berhasil didapatkan`,
+      listUserPreferences: response.data(),
+    });
   } catch (error) {
     console.log(error);
-    res.send(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
+  }
+});
+
+router.get("/search/:foodName", async (req, res) => {
+  try {
+    const foodName = req.params.foodName.toLowerCase();
+    const userpredb1 = db.collection("foods");
+    const responses = await userpredb1.where("food_name", "==", foodName).get();
+
+    const result = [];
+    responses.forEach((doc) => {
+      result.push(doc.data().food_name);
+    });
+
+    if (!responses.exists) {
+      return res.status(404).json({
+        error: true,
+        message: `Data Makanan dengan nama ${foodName} tidak ditemukan`,
+      });
+    }
+
+    res.status(200).json({
+      error: false,
+      message: `Berhasil menemukan makanan dengan nama '${foodName}'`,
+      data: result,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
   }
 });
 
@@ -69,10 +119,7 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     const idParams = req.params.id;
-    const userpredb = db
-      .collection("food")
-      .doc(req.params.id)
-      .delete();
+    const userpredb = db.collection("food").doc(req.params.id).delete();
     res.send(`${idParams}'s data has been deleted`);
   } catch (error) {
     console.log(error);
