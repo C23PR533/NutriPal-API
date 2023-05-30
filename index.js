@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 
 const dataDiriRoutes = require("./routes/data_diri");
 const userPreference = require("./routes/user_preferences");
-const foodRoutes = require("./routes/foods");
+const foodRoutes = require("./routes/foods_copy");
 
 const app = express();
 const cors = require("cors");
