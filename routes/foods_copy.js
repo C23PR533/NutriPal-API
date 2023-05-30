@@ -76,15 +76,21 @@ const foodsRef = db.collection('foods');
 const query = foodsRef.where('food_name', '==', param );
 query.get().then((snapshot) => {
   if (snapshot.empty) {
-    return res.status(404).json({
+    res.status(404).json({
       error: true,
       message: `Data Makanan dengan nama ${foodName} tidak ditemukan`,
     });
+    return;
   }
-  snapshot.forEach((doc) => {
-    console.log(doc.id, '=>', doc.data());
-  });
-}).catch((error) => {
+  const makanan = [];
+    snapshot.forEach((doc) => {
+      const id = doc.id;
+      const data = doc.data();
+      makanan.push({ id, ...data });
+    });
+    res.status(200).json({ code: 200, message: "Data berhasil didapatkan", data: makanan });
+
+  }).catch((error) => {
   console.log('Error getting documents:', error);
 });
 });
