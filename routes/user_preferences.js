@@ -68,9 +68,23 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
+    const idUserPre = req.params.id;
     const userpredb = db.collection("userPreferences").doc(req.params.id);
     const response = await userpredb.get(userpredb);
-    res.send(response.data());
+
+    if (!response.exists) {
+      return res.status(404).json({
+        error: true,
+        message: `Data User Preference dengan id ${idUserPre} tidak ditemukan`,
+      });
+    }
+
+    res.status(200).json({
+      error: false,
+      message: `Data User Preference dengan id ${idUserPre} berhasil didapatkan`,
+      listUserPreferences: response.data(),
+    });
+    // res.send(response.data());
   } catch (error) {
     console.log(error);
     res.status(400).json({
@@ -108,7 +122,7 @@ router.put("/:id", async (req, res) => {
 
     res.status(200).json({
       error: false,
-      message: "Data telah diupdate",
+      message: `Data User Preference dengan id ${idParams} telah diupdate`,
     });
   } catch (error) {
     console.log(error);
@@ -128,7 +142,7 @@ router.delete("/:id", async (req, res) => {
       .delete();
     res.status(200).json({
       error: false,
-      message: "Data telah dihapus",
+      message: `Data User Preference dengan id ${idParams} telah dihapus`,
     });
   } catch (error) {
     console.log(error);
