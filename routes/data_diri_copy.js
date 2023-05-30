@@ -6,6 +6,7 @@ const path = require('path');
 const db = new Firestore();
 router.use(express.urlencoded({ extended: true }));
 
+
 // get all start 
 router.get("/", async (req, res) => {
   try {
@@ -25,22 +26,14 @@ router.get("/", async (req, res) => {
 
 
 // get data by id start
-
 router.get("/:id", async (req, res) => {
   try {
-    const id = req.body.id_user;
     const userpredb = db.collection("dataDiri").doc(req.params.id);
     const response = await userpredb.get(userpredb);
-    if(!id){
-      throw new Error("Unautentikasi");
-    }
-    if (!response.exists) {
-      throw new Error("User tidak ditemukan");
-    }
     res.send(response.data());
   } catch (error) {
     console.log(error);
-    res.status(404).json({code:404, message: error.message });
+    res.send(error);
   }
 });
 // get data by id end
@@ -57,6 +50,7 @@ router.post("/", async (req, res) => {
     if (!nama) {
       throw new Error('nama tidak boleh kosong');
     }
+
     const newDataDiri = {
       id_user,
       nama,
