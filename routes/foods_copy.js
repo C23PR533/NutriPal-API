@@ -78,7 +78,7 @@ query.get().then((snapshot) => {
   if (snapshot.empty) {
     res.status(404).json({
       error: true,
-      message: `Data Makanan dengan nama ${foodName} tidak ditemukan`,
+      message: `Data Makanan dengan nam ${foodName} tidak ditemukan`,
     });
     return;
   }
