@@ -28,12 +28,21 @@ router.get("/", async (req, res) => {
 // get data by id start
 router.get("/:id", async (req, res) => {
   try {
+    const id = req.body.id_user;
     const userpredb = db.collection("dataDiri").doc(req.params.id);
     const response = await userpredb.get(userpredb);
-    res.send(response.data());
+    if(!id){
+      throw {code: 403, message: "Unautenticated"};
+    }
+    if (!response.exists) {
+      throw {code: 200, message: "data tidak ditemukan"};
+    }
+    const data = response.data;
+    res.status(200).json({code:200, message:"data di temukan", data:response.data()});
+    // res.send(response.data());
   } catch (error) {
     console.log(error);
-    res.send(error);
+    res.status(400).json({code:error.code, message: error.message });
   }
 });
 // get data by id end
@@ -43,12 +52,11 @@ router.post("/", async (req, res) => {
   try {
     const id = req.body.id_user;
     const { id_user, nama, nomor_hp, email, foto_profile, gender, birthdate } = req.body;
-
     if (!id_user) {
-      throw new Error('id user tidak boleh kosong');
+      throw {code: 403, message: "Unautenticated"};
     }
     if (!nama) {
-      throw new Error('nama tidak boleh kosong');
+      throw {code: 400, message: "nama tidak boleh kosong"};
     }
 
     const newDataDiri = {
@@ -63,8 +71,7 @@ router.post("/", async (req, res) => {
     const response = await db.collection("dataDiri").doc(id).set(newDataDiri);
     res.status(200).json({ code: 200, message: 'Data berhasil ditambahkan'});
   } catch (error) {
-    console.log(error);
-    res.status(400).json({ code: 400, message: error.message });
+    res.status(400).json({code: error.code, message: error.message});
   }
 });
 // add data end
@@ -72,22 +79,26 @@ router.post("/", async (req, res) => {
 // update data start
 router.put("/:id", async (req, res) => {
   try {
+    const id = req.body.id_user;
     const { nama, nomor_hp, email, foto_profile, gender, birthdate } = req.body;
+    if(!id){
+      throw {code: 403, message: "Unautenticated"};
+    }
+    const newDataDiri = {
+      nama,
+      nomor_hp,
+      email,
+      foto_profile,
+      gender,
+      birthdate
+    };
     const userpredb = db
       .collection("dataDiri")
       .doc(req.params.id)
-      .update({
-        nama,
-        nomor_hp,
-        email,
-        foto_profile,
-        gender,
-        birthdate
-      });
+      .update(newDataDiri, { ignoreUndefinedProperties: true });
     res.status(200).json({code:200, message:"data berhasil di update"});
   } catch (error) {
-    console.log(error);
-    res.send(error);
+    res.status(400).json({code:error.code, error:error.message});
   }
 });
 // update data end
@@ -95,10 +106,19 @@ router.put("/:id", async (req, res) => {
 // delete data start
 router.delete("/:id", async (req, res) => {
   try {
+    const id = req.body.id_user;
     const idParams = req.params.id;
 
+    if(!id){
+      throw {code: 403, message: "Unautenticated"};
+    }
+
     if(!idParams){
-      throw new Error("id tidak boleh kosong");
+      throw {code: 400, message: "id tidak boleh kosong"};
+    }
+
+    if(id !== idParams){
+      throw {code: 403, message: "Unautenticated"};
     }
     const userpredb = db
       .collection("dataDiri")
@@ -110,7 +130,7 @@ router.delete("/:id", async (req, res) => {
     await userpredb.delete();
     res.status(200).json({code:200, message:"data berhasil di hapus"});
   } catch (error) {
-    res.status(400).json({code:400, message:error.message});
+    res.status(400).json({code:error.code, message:error.message});
   }
 });
 // delete data end
