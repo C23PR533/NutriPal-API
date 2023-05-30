@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
 
     for (const field in userJson) {
       if (!userJson[field]) {
-        res.status(401).json({
+        return res.status(401).json({
           error: true,
           message: `${field} harus diisi`,
         });
@@ -52,10 +52,17 @@ router.get("/", async (req, res) => {
     response.forEach((doc) => {
       responseArr.push(doc.data());
     });
-    res.send(responseArr);
+    res.status(200).json({
+      error: false,
+      message: "Data berhasil didapatkan",
+      listUserPreferences: responseArr,
+    });
   } catch (error) {
     console.log(error);
-    res.send(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
   }
 });
 
@@ -66,31 +73,49 @@ router.get("/:id", async (req, res) => {
     res.send(response.data());
   } catch (error) {
     console.log(error);
-    res.send(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
   }
 });
 
 router.put("/:id", async (req, res) => {
   try {
     const idParams = req.params.id;
-    const userpredb = db
-      .collection("userPreferences")
-      .doc(req.params.id)
-      .update({
-        id_user: req.body.id_user,
-        goals: req.body.goals,
-        height: req.body.height,
-        weight: req.body.weight,
-        gender: req.body.gender,
-        birthdate: req.body.birthdate,
-        activityLevel: req.body.activityLevel,
-        disease: req.body.disease || [],
-        favoriteFood: req.body.favoriteFood || [],
-      });
-    res.send("${idParams}'s data has been Updated");
+    const userJson = {
+      id_user: req.body.id_user,
+      goals: req.body.goals,
+      height: req.body.height,
+      weight: req.body.weight,
+      gender: req.body.gender,
+      birthdate: req.body.birthdate,
+      activityLevel: req.body.activityLevel,
+      disease: req.body.disease || [],
+      favoriteFood: req.body.favoriteFood || [],
+    };
+
+    for (const field in userJson) {
+      if (!userJson[field]) {
+        return res.status(401).json({
+          error: true,
+          message: `${field} harus diisi`,
+        });
+      }
+    }
+
+    await db.collection("userPreferences").doc(idParams).update(userJson);
+
+    res.status(200).json({
+      error: false,
+      message: "Data telah diupdate",
+    });
   } catch (error) {
     console.log(error);
-    res.send(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
   }
 });
 
@@ -101,10 +126,16 @@ router.delete("/:id", async (req, res) => {
       .collection("userPreferences")
       .doc(req.params.id)
       .delete();
-    res.send(`${idParams}'s data has been deleted`);
+    res.status(200).json({
+      error: false,
+      message: "Data telah dihapus",
+    });
   } catch (error) {
     console.log(error);
-    res.send(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
   }
 });
 
