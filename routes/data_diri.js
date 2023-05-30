@@ -29,9 +29,13 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const id = req.body.id_user;
+    const idParams = req.params.id;
     const userpredb = db.collection("dataDiri").doc(req.params.id);
     const response = await userpredb.get(userpredb);
     if(!id){
+      throw {code: 403, message: "Unautenticated"};
+    }
+    if(id !== idParams){
       throw {code: 403, message: "Unautenticated"};
     }
     if (!response.exists) {
@@ -80,8 +84,12 @@ router.post("/", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const id = req.body.id_user;
+    const idParams = req.params.id;
     const { nama, nomor_hp, email, foto_profile, gender, birthdate } = req.body;
     if(!id){
+      throw {code: 403, message: "Unautenticated"};
+    }
+    if(id !== idParams){
       throw {code: 403, message: "Unautenticated"};
     }
     const newDataDiri = {
