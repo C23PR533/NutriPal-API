@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 
@@ -14,6 +16,4 @@ app.use("/datadiri", dataDiriRoutes);
 app.use("/userpreferences", userPreference);
 app.use("/history_aktifitas", history_aktifitas);
 
-app.listen(PORT, () =>
-  console.log(`Server berjalan di ${PORT}`)
-);
+app.listen(PORT, () => console.log(`Server berjalan di ${PORT}`));
