@@ -167,7 +167,7 @@ router.post("/", async (req, res) => {
     // const dataHistory = loadHistory();
     // dataHistory.push(newAktivitas);
     // saveHistory(dataHistory);
-    await db.collection("historyActivity").doc(id_user).set(newAktivitas);
+    await db.collection("historyActivity").doc(id_user).set({ [tanggal]: [newAktivitas] }, { merge: true });
     res.status(200).json({
       code: 200,
       error: false,
