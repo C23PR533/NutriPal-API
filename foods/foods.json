@@ -1,0 +1,467 @@
+{
+    "foods": [
+        {
+            "brand_name": "Bibigo",
+            "food_id": "19397154",
+            "food_name": "Korean Style Bibimbap Beef",
+            "food_type": "Brand",
+            "food_url": "https://www.fatsecret.com/calories-nutrition/bibigo/korean-style-bibimbap-beef",
+            "servings": {
+                "serving": [
+                    {
+                        "calories": "340",
+                        "carbohydrate": "56.00",
+                        "cholesterol": "25",
+                        "fat": "6.00",
+                        "fiber": "3.0",
+                        "measurement_description": "serving",
+                        "metric_serving_amount": "255.000",
+                        "metric_serving_unit": "g",
+                        "number_of_units": "1.000",
+                        "protein": "13.00",
+                        "saturated_fat": "1.500",
+                        "serving_description": "1 bowl",
+                        "serving_id": "18270256",
+                        "serving_url": "https://www.fatsecret.com/calories-nutrition/bibigo/korean-style-bibimbap-beef",
+                        "sodium": "780",
+                        "sugar": "18.00",
+                        "trans_fat": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "brand_name": "Freshly",
+            "food_id": "28467672",
+            "food_name": "Korean-Style Chicken Bibimbap",
+            "food_type": "Brand",
+            "food_url": "https://www.fatsecret.com/calories-nutrition/freshly/korean-style-chicken-bibimbap",
+            "servings": {
+                "serving": [
+                    {
+                        "calories": "460",
+                        "carbohydrate": "38.00",
+                        "cholesterol": "225",
+                        "fat": "18.00",
+                        "fiber": "4.0",
+                        "measurement_description": "serving",
+                        "metric_serving_amount": "354.000",
+                        "metric_serving_unit": "g",
+                        "monounsaturated_fat": "0",
+                        "number_of_units": "1.000",
+                        "polyunsaturated_fat": "0",
+                        "potassium": "0",
+                        "protein": "38.00",
+                        "saturated_fat": "3.500",
+                        "serving_description": "1 tray",
+                        "serving_id": "26047551",
+                        "serving_url": "https://www.fatsecret.com/calories-nutrition/freshly/korean-style-chicken-bibimbap",
+                        "sodium": "540",
+                        "sugar": "8.00",
+                        "trans_fat": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "brand_name": "Saffron Road",
+            "food_id": "8201029",
+            "food_name": "Bibimbop with Beef & Brown Rice",
+            "food_type": "Brand",
+            "food_url": "https://www.fatsecret.com/calories-nutrition/saffron-road/bibimbop-with-beef-and-brown-rice",
+            "servings": {
+                "serving": [
+                    {
+                        "calories": "410",
+                        "carbohydrate": "47.00",
+                        "cholesterol": "35",
+                        "fat": "16.00",
+                        "fiber": "3.0",
+                        "measurement_description": "serving",
+                        "metric_serving_amount": "283.000",
+                        "metric_serving_unit": "g",
+                        "number_of_units": "1.000",
+                        "protein": "19.00",
+                        "saturated_fat": "4.000",
+                        "serving_description": "1 container",
+                        "serving_id": "7887439",
+                        "serving_url": "https://www.fatsecret.com/calories-nutrition/saffron-road/bibimbop-with-beef-and-brown-rice",
+                        "sodium": "520",
+                        "sugar": "14.00",
+                        "trans_fat": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "brand_name": "Saffron Road",
+            "food_id": "10270233",
+            "food_name": "Bibimbop with Tofu",
+            "food_type": "Brand",
+            "food_url": "https://www.fatsecret.com/calories-nutrition/saffron-road/bibimbop-with-tofu",
+            "servings": {
+                "serving": [
+                    {
+                        "calories": "350",
+                        "carbohydrate": "49.00",
+                        "fat": "13.00",
+                        "fiber": "3.0",
+                        "measurement_description": "serving",
+                        "number_of_units": "1.000",
+                        "protein": "11.00",
+                        "saturated_fat": "1.000",
+                        "serving_description": "1 container",
+                        "serving_id": "9799721",
+                        "serving_url": "https://www.fatsecret.com/calories-nutrition/saffron-road/bibimbop-with-tofu",
+                        "sodium": "490",
+                        "sugar": "14.00"
+                    }
+                ]
+            }
+        },
+        {
+            "food_id": "4823",
+            "food_name": "Taco or Tostada with Beef, Cheese and Lettuce",
+            "food_type": "Generic",
+            "food_url": "https://www.fatsecret.com/calories-nutrition/generic/taco-or-tostada-with-beef-cheese-and-lettuce",
+            "servings": {
+                "serving": [
+                    {
+                        "calcium": "140",
+                        "calories": "345",
+                        "carbohydrate": "25.34",
+                        "cholesterol": "49",
+                        "fat": "19.79",
+                        "fiber": "3.3",
+                        "iron": "2.35",
+                        "measurement_description": "cup",
+                        "metric_serving_amount": "122.000",
+                        "metric_serving_unit": "g",
+                        "monounsaturated_fat": "8.050",
+                        "number_of_units": "1.000",
+                        "polyunsaturated_fat": "3.647",
+                        "potassium": "279",
+                        "protein": "17.02",
+                        "saturated_fat": "6.138",
+                        "serving_description": "1 cup",
+                        "serving_id": "16930",
+                        "serving_url": "https://www.fatsecret.com/calories-nutrition/generic/taco-or-tostada-with-beef-cheese-and-lettuce?portionid=16930&portionamount=1.000",
+                        "sodium": "722",
+                        "sugar": "0.73",
+                        "vitamin_a": "28",
+                        "vitamin_c": "0.7"
+                    }
+                ]
+            }
+        },
+        {
+            "food_id": "4825",
+            "food_name": "Taco or Tostada with Beef, Cheese, Lettuce, Tomato and Salsa",
+            "food_type": "Generic",
+            "food_url": "https://www.fatsecret.com/calories-nutrition/generic/taco-or-tostada-with-beef-cheese-lettuce-tomato-and-salsa",
+            "servings": {
+                "serving": [
+                    {
+                        "calcium": "139",
+                        "calories": "255",
+                        "carbohydrate": "16.10",
+                        "cholesterol": "43",
+                        "fat": "15.07",
+                        "fiber": "2.3",
+                        "iron": "1.74",
+                        "measurement_description": "cup",
+                        "metric_serving_amount": "122.000",
+                        "metric_serving_unit": "g",
+                        "monounsaturated_fat": "5.926",
+                        "number_of_units": "1.000",
+                        "polyunsaturated_fat": "2.165",
+                        "potassium": "306",
+                        "protein": "14.21",
+                        "saturated_fat": "5.574",
+                        "serving_description": "1 cup",
+                        "serving_id": "16389",
+                        "serving_url": "https://www.fatsecret.com/calories-nutrition/generic/taco-or-tostada-with-beef-cheese-lettuce-tomato-and-salsa?portionid=16389&portionamount=1.000",
+                        "sodium": "334",
+                        "sugar": "1.61",
+                        "vitamin_a": "44",
+                        "vitamin_c": "3.0"
+                    }
+                ]
+            }
+        },
+        {
+            "brand_name": "Bertucci's",
+            "food_id": "3201365",
+            "food_name": "Insalata",
+            "food_type": "Brand",
+            "food_url": "https://www.fatsecret.com/calories-nutrition/bertuccis/insalata",
+            "servings": {
+                "serving": [
+                    {
+                        "calories": "150",
+                        "carbohydrate": "21.00",
+                        "fat": "6.00",
+                        "fiber": "5.0",
+                        "measurement_description": "serving",
+                        "number_of_units": "1.000",
+                        "protein": "7.00",
+                        "saturated_fat": "2.500",
+                        "serving_description": "1 serving",
+                        "serving_id": "3115050",
+                        "serving_url": "https://www.fatsecret.com/calories-nutrition/bertuccis/insalata",
+                        "sodium": "320"
+                    }
+                ]
+            }
+        },
+        {
+            "brand_name": "Specialty's",
+            "food_id": "1421097",
+            "food_name": "Caprese Sandwich",
+            "food_type": "Brand",
+            "food_url": "https://www.fatsecret.com/calories-nutrition/specialtys/caprese-sandwich",
+            "servings": {
+                "serving": [
+                    {
+                        "calories": "1026",
+                        "carbohydrate": "83.00",
+                        "cholesterol": "81",
+                        "fat": "61.00",
+                        "fiber": "4.0",
+                        "measurement_description": "serving",
+                        "number_of_units": "1.000",
+                        "protein": "37.00",
+                        "saturated_fat": "20.000",
+                        "serving_description": "1 sandwich",
+                        "serving_id": "1407876",
+                        "serving_url": "https://www.fatsecret.com/calories-nutrition/specialtys/caprese-sandwich",
+                        "sodium": "1465",
+                        "sugar": "11.00"
+                    }
+                ]
+            }
+        },
+        {
+            "brand_name": "Hello Fresh",
+            "food_id": "20248862",
+            "food_name": "Steak Caprese",
+            "food_type": "Brand",
+            "food_url": "https://www.fatsecret.com/calories-nutrition/hello-fresh/steak-caprese",
+            "servings": {
+                "serving": [
+                    {
+                        "calories": "750",
+                        "carbohydrate": "38.00",
+                        "fat": "46.00",
+                        "measurement_description": "serving",
+                        "number_of_units": "1.000",
+                        "protein": "46.00",
+                        "saturated_fat": "18.000",
+                        "serving_description": "1 meal",
+                        "serving_id": "19048018",
+                        "serving_url": "https://www.fatsecret.com/calories-nutrition/hello-fresh/steak-caprese",
+                        "sugar": "9.00"
+                    }
+                ]
+            }
+        },
+        {
+            "brand_name": "Costco",
+            "food_id": "6097506",
+            "food_name": "Caprese Salad",
+            "food_type": "Brand",
+            "food_url": "https://www.fatsecret.com/calories-nutrition/costco/caprese-salad",
+            "servings": {
+                "serving": [
+                    {
+                        "calories": "320",
+                        "carbohydrate": "14.00",
+                        "cholesterol": "30",
+                        "fat": "24.00",
+                        "fiber": "1.0",
+                        "measurement_description": "serving",
+                        "metric_serving_amount": "5.450",
+                        "metric_serving_unit": "oz",
+                        "monounsaturated_fat": "0",
+                        "number_of_units": "1.000",
+                        "polyunsaturated_fat": "0",
+                        "protein": "9.00",
+                        "saturated_fat": "7.000",
+                        "serving_description": "1 salad",
+                        "serving_id": "5913067",
+                        "serving_url": "https://www.fatsecret.com/calories-nutrition/costco/caprese-salad",
+                        "sodium": "500",
+                        "sugar": "11.00",
+                        "trans_fat": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "brand_name": "Ready Pac",
+            "food_id": "26513426",
+            "food_name": "Greek Inspired with Feta Cheese Chopped Salad",
+            "food_type": "Brand",
+            "food_url": "https://www.fatsecret.com/calories-nutrition/ready-pac/greek-inspired-with-feta-cheese-chopped-salad",
+            "servings": {
+                "serving": [
+                    {
+                        "calories": "210",
+                        "carbohydrate": "5.00",
+                        "cholesterol": "20",
+                        "fat": "18.00",
+                        "fiber": "2.0",
+                        "measurement_description": "serving",
+                        "metric_serving_amount": "156.000",
+                        "metric_serving_unit": "g",
+                        "number_of_units": "1.000",
+                        "protein": "8.00",
+                        "saturated_fat": "3.500",
+                        "serving_description": "1 bowl",
+                        "serving_id": "24459220",
+                        "serving_url": "https://www.fatsecret.com/calories-nutrition/ready-pac/greek-inspired-with-feta-cheese-chopped-salad",
+                        "sodium": "810",
+                        "sugar": "2.00",
+                        "trans_fat": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "brand_name": "Salad and Go",
+            "food_id": "28385413",
+            "food_name": "Greek Salad",
+            "food_type": "Brand",
+            "food_url": "https://www.fatsecret.com/calories-nutrition/salad-and-go/greek-salad",
+            "servings": {
+                "serving": [
+                    {
+                        "calories": "170",
+                        "carbohydrate": "18.00",
+                        "fat": "8.00",
+                        "fiber": "6.0",
+                        "measurement_description": "serving",
+                        "number_of_units": "1.000",
+                        "protein": "9.00",
+                        "saturated_fat": "2.500",
+                        "serving_description": "1 serving",
+                        "serving_id": "25979651",
+                        "serving_url": "https://www.fatsecret.com/calories-nutrition/salad-and-go/greek-salad",
+                        "sodium": "560",
+                        "sugar": "8.00"
+                    }
+                ]
+            }
+        },
+        {
+            "food_id": "7645",
+        "food_name": "Tom Collins",
+        "food_type": "Generic",
+        "food_url": "https://www.fatsecret.com/calories-nutrition/generic/tom-collins",
+        "servings": {
+            "serving": [
+                {
+                    "calcium": "9",
+                    "calories": "122",
+                    "carbohydrate": "3.06",
+                    "cholesterol": "0",
+                    "fat": "0.04",
+                    "fiber": "0",
+                    "iron": "0.04",
+                    "measurement_description": "cocktail",
+                    "metric_serving_amount": "222.000",
+                    "metric_serving_unit": "g",
+                    "monounsaturated_fat": "0.002",
+                    "number_of_units": "1.000",
+                    "polyunsaturated_fat": "0.013",
+                    "potassium": "20",
+                    "protein": "0.07",
+                    "saturated_fat": "0.007",
+                    "serving_description": "1 cocktail",
+                    "serving_id": "28205",
+                    "serving_url": "https://www.fatsecret.com/calories-nutrition/generic/tom-collins?portionid=28205&portionamount=1.000",
+                    "sodium": "38",
+                    "sugar": "2.44",
+                    "vitamin_a": "0",
+                    "vitamin_c": "3.8"
+                },
+                {
+                    "calcium": "1",
+                    "calories": "16",
+                    "carbohydrate": "0.41",
+                    "cholesterol": "0",
+                    "fat": "0.01",
+                    "fiber": "0",
+                    "iron": "0.01",
+                    "measurement_description": "fl oz (no ice)",
+                    "metric_serving_amount": "30.000",
+                    "metric_serving_unit": "g",
+                    "monounsaturated_fat": "0",
+                    "number_of_units": "1.000",
+                    "polyunsaturated_fat": "0.002",
+                    "potassium": "3",
+                    "protein": "0.01",
+                    "saturated_fat": "0.001",
+                    "serving_description": "1 fl oz (no ice)",
+                    "serving_id": "28689",
+                    "serving_url": "https://www.fatsecret.com/calories-nutrition/generic/tom-collins?portionid=28689&portionamount=1.000",
+                    "sodium": "5",
+                    "sugar": "0.33",
+                    "vitamin_a": "0",
+                    "vitamin_c": "0.5"
+                },
+                {
+                    "calcium": "9",
+                    "calories": "122",
+                    "carbohydrate": "3.06",
+                    "cholesterol": "0",
+                    "fat": "0.04",
+                    "fiber": "0",
+                    "iron": "0.04",
+                    "measurement_description": "serving (222g)",
+                    "metric_serving_amount": "222.000",
+                    "metric_serving_unit": "g",
+                    "monounsaturated_fat": "0.002",
+                    "number_of_units": "1.000",
+                    "polyunsaturated_fat": "0.013",
+                    "potassium": "20",
+                    "protein": "0.07",
+                    "saturated_fat": "0.007",
+                    "serving_description": "1 serving (222 g)",
+                    "serving_id": "28567",
+                    "serving_url": "https://www.fatsecret.com/calories-nutrition/generic/tom-collins?portionid=28567&portionamount=1.000",
+                    "sodium": "38",
+                    "sugar": "2.44",
+                    "vitamin_a": "0",
+                    "vitamin_c": "3.8"
+                },
+                {
+                    "calcium": "4",
+                    "calories": "55",
+                    "carbohydrate": "1.38",
+                    "cholesterol": "0",
+                    "fat": "0.02",
+                    "fiber": "0",
+                    "iron": "0.02",
+                    "measurement_description": "g",
+                    "metric_serving_amount": "100.000",
+                    "metric_serving_unit": "g",
+                    "monounsaturated_fat": "0.001",
+                    "number_of_units": "100.000",
+                    "polyunsaturated_fat": "0.006",
+                    "potassium": "9",
+                    "protein": "0.03",
+                    "saturated_fat": "0.003",
+                    "serving_description": "100 g",
+                    "serving_id": "56325",
+                    "serving_url": "https://www.fatsecret.com/calories-nutrition/generic/tom-collins?portionid=56325&portionamount=100.000",
+                    "sodium": "17",
+                    "sugar": "1.10",
+                    "vitamin_a": "0",
+                    "vitamin_c": "1.7"
+                }
+            ]
+        }
+        }
+    ]
+}
