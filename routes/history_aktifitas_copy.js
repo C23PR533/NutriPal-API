@@ -201,7 +201,6 @@ router.post("/", async (req, res) => {
   }
 });
 
-
 router.put("/:id_user", async (req, res) => {
   try {
     const idHistoAct = req.body.id_user;
