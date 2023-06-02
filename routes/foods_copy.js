@@ -71,28 +71,36 @@ router.get("/:id", async (req, res) => {
 });
 
 router.get("/search/:foodName", async (req, res) => {
-const param = req.params.foodName
-const foodsRef = db.collection('foods');
-const query = foodsRef.where('food_name', '==', param );
-query.get().then((snapshot) => {
-  if (snapshot.empty) {
-    res.status(404).json({
-      error: true,
-      message: `Data Makanan dengan nam ${foodName} tidak ditemukan`,
+  const param = req.params.foodName;
+  const foodsRef = db.collection("foods");
+  const query = foodsRef.where("food_name", "==", param);
+  query
+    .get()
+    .then((snapshot) => {
+      if (snapshot.empty) {
+        res.status(404).json({
+          error: true,
+          message: `Data Makanan dengan nam ${foodName} tidak ditemukan`,
+        });
+        return;
+      }
+      const makanan = [];
+      snapshot.forEach((doc) => {
+        const id = doc.id;
+        const data = doc.data();
+        makanan.push({ id, ...data });
+      });
+      res
+        .status(200)
+        .json({
+          code: 200,
+          message: "Data berhasil didapatkan",
+          data: makanan,
+        });
+    })
+    .catch((error) => {
+      console.log("Error getting documents:", error);
     });
-    return;
-  }
-  const makanan = [];
-    snapshot.forEach((doc) => {
-      const id = doc.id;
-      const data = doc.data();
-      makanan.push({ id, ...data });
-    });
-    res.status(200).json({ code: 200, message: "Data berhasil didapatkan", data: makanan });
-
-  }).catch((error) => {
-  console.log('Error getting documents:', error);
-});
 });
 
 router.put("/:id", async (req, res) => {

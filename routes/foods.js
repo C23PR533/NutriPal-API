@@ -71,35 +71,36 @@ router.get("/:id", async (req, res) => {
 });
 
 router.get("/search/:foodName", async (req, res) => {
-  try {
-    const foodName = req.params.foodName.toLowerCase();
-    const userpredb1 = db.collection("foods");
-    const responses = await userpredb1.where("food_name", "==", foodName).get();
-
-    const result = [];
-    responses.forEach((doc) => {
-      result.push(doc.data().food_name);
-    });
-
-    if (!responses.exists) {
-      return res.status(404).json({
-        error: true,
-        message: `Data Makanan dengan nama ${foodName} tidak ditemukan`,
+  const param = req.params.foodName;
+  const foodsRef = db.collection("foods");
+  const query = foodsRef.where("food_name", "==", param);
+  query
+    .get()
+    .then((snapshot) => {
+      if (snapshot.empty) {
+        res.status(404).json({
+          error: true,
+          message: `Data Makanan dengan nam ${foodName} tidak ditemukan`,
+        });
+        return;
+      }
+      const makanan = [];
+      snapshot.forEach((doc) => {
+        const id = doc.id;
+        const data = doc.data();
+        makanan.push({ id, ...data });
       });
-    }
-
-    res.status(200).json({
-      error: false,
-      message: `Berhasil menemukan makanan dengan nama '${foodName}'`,
-      data: result,
+      res
+        .status(200)
+        .json({
+          code: 200,
+          message: "Data berhasil didapatkan",
+          data: makanan,
+        });
+    })
+    .catch((error) => {
+      console.log("Error getting documents:", error);
     });
-  } catch (error) {
-    console.log(error);
-    res.status(400).json({
-      error: true,
-      message: error.message,
-    });
-  }
 });
 
 router.put("/:id", async (req, res) => {
@@ -112,7 +113,10 @@ router.put("/:id", async (req, res) => {
     res.send(response);
   } catch (error) {
     console.log(error);
-    res.send(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
   }
 });
 
@@ -123,7 +127,10 @@ router.delete("/:id", async (req, res) => {
     res.send(`${idParams}'s data has been deleted`);
   } catch (error) {
     console.log(error);
-    res.send(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
   }
 });
 
