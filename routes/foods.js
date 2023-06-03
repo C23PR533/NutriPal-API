@@ -7,22 +7,38 @@ const db = new Firestore();
 const path = require("path");
 const directoryPath = path.join(__dirname, "data", "foods.json");
 
+function convertToCamelCase(str) {
+  return str.replace(/\w\S*/g, function (kata) {
+    const kataBaru = kata.slice(0, 1).toUpperCase() + kata.substr(1);
+    return kataBaru;
+  });
+}
+
 router.post("/fromjson", async (req, res) => {
   try {
-    const userJson = () => {
-      const data = fs.readFileSync(directoryPath, "utf8");
-      const jsonData = JSON.parse(data);
-      const foodData = jsonData[3];
-      const id = foodData.food_id;
-      return { ...foodData, id: id };
-    };
+    fs.readdir(directoryPath, async function (err, files) {
+      if (err) {
+        return console.log("Unable to scan directory: " + err);
+      }
 
-    const response = await db
-      .collection("food")
-      .doc(userJson().id)
-      .set(userJson());
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const filePath = path.join(directoryPath, file);
+        const data = fs.readFileSync(filePath, "utf8");
+        const jsonData = JSON.parse(data);
 
-    res.send(response);
+        for (let j = 0; j < jsonData.length; j++) {
+          const foodData = jsonData[j];
+          const id = foodData.food_id;
+
+          const response = await db.collection("food").doc(id).set(foodData);
+
+          console.log("Document written:", response);
+        }
+      }
+
+      res.send("Data berhasil diunggah ke Firestore");
+    });
   } catch (error) {
     console.log(error);
     res.send(error);
@@ -31,7 +47,7 @@ router.post("/fromjson", async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
-    const userpredb = db.collection("food");
+    const userpredb = db.collection("foods");
     const response = await userpredb.get();
     let responseArr = [];
     response.forEach((doc) => {
@@ -71,16 +87,17 @@ router.get("/:id", async (req, res) => {
 });
 
 router.get("/search/:foodName", async (req, res) => {
-  const param = req.params.foodName;
+  const param = convertToCamelCase(req.params.foodName);
+  param.toLowerCase();
   const foodsRef = db.collection("foods");
-  const query = foodsRef.where("food_name", "==", param);
+  const query = foodsRef.where("food_name", ">=", param).where("food_name", "<=", param + "\uf8ff");
   query
     .get()
     .then((snapshot) => {
       if (snapshot.empty) {
         res.status(404).json({
           error: true,
-          message: `Data Makanan dengan nam ${foodName} tidak ditemukan`,
+          message: `Data Makanan dengan nama ${param} tidak ditemukan`,
         });
         return;
       }
@@ -90,13 +107,11 @@ router.get("/search/:foodName", async (req, res) => {
         const data = doc.data();
         makanan.push({ id, ...data });
       });
-      res
-        .status(200)
-        .json({
-          code: 200,
-          message: "Data berhasil didapatkan",
-          data: makanan,
-        });
+      res.status(200).json({
+        code: 200,
+        message: "Data berhasil didapatkan",
+        data: makanan,
+      });
     })
     .catch((error) => {
       console.log("Error getting documents:", error);
