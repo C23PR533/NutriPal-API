@@ -95,4 +95,49 @@ router.post("/:id_user", async (req, res) => {
   }
 });
 
+router.get("/:id_user", async (req, res) => {
+  try {
+    const id_user = req.params.id_user;
+
+    if (!id_user) {
+      return res.status(400).json({
+        code: 400,
+        error: true,
+        message: "id_user harus diisi",
+      });
+    }
+
+    const foodsLikeRef = db.collection("foodsLike").doc(id_user);
+    const foodsLikeDoc = await foodsLikeRef.get();
+
+    if (!foodsLikeDoc.exists) {
+      return res.status(404).json({
+        code: 404,
+        error: true,
+        message: "Data makanan favorit tidak ditemukan",
+      });
+    }
+
+    const foodsLikeData = foodsLikeDoc.data();
+    const favoriteFoods = foodsLikeData[id_user]?.favoriteFoods || [];
+
+    const result = {
+      id_user: id_user,
+      favoriteFoods: favoriteFoods,
+    };
+
+    res.status(200).json({
+      error: false,
+      message: "Data berhasil didapatkan",
+      data: result,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      error: true,
+      message: "Terjadi kesalahan pada server",
+    });
+  }
+});
+
 module.exports = router;
