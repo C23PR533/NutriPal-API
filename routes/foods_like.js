@@ -140,4 +140,64 @@ router.get("/:id_user", async (req, res) => {
   }
 });
 
+router.delete("/:id_user/:food_id", async (req, res) => {
+  try {
+    const id_user = req.params.id_user;
+    const food_id = req.params.food_id;
+
+    if (!id_user) {
+      return res.status(400).json({
+        code: 400,
+        error: true,
+        message: "id_user harus diisi",
+      });
+    }
+
+    if (!food_id) {
+      return res.status(400).json({
+        code: 400,
+        error: true,
+        message: "food_id harus diisi",
+      });
+    }
+
+    const foodsLikeRef = db.collection("foodsLike").doc(id_user);
+    const foodsLikeDoc = await foodsLikeRef.get();
+
+    if (!foodsLikeDoc.exists) {
+      return res.status(404).json({
+        code: 404,
+        error: true,
+        message: "Data makanan favorit tidak ditemukan",
+      });
+    }
+
+    const foodsLikeData = foodsLikeDoc.data();
+    const favoriteFoods = foodsLikeData[id_user]?.favoriteFoods || [];
+
+    const updatedFavoriteFoods = favoriteFoods.filter(
+      (food) => food.food_id !== food_id
+    );
+
+    await foodsLikeRef.set(
+      { [id_user]: { favoriteFoods: updatedFavoriteFoods } },
+      { merge: true }
+    );
+
+    res.status(200).json({
+      code: 200,
+      error: false,
+      message: "Makanan favorit berhasil dihapus",
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      code: 500,
+      error: true,
+      message: "Terjadi kesalahan pada server",
+    });
+  }
+});
+
+
 module.exports = router;
