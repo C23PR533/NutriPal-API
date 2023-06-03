@@ -9,29 +9,41 @@ const directoryPath = path.join(__dirname, "data", "foods.json");
 
 router.post("/fromjson", async (req, res) => {
   try {
-    const userJson = () => {
-      const data = fs.readFileSync(directoryPath, "utf8");
-      const jsonData = JSON.parse(data);
-      const foodData = jsonData[3];
-      const id = foodData.food_id;
-      return { ...foodData, id: id };
-    };
+    fs.readdir(directoryPath, async function (err, files) {
+      if (err) {
+        return console.log("Unable to scan directory: " + err);
+      }
 
-    const response = await db
-      .collection("food")
-      .doc(userJson().id)
-      .set(userJson());
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const filePath = path.join(directoryPath, file);
+        const data = fs.readFileSync(filePath, "utf8");
+        const jsonData = JSON.parse(data);
 
-    res.send(response);
+        for (let j = 0; j < jsonData.length; j++) {
+          const foodData = jsonData[j];
+          const id = foodData.food_id;
+
+          const response = await db.collection("food").doc(id).set(foodData);
+
+          console.log("Document written:", response);
+        }
+      }
+
+      res.send("Data berhasil diunggah ke Firestore");
+    });
   } catch (error) {
     console.log(error);
     res.send(error);
   }
 });
 
+
+
+
 router.get("/", async (req, res) => {
   try {
-    const userpredb = db.collection("food");
+    const userpredb = db.collection("foods");
     const response = await userpredb.get();
     let responseArr = [];
     response.forEach((doc) => {
