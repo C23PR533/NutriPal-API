@@ -55,10 +55,12 @@ router.post("/:id_user", async (req, res) => {
     const foodsLikeDoc = await foodsLikeRef.get();
 
     if (!foodsLikeDoc.exists) {
-      await foodsLikeRef.set({ favoriteFoods: [newFavoriteFood] });
+      await foodsLikeRef.set({
+        [id_user]: { favoriteFoods: [newFavoriteFood] },
+      });
     } else {
       const foodsLikeData = foodsLikeDoc.data();
-      const favoriteFoods = foodsLikeData.favoriteFoods || [];
+      const favoriteFoods = foodsLikeData[id_user]?.favoriteFoods || [];
 
       const isDuplicate = favoriteFoods.some(
         (food) => food.food_id === food_id
@@ -74,7 +76,7 @@ router.post("/:id_user", async (req, res) => {
 
       favoriteFoods.push(newFavoriteFood);
 
-      await foodsLikeRef.set({ favoriteFoods }, { merge: true });
+      await foodsLikeRef.set({ [id_user]: { favoriteFoods } }, { merge: true });
     }
 
     res.status(201).json({
