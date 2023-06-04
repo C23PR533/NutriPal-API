@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 
 const dataDiriRoutes = require("./routes/data_diri");
 const userPreference = require("./routes/user_preferences");
-const history_aktifitas = require("./routes/history_aktifitas_copy");
+const history_aktifitas = require("./routes/history_aktifitas");
 
 const app = express();
 const cors = require("cors");
