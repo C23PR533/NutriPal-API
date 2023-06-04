@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const { Firestore } = require("@google-cloud/firestore");
+const authMiddleware = require("../middleware/authMiddleware");
 
 const db = new Firestore();
+router.use(authMiddleware);
 
 router.use(express.urlencoded({ extended: true }));
 

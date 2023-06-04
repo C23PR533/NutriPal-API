@@ -1,7 +1,10 @@
 require("dotenv").config();
 
+const functions = require("firebase-functions");
 const express = require("express");
 const bodyParser = require("body-parser");
+
+const authMiddleware = require('./middleware/authMiddleware');
 
 const dataDiriRoutes = require("./routes/data_diri");
 const userPreference = require("./routes/user_preferences");
@@ -18,6 +21,7 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+//app.use(authMiddleware);
 
 const { Firestore } = require("@google-cloud/firestore");
 var admin = require("firebase-admin");
