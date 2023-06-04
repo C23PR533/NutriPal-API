@@ -598,7 +598,13 @@
     {
         "food_id": "4502",
         "food_name": "Cooked Rice",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/rice-cooked",
         "servings": {
             "serving": [
@@ -633,7 +639,13 @@
     {
         "food_id": "5102",
         "food_name": "Beef Fried Rice",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/rice-fried-with-beef",
         "servings": {
             "serving": [
@@ -668,7 +680,13 @@
     {
         "food_id": "5152",
         "food_name": "Flavored Rice Mixture",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/flavored-rice-mixture",
         "servings": {
             "serving": [
@@ -703,7 +721,13 @@
     {
         "food_id": "421571",
         "food_name": "Chinese Fried Rice",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/rice-fried-chinese",
         "servings": {
             "serving": [
@@ -740,7 +764,13 @@
     {
         "food_id": "33797",
         "food_name": "Fried Egg",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/fried-egg",
         "servings": {
             "serving": [
@@ -776,7 +806,13 @@
     {
         "food_id": "39866",
         "food_name": "Scrambled Egg",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/scrambled-egg",
         "servings": {
             "serving": [
@@ -812,7 +848,13 @@
     {
         "food_id": "3094",
         "food_name": "Boiled Egg",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/egg-whole-boiled",
         "servings": {
             "serving": [
@@ -847,7 +889,13 @@
     {
         "food_id": "1794",
         "food_name": "Fried Battered Duck",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/duck-battered-fried",
         "servings": {
             "serving": [
@@ -883,7 +931,13 @@
         "brand_name": "Samyang",
         "food_id": "15050846",
         "food_name": "Hot Chicken Flavor Ramen",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/samyang/hot-chicken-flavor-ramen",
         "servings": {
             "serving": [
@@ -918,7 +972,13 @@
         "brand_name": "Samyang",
         "food_id": "67001331",
         "food_name": "Jjajang Ramen",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/samyang/jjajang-ramen",
         "servings": {
             "serving": [
@@ -952,7 +1012,13 @@
     {
         "food_id": "4926",
         "food_name": "Steamed Dumpling (Filled with Meat Poultry or Seafood)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/dumpling-steamed-filled-with-meat-poultry-or-seafood",
         "servings": {
             "serving": [
@@ -988,7 +1054,13 @@
         "brand_name": "Wegmans",
         "food_id": "44155",
         "food_name": "Chicken Dumplings",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/wegmans/chicken-dumplings",
         "servings": {
             "serving": [
@@ -1012,7 +1084,13 @@
     {
         "food_id": "1564",
         "food_name": "Fried Goat",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/goat-fried",
         "servings": {
             "serving": [
@@ -1047,7 +1125,13 @@
     {
         "food_id": "3301",
         "food_name": "Miso Soup",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/soybean-soup-miso-broth",
         "servings": {
             "serving": [
@@ -1082,7 +1166,13 @@
     {
         "food_id": "5206",
         "food_name": "Rice Soup",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/rice-soup",
         "servings": {
             "serving": [
@@ -1117,7 +1207,13 @@
     {
         "food_id": "6254",
         "food_name": "Mixed Salad Greens",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/mixed-salad-greens-raw",
         "tags": "rujak",
         "servings": {
@@ -1153,7 +1249,13 @@
     {
         "food_id": "38338",
         "food_name": "Fried Tofu",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/fried-tofu",
         "servings": {
             "serving": [
@@ -1188,7 +1290,13 @@
     {
         "food_id": "15040634",
         "food_name": "Bubur Ayam",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/bubur-ayam",
         "servings": {
             "serving": [
@@ -1224,7 +1332,13 @@
     {
         "food_id": "448901",
         "food_name": "Grilled Chicken",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-grilled-ns-as-to-skin-eaten",
         "servings": {
             "serving": [
@@ -1260,7 +1374,13 @@
         "brand_name": "Fresh & Easy",
         "food_id": "1304949",
         "food_name": "Bangers & Mash",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/fresh-and-easy/bangers-and-mash",
         "servings": {
             "serving": [
@@ -1291,7 +1411,13 @@
     {
         "food_id": "34874",
         "food_name": "Chicken Broth Soup (Less/Reduced Sodium, Canned)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/chicken-broth-soup-(less-reduced-sodium-canned)",
         "servings": {
             "serving": [
@@ -1326,7 +1452,13 @@
     {
         "food_id": "40125316",
         "food_name": "Beef Tendon",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/beef-tendon",
         "servings": {
             "serving": [
@@ -1361,7 +1493,13 @@
     {
         "food_id": "2321",
         "food_name": "Beef Stroganoff with Noodles",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/beef-stroganoff-with-noodles",
         "servings": {
             "serving": [
@@ -1396,7 +1534,13 @@
     {
         "food_id": "5503803",
         "food_name": "Tom Yum Soup",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/tom-yum-soup",
         "servings": {
             "serving": [
@@ -1434,7 +1578,13 @@
         "brand_name": "Southern Tsunami Sushi Bar",
         "food_id": "80987",
         "food_name": "Tuna Nigiri",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/southern-tsunami-sushi-bar/tuna-nigiri",
         "servings": {
             "serving": [
@@ -1463,7 +1613,13 @@
     {
         "food_id": "39783",
         "food_name": "Cooked Soba Japanese Noodles",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/cooked-soba-japanese-noodles",
         "servings": {
             "serving": [
@@ -1496,7 +1652,13 @@
     {
         "food_id": "619523",
         "food_name": "Potato Croquettes",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/potato-croquettes",
         "servings": {
             "serving": [
@@ -1532,7 +1694,13 @@
     {
         "food_id": "39945",
         "food_name": "Hamburger (Single Patty with Condiments)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/hamburger-(single-patty-with-condiments)",
         "servings": {
             "serving": [
@@ -1567,7 +1735,13 @@
     {
         "food_id": "39926",
         "food_name": "Cheeseburger",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/cheeseburger",
         "servings": {
             "serving": [
@@ -1602,7 +1776,13 @@
         "brand_name": "Chili's",
         "food_id": "68883651",
         "food_name": "Burger Bites",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/chilis/burger-bites",
         "servings": {
             "serving": [
@@ -1630,7 +1810,13 @@
         "brand_name": "Chili's",
         "food_id": "68884191",
         "food_name": "Burger Bun, Buttered",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/chilis/burger-bun-buttered",
         "servings": {
             "serving": [
@@ -1658,7 +1844,13 @@
         "brand_name": "Chili's",
         "food_id": "68882722",
         "food_name": "Burger Bites & Curly Fries",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/chilis/burger-bites-curly-fries",
         "servings": {
             "serving": [
@@ -1685,7 +1877,13 @@
     {
         "food_id": "39934",
         "food_name": "Cheeseburger with Bacon and Condiments",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/cheeseburger-with-bacon-and-condiments",
         "servings": {
             "serving": [
@@ -1719,7 +1917,13 @@
         "brand_name": "Kirkland Signature",
         "food_id": "74598",
         "food_name": "Ground Sirlion Burger",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/kirkland-signature/ground-sirlion-burger",
         "servings": {
             "serving": [
@@ -1749,7 +1953,13 @@
         "brand_name": "Applegate Farms",
         "food_id": "62217",
         "food_name": "Organic Beef Burger",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/applegate-farms/organic-beef-burger",
         "servings": {
             "serving": [
@@ -1779,7 +1989,13 @@
         "brand_name": "Shake Shack",
         "food_id": "31455452",
         "food_name": "Burger Patty",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/shake-shack/burger-patty",
         "servings": {
             "serving": [
@@ -1806,7 +2022,13 @@
     {
         "food_id": "39927",
         "food_name": "Cheeseburger (Single Patty with Condiments)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/cheeseburger-(single-patty-with-condiments)",
         "servings": {
             "serving": [
@@ -1840,7 +2062,13 @@
         "brand_name": "In-N-Out",
         "food_id": "26547",
         "food_name": "Double-Double Burger",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/in-n-out/double-double-burger",
         "servings": {
             "serving": [
@@ -1870,7 +2098,13 @@
         "brand_name": "Sam's Choice",
         "food_id": "70941",
         "food_name": "Backyard Black Angus Burgers",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/sams-choice/backyard-black-angus-burgers",
         "servings": {
             "serving": [
@@ -1900,7 +2134,13 @@
         "brand_name": "Denny's",
         "food_id": "111235",
         "food_name": "Classic Burger",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/dennys/classic-burger",
         "servings": {
             "serving": [
@@ -1929,7 +2169,13 @@
         "brand_name": "Carl's Jr.",
         "food_id": "91493",
         "food_name": "Bacon Cheese Six Dollar Burger",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/carls-jr/bacon-cheese-six-dollar-burger",
         "servings": {
             "serving": [
@@ -1959,7 +2205,13 @@
         "brand_name": "Cardinal Roadhouse",
         "food_id": "67722",
         "food_name": "Angus Beef Burger",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/cardinal-roadhouse/angus-beef-burger",
         "servings": {
             "serving": [
@@ -1992,7 +2244,13 @@
         "brand_name": "Chili's",
         "food_id": "98620",
         "food_name": "Oldtimer with Cheese Burger",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/chilis/oldtimer-with-cheese-burger",
         "servings": {
             "serving": [
@@ -2019,7 +2277,13 @@
     {
         "food_id": "1938",
         "food_name": "Baked or Broiled Fish",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/fish-baked-or-broiled",
         "servings": {
             "serving": [
@@ -2054,7 +2318,13 @@
     {
         "food_id": "1937",
         "food_name": "Cooked Fish",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/fish-cooked-ns-as-to-cooking-method",
         "servings": {
             "serving": [
@@ -2089,7 +2359,13 @@
     {
         "food_id": "450773",
         "food_name": "Grilled Fish",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/fish-grilled",
         "servings": {
             "serving": [
@@ -2124,7 +2400,13 @@
     {
         "food_id": "2057",
         "food_name": "Salmon",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/salmon-raw",
         "servings": {
             "serving": [
@@ -2159,7 +2441,13 @@
     {
         "food_id": "1966",
         "food_name": "Fried Battered Catfish",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/catfish-battered-fried",
         "servings": {
             "serving": [
@@ -2194,7 +2482,13 @@
     {
         "food_id": "16632713",
         "food_name": "Beef Stew",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/beef-stew",
         "servings": {
             "serving": [
@@ -2230,7 +2524,13 @@
     {
         "food_id": "14959488",
         "food_name": "Lontong Sayur",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/soup-lontong-sayur",
         "servings": {
             "serving": [
@@ -2267,7 +2567,13 @@
         "brand_name": "Barilla",
         "food_id": "61231",
         "food_name": "Rotini Pasta",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/barilla/rotini-pasta",
         "servings": {
             "serving": [
@@ -2306,7 +2612,13 @@
         "brand_name": "Eating Right",
         "food_id": "8468609",
         "food_name": "Chicken & Sausage Gumbo",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/eating-right/chicken-and-sausage-gumbo",
         "servings": {
             "serving": [
@@ -2335,7 +2647,13 @@
     {
         "food_id": "2573",
         "food_name": "Gumbo with Rice (New Orleans Type with Shellfish, Pork or Poultry, Tomatoes, Okra, Rice)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/gumbo-with-rice-(new-orleans-type-with-shellfish-pork-and-or-poultry-tomatoes-okra-rice)",
         "servings": {
             "serving": [
@@ -2371,7 +2689,13 @@
         "brand_name": "Fresh Foods Market",
         "food_id": "14841453",
         "food_name": "Chicken & Sausage Gumbo",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/fresh-foods-market/chicken-and-sausage-gumbo",
         "servings": {
             "serving": [
@@ -2404,7 +2728,13 @@
         "brand_name": "Uno Chicago Grill",
         "food_id": "195253",
         "food_name": "Chicken Shrimp and Sausage Gumbo",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/uno-chicago-grill/chicken-shrimp-and-sausage-gumbo",
         "servings": {
             "serving": [
@@ -2433,7 +2763,13 @@
         "brand_name": "Uno Chicago Grill",
         "food_id": "195253",
         "food_name": "Chicken Shrimp and Sausage Gumbo",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/uno-chicago-grill/chicken-shrimp-and-sausage-gumbo",
         "servings": {
             "serving": [
@@ -2462,7 +2798,13 @@
         "brand_name": "Zatarain's",
         "food_id": "53493",
         "food_name": "New Orleans Style Sausage & Chicken Gumbo",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/zatarains/new-orleans-style-sausage-and-chicken-gumbo",
         "servings": {
             "serving": [
@@ -2489,7 +2831,13 @@
     {
         "food_id": "3062",
         "food_name": "Shrimp Gumbo",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/shrimp-gumbo",
         "servings": {
             "serving": [
@@ -2525,7 +2873,13 @@
         "brand_name": "Jason's Deli",
         "food_id": "114963",
         "food_name": "Seafood Gumbo (Bowl)",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/jasons-deli/seafood-gumbo-(bowl)",
         "servings": {
             "serving": [
@@ -2554,7 +2908,13 @@
         "brand_name": "Progresso",
         "food_id": "43565",
         "food_name": "Chicken & Sausage Gumbo Soup",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/progresso/chicken-and-sausage-gumbo-soup",
         "servings": {
             "serving": [
@@ -2586,7 +2946,13 @@
         "brand_name": "Whole Foods Market",
         "food_id": "65283948",
         "food_name": "Shrimp & Andouille Sausage Gumbo Soup",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/whole-foods-market/shrimp-andouille-sausage-gumbo-soup",
         "servings": {
             "serving": [
@@ -2625,7 +2991,13 @@
         "brand_name": "Sam's Choice",
         "food_id": "16675526",
         "food_name": "Chicken & Sausage Gumbo",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/sams-choice/chicken-sausage-gumbo",
         "servings": {
             "serving": [
@@ -2654,7 +3026,13 @@
         "brand_name": "Chef's Cupboard",
         "food_id": "103644",
         "food_name": "Chunky Grilled Chicken & Sausage Gumbo Soup",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/chefs-cupboard/chunky-grilled-chicken-and-sausage-gumbo-soup",
         "servings": {
             "serving": [
@@ -2687,7 +3065,13 @@
         "brand_name": "Savoie's",
         "food_id": "863655",
         "food_name": "Sausage & Chicken Gumbo",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/savoies/sausage-and-chicken-gumbo",
         "servings": {
             "serving": [
@@ -2717,7 +3101,13 @@
         "brand_name": "Steak n Shake",
         "food_id": "890100",
         "food_name": "Chicken Gumbo Soup (Cup)",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/steak-n-shake/chicken-gumbo-soup-(cup)",
         "servings": {
             "serving": [
@@ -2744,7 +3134,13 @@
         "brand_name": "Freshly",
         "food_id": "36402586",
         "food_name": "Andouille & Chicken Gumbo",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/freshly/andouille-chicken-gumbo",
         "servings": {
             "serving": [
@@ -2774,7 +3170,13 @@
         "brand_name": "Bistro MD",
         "food_id": "3164557",
         "food_name": "Shrimp & Chicken Gumbo",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bistro-md/shrimp-and-chicken-gumbo",
         "servings": {
             "serving": [
@@ -2805,7 +3207,13 @@
         "brand_name": "Champps",
         "food_id": "1326727",
         "food_name": "Gumbo",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/champps/gumbo",
         "servings": {
             "serving": [
@@ -2831,7 +3239,13 @@
         "brand_name": "City Barbeque",
         "food_id": "1482078",
         "food_name": "Gumbo with Rice",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/city-barbeque/gumbo-with-rice",
         "servings": {
             "serving": [
@@ -2857,7 +3271,13 @@
         "brand_name": "Publix",
         "food_id": "3905583",
         "food_name": "Seafood Gumbo",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/publix/seafood-gumbo",
         "servings": {
             "serving": [
@@ -2879,7 +3299,13 @@
     {
         "food_id": "38820",
         "food_name": "White Bread",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/white-bread",
         "servings": {
             "serving": [
@@ -2914,7 +3340,13 @@
     {
         "food_id": "3590",
         "food_name": "Whole Wheat Bread",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/bread-whole-wheat",
         "servings": {
             "serving": [
@@ -2949,7 +3381,13 @@
     {
         "food_id": "3422",
         "food_name": "Bread",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/bread",
         "servings": {
             "serving": [
@@ -2985,7 +3423,13 @@
         "brand_name": "Shaw's",
         "food_id": "84397",
         "food_name": "Multi Grain Whole Grain Bread",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/shaws/multi-grain-whole-grain-bread",
         "servings": {
             "serving": [
@@ -3012,7 +3456,13 @@
     {
         "food_id": "38793",
         "food_name": "Italian Bread",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/italian-bread",
         "servings": {
             "serving": [
@@ -3047,7 +3497,13 @@
     {
         "food_id": "284041",
         "food_name": "Baguette",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/baguette",
         "servings": {
             "serving": [
@@ -3083,7 +3539,13 @@
         "brand_name": "Albertsons",
         "food_id": "86418",
         "food_name": "French Bread",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/albertsons/french-bread",
         "servings": {
             "serving": [
@@ -3113,7 +3575,13 @@
         "brand_name": "Brownberry",
         "food_id": "41382",
         "food_name": "Whole Grains 12 Grain Bread",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/brownberry/whole-grains-12-grain-bread",
         "servings": {
             "serving": [
@@ -3148,7 +3616,13 @@
         "brand_name": "Bunny Bread",
         "food_id": "71327",
         "food_name": "Wheat Sandwich Bread",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bunny-bread/wheat-sandwich-bread",
         "servings": {
             "serving": [
@@ -3178,7 +3652,13 @@
         "brand_name": "Sara Lee",
         "food_id": "46249",
         "food_name": "45 Calories & Delightful 100% Whole Wheat Bread",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/sara-lee/45-calories-and-delightful-100%25-whole-wheat-bread",
         "servings": {
             "serving": [
@@ -3215,7 +3695,13 @@
         "brand_name": "Bunny Bread",
         "food_id": "71326",
         "food_name": "100% Whole Wheat Bread",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bunny-bread/100%25-whole-wheat-bread",
         "servings": {
             "serving": [
@@ -3246,7 +3732,13 @@
     {
         "food_id": "3490",
         "food_name": "Sour Dough Bread",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/bread-sour-dough",
         "servings": {
             "serving": [
@@ -3282,7 +3774,13 @@
         "brand_name": "Food For Life Baking Company",
         "food_id": "29000",
         "food_name": "Ezekiel 4:9 Sprouted 100% Whole Grain Bread",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/food-for-life-baking-company/ezekiel-49-sprouted-100%25-whole-grain-bread",
         "servings": {
             "serving": [
@@ -3315,7 +3813,13 @@
         "brand_name": "Great Harvest Bread Co",
         "food_id": "77478",
         "food_name": "Honey Whole Wheat Bread",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/great-harvest-bread-co/honey-whole-wheat-bread",
         "servings": {
             "serving": [
@@ -3347,7 +3851,13 @@
     {
         "food_id": "3435",
         "food_name": "White Bread (Home Recipe or Bakery)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/bread-white-made-from-home-recipe-or-purchased-at-a-bakery",
         "servings": {
             "serving": [
@@ -3382,7 +3892,13 @@
     {
         "food_id": "3682",
         "food_name": "Multigrain Bread",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/bread-multigrain",
         "servings": {
             "serving": [
@@ -3418,7 +3934,13 @@
         "brand_name": "Nature's Own",
         "food_id": "205833",
         "food_name": "Honey Wheat Sliced Bread",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/natures-own/honey-wheat-sliced-bread",
         "servings": {
             "serving": [
@@ -3446,7 +3968,13 @@
     {
         "food_id": "38826",
         "food_name": "Whole Wheat Bread",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/whole-wheat-bread",
         "servings": {
             "serving": [
@@ -3481,7 +4009,13 @@
     {
         "food_id": "39048",
         "food_name": "Dinner Rolls",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/dinner-rolls",
         "servings": {
             "serving": [
@@ -3516,7 +4050,13 @@
     {
         "food_id": "3428",
         "food_name": "Roll (Home Recipe or Bakery)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/roll-made-from-home-recipe-or-purchased-at-a-bakery",
         "servings": {
             "serving": [
@@ -3551,7 +4091,13 @@
     {
         "food_id": "39058",
         "food_name": "Hard Rolls (Includes Kaiser)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/hard-rolls-(includes-kaiser)",
         "servings": {
             "serving": [
@@ -3587,7 +4133,13 @@
         "brand_name": "Schwebel's",
         "food_id": "58366",
         "food_name": "Kaiser Rolls",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/schwebels/kaiser-rolls",
         "servings": {
             "serving": [
@@ -3618,7 +4170,13 @@
     {
         "food_id": "3496",
         "food_name": "Soft White Roll",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/roll-white-soft",
         "servings": {
             "serving": [
@@ -3653,7 +4211,13 @@
     {
         "food_id": "39054",
         "food_name": "French Rolls",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/french-rolls",
         "servings": {
             "serving": [
@@ -3689,7 +4253,13 @@
         "brand_name": "Schwebel's",
         "food_id": "58367",
         "food_name": "Submarine Rolls",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/schwebels/submarine-rolls",
         "servings": {
             "serving": [
@@ -3718,7 +4288,13 @@
     {
         "food_id": "39055",
         "food_name": "Hamburger or Hotdog Rolls",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/hamburger-or-hotdog-rolls",
         "servings": {
             "serving": [
@@ -3753,7 +4329,13 @@
     {
         "food_id": "3430",
         "food_name": "Hard Roll",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/roll-hard",
         "servings": {
             "serving": [
@@ -3788,7 +4370,13 @@
     {
         "food_id": "3510",
         "food_name": "Submarine Hoagie Roll",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/roll-hoagie-submarine",
         "servings": {
             "serving": [
@@ -3823,7 +4411,13 @@
     {
         "food_id": "3426",
         "food_name": "Roll",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/roll",
         "servings": {
             "serving": [
@@ -3859,7 +4453,13 @@
         "brand_name": "ACE Bakery",
         "food_id": "90138",
         "food_name": "Sandwich Rolls",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/ace-bakery/sandwich-rolls",
         "servings": {
             "serving": [
@@ -3889,7 +4489,13 @@
         "brand_name": "Oroweat",
         "food_id": "60270",
         "food_name": "100% Whole Wheat Dinner Roll",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/oroweat/100%25-whole-wheat-dinner-roll",
         "servings": {
             "serving": [
@@ -3915,7 +4521,13 @@
     {
         "food_id": "3501",
         "food_name": "Hard White Roll",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/roll-white-hard",
         "servings": {
             "serving": [
@@ -3950,7 +4562,13 @@
     {
         "food_id": "3427",
         "food_name": "Toasted Roll",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/roll-toasted",
         "servings": {
             "serving": [
@@ -3985,7 +4603,13 @@
     {
         "food_id": "3502",
         "food_name": "Toasted Hard White Roll",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/roll-white-hard-toasted",
         "servings": {
             "serving": [
@@ -4020,7 +4644,13 @@
     {
         "food_id": "35195",
         "food_name": "Beef Honey Roll Sausage",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/beef-honey-roll-sausage",
         "servings": {
             "serving": [
@@ -4056,7 +4686,13 @@
         "brand_name": "LaBrea Bakery",
         "food_id": "57403",
         "food_name": "French Dinner Rolls",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/labrea-bakery/french-dinner-rolls",
         "servings": {
             "serving": [
@@ -4086,7 +4722,13 @@
         "brand_name": "Troyer",
         "food_id": "956673",
         "food_name": "Roll Butter",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/troyer/roll-butter",
         "servings": {
             "serving": [
@@ -4115,7 +4757,13 @@
     {
         "food_id": "3663",
         "food_name": "Pumpernickel Roll",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/roll-pumpernickel",
         "servings": {
             "serving": [
@@ -4151,7 +4799,13 @@
         "brand_name": "Post",
         "food_id": "33172",
         "food_name": "Honey Bunches of Oats with Almonds",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/post/honey-bunches-of-oats-with-almonds",
         "servings": {
             "serving": [
@@ -4188,7 +4842,13 @@
     {
         "food_id": "4578",
         "food_name": "Cereal",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/cereal",
         "servings": {
             "serving": [
@@ -4223,7 +4883,13 @@
     {
         "food_id": "7452998",
         "food_name": "Cereal with Milk",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/cereal-with-milk-(whole)",
         "servings": {
             "serving": [
@@ -4261,7 +4927,13 @@
         "brand_name": "Kellogg's",
         "food_id": "33227",
         "food_name": "Special K Vanilla Almond Cereal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/kelloggs/special-k-vanilla-almond-cereal",
         "servings": {
             "serving": [
@@ -4300,7 +4972,13 @@
         "brand_name": "Kellogg's",
         "food_id": "42443",
         "food_name": "Special K Satisfaction Cereal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/kelloggs/special-k-satisfaction-cereal",
         "servings": {
             "serving": [
@@ -4331,7 +5009,13 @@
         "brand_name": "General Mills",
         "food_id": "45964",
         "food_name": "Total Raisin Bran Cereal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/general-mills/total-raisin-bran-cereal",
         "servings": {
             "serving": [
@@ -4364,7 +5048,13 @@
         "brand_name": "General Mills",
         "food_id": "50953",
         "food_name": "Whole Grain Cheerios",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/general-mills/whole-grain-cheerios",
         "servings": {
             "serving": [
@@ -4397,7 +5087,13 @@
         "brand_name": "General Mills",
         "food_id": "43796",
         "food_name": "Honey Nut with Whole Grain Cheerios",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/general-mills/honey-nut-with-whole-grain-cheerios",
         "servings": {
             "serving": [
@@ -4430,7 +5126,13 @@
         "brand_name": "Millville",
         "food_id": "51952",
         "food_name": "Cinnamon Crunch Squares Cereal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/millville/cinnamon-crunch-squares-cereal",
         "servings": {
             "serving": [
@@ -4463,7 +5165,13 @@
         "brand_name": "Post",
         "food_id": "54481",
         "food_name": "Cocoa Pebbles Cereal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/post/cocoa-pebbles-cereal",
         "servings": {
             "serving": [
@@ -4498,7 +5206,13 @@
         "brand_name": "General Mills",
         "food_id": "43854",
         "food_name": "Cap'n Crunch Cereal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/general-mills/capn-crunch-cereal",
         "servings": {
             "serving": [
@@ -4531,7 +5245,13 @@
         "brand_name": "Kellogg's",
         "food_id": "256891",
         "food_name": "Froot Loops Sweetened Multi-Grain Cereal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/kelloggs/froot-loops-sweetened-multi-grain-cereal",
         "servings": {
             "serving": [
@@ -4559,7 +5279,13 @@
     {
         "food_id": "4725",
         "food_name": "Raisin Bran",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/raisin-bran",
         "servings": {
             "serving": [
@@ -4595,7 +5321,13 @@
         "brand_name": "Post",
         "food_id": "27519",
         "food_name": "Grape-Nuts Trail Mix Crunch Cereal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/post/grape-nuts-trail-mix-crunch-cereal",
         "servings": {
             "serving": [
@@ -4626,7 +5358,13 @@
         "brand_name": "Kellogg's",
         "food_id": "2019964",
         "food_name": "Honey Smacks",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/kelloggs/honey-smacks",
         "servings": {
             "serving": [
@@ -4663,7 +5401,13 @@
         "brand_name": "Hy-Vee",
         "food_id": "95044",
         "food_name": "Bite Size Frosted Shredded Wheat",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/hy-vee/bite-size-frosted-shredded-wheat",
         "servings": {
             "serving": [
@@ -4695,7 +5439,13 @@
         "brand_name": "Cascadian Farm",
         "food_id": "45529",
         "food_name": "Organic Oats & Honey Granola Cereal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/cascadian-farm/organic-oats-and-honey-granola-cereal",
         "servings": {
             "serving": [
@@ -4731,7 +5481,13 @@
         "brand_name": "Quaker",
         "food_id": "5957479",
         "food_name": "Cap'n Crunch's Crunch Berries",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/quaker/capn-crunchs-crunch-berries",
         "servings": {
             "serving": [
@@ -4763,7 +5519,13 @@
     {
         "food_id": "35379",
         "food_name": "Puffed Wheat Cereal (Presweetened)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/puffed-wheat-cereal-(presweetened)",
         "servings": {
             "serving": [
@@ -4800,7 +5562,13 @@
         "brand_name": "Post",
         "food_id": "48143",
         "food_name": "Great Grains Raisin, Dates & Pecans Cereal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/post/great-grains-raisin-dates-and-pecans-cereal",
         "servings": {
             "serving": [
@@ -4835,7 +5603,13 @@
     {
         "food_id": "4481",
         "food_name": "Oatmeal",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/oatmeal-cooked-regular",
         "servings": {
             "serving": [
@@ -4871,7 +5645,13 @@
         "brand_name": "Quaker",
         "food_id": "25517",
         "food_name": "100% Whole Grain Oatmeal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/quaker/100-whole-grain-oatmeal",
         "servings": {
             "serving": [
@@ -4908,7 +5688,13 @@
         "brand_name": "Kroger",
         "food_id": "76404",
         "food_name": "Old Fashioned Oatmeal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/kroger/old-fashioned-oatmeal",
         "servings": {
             "serving": [
@@ -4944,7 +5730,13 @@
         "brand_name": "Great Value",
         "food_id": "48187",
         "food_name": "Maple & Brown Sugar Instant Oatmeal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/great-value/maple-and-brown-sugar-instant-oatmeal",
         "servings": {
             "serving": [
@@ -4980,7 +5772,13 @@
         "brand_name": "Quaker",
         "food_id": "27476",
         "food_name": "Instant Oatmeal - Regular",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/quaker/instant-oatmeal---regular",
         "servings": {
             "serving": [
@@ -5019,7 +5817,13 @@
         "brand_name": "Quaker",
         "food_id": "4381150",
         "food_name": "Instant Oatmeal - Maple & Brown Sugar",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/quaker/instant-oatmeal---maple-and-brown-sugar",
         "servings": {
             "serving": [
@@ -5054,7 +5858,13 @@
     {
         "food_id": "4480",
         "food_name": "Quick Oatmeal (1 or 3 Minutes)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/oatmeal-cooked-quick-(1-or-3-minutes)",
         "servings": {
             "serving": [
@@ -5090,7 +5900,13 @@
         "brand_name": "Quaker",
         "food_id": "25859",
         "food_name": "Instant Oatmeal - Apples & Cinnamon (35g)",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/quaker/instant-oatmeal---apples-and-cinnamon-(35g)",
         "servings": {
             "serving": [
@@ -5126,7 +5942,13 @@
         "brand_name": "Great Value",
         "food_id": "18097364",
         "food_name": "Old Fashioned Oatmeal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/great-value/old-fashioned-oatmeal",
         "servings": {
             "serving": [
@@ -5155,7 +5977,13 @@
     {
         "food_id": "4492",
         "food_name": "Oatmeal with Fruit",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/oatmeal-with-fruit-cooked",
         "servings": {
             "serving": [
@@ -5191,7 +6019,13 @@
         "brand_name": "Quaker",
         "food_id": "84196",
         "food_name": "Instant Oatmeal - Strawberries & Cream (30g)",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/quaker/instant-oatmeal-strawberries-cream-(30g)",
         "servings": {
             "serving": [
@@ -5228,7 +6062,13 @@
         "brand_name": "365",
         "food_id": "1077375",
         "food_name": "Organic Steel Cut Oats",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/365/organic-steel-cut-oats",
         "servings": {
             "serving": [
@@ -5260,7 +6100,13 @@
     {
         "food_id": "10819249",
         "food_name": "Oatmeal with Milk",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/oatmeal-with-milk-(whole)",
         "servings": {
             "serving": [
@@ -5297,7 +6143,13 @@
         "brand_name": "Quaker",
         "food_id": "27819",
         "food_name": "Instant Oatmeal - Lower Sugar Maple & Brown Sugar",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/quaker/instant-oatmeal---lower-sugar-maple-and-brown-sugar",
         "servings": {
             "serving": [
@@ -5334,7 +6186,13 @@
         "brand_name": "Bob Evans",
         "food_id": "408590",
         "food_name": "Cup of Quaker Oatmeal with Brown Sugar & Milk",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bob-evans/cup-of-quaker-oatmeal-with-brown-sugar-and-milk",
         "servings": {
             "serving": [
@@ -5363,7 +6221,13 @@
         "brand_name": "Quaker",
         "food_id": "48163",
         "food_name": "Instant Oatmeal - Raisin, Date & Walnut",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/quaker/instant-oatmeal---raisin-date-and-walnut",
         "servings": {
             "serving": [
@@ -5395,7 +6259,13 @@
     {
         "food_id": "4479",
         "food_name": "Quick or Instant Oatmeal",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/oatmeal-cooked-quick-or-instant-ns-as-to-fat-added-in-cooking",
         "servings": {
             "serving": [
@@ -5431,7 +6301,13 @@
         "brand_name": "McCann's",
         "food_id": "25524",
         "food_name": "Steel Cut Irish Oatmeal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/mccanns/steel-cut-irish-oatmeal",
         "servings": {
             "serving": [
@@ -5468,7 +6344,13 @@
         "brand_name": "Bob's Red Mill",
         "food_id": "4827765",
         "food_name": "Gluten Free Oatmeal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bobs-red-mill/gluten-free-oatmeal",
         "servings": {
             "serving": [
@@ -5495,7 +6377,13 @@
         "brand_name": "Back to Nature",
         "food_id": "60938",
         "food_name": "Classic Granola",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/back-to-nature/classic-granola",
         "servings": {
             "serving": [
@@ -5527,7 +6415,13 @@
         "brand_name": "Bare Naked",
         "food_id": "2824142",
         "food_name": "Vanilla Almond Crunch Granola",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bare-naked/vanilla-almond-crunch-granola",
         "servings": {
             "serving": [
@@ -5558,7 +6452,13 @@
     {
         "food_id": "4655",
         "food_name": "Granola",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/granola",
         "servings": {
             "serving": [
@@ -5594,7 +6494,13 @@
         "brand_name": "Quaker",
         "food_id": "2394005",
         "food_name": "Natural Granola - Oats & Honey",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/quaker/natural-granola---oats-and-honey",
         "servings": {
             "serving": [
@@ -5627,7 +6533,13 @@
         "brand_name": "The Baker",
         "food_id": "58711",
         "food_name": "Honey Oat Granola with Almonds",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/the-baker/honey-oat-granola-with-almonds",
         "servings": {
             "serving": [
@@ -5656,7 +6568,13 @@
         "brand_name": "Cascadian Farm",
         "food_id": "45529",
         "food_name": "Organic Oats & Honey Granola Cereal",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/cascadian-farm/organic-oats-and-honey-granola-cereal",
         "servings": {
             "serving": [
@@ -5692,7 +6610,13 @@
         "brand_name": "Nature Valley",
         "food_id": "3412271",
         "food_name": "Low Fat Granola",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/nature-valley/low-fat-granola",
         "servings": {
             "serving": [
@@ -5722,7 +6646,13 @@
         "brand_name": "Udi's",
         "food_id": "98916",
         "food_name": "Natural Artisan Granola - Original",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/udis/natural-artisan-granola---original",
         "servings": {
             "serving": [
@@ -5751,7 +6681,13 @@
     {
         "food_id": "4656",
         "food_name": "Homemade Granola",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/granola-homemade",
         "servings": {
             "serving": [
@@ -5787,7 +6723,13 @@
         "brand_name": "Food Club",
         "food_id": "110868",
         "food_name": "Oats, Honey & Almonds Granola",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/food-club/oats-honey-and-almonds-granola",
         "servings": {
             "serving": [
@@ -5819,7 +6761,13 @@
         "brand_name": "Nature's Path",
         "food_id": "1167680",
         "food_name": "Organic Pumpkin Flax Plus Granola",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/natures-path/organic-pumpkin-flax-plus-granola",
         "servings": {
             "serving": [
@@ -5856,7 +6804,13 @@
         "brand_name": "Bear Naked",
         "food_id": "2031357",
         "food_name": "Fit Granola - Triple Berry Crunch",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bear-naked/fit-granola---triple-berry-crunch",
         "servings": {
             "serving": [
@@ -5889,7 +6843,13 @@
         "brand_name": "Quaker",
         "food_id": "76065",
         "food_name": "Granola Bites - Chocolate (20g)",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/quaker/granola-bites---chocolate-(20g)/1-small-pouch",
         "servings": {
             "serving": [
@@ -5918,7 +6878,13 @@
         "brand_name": "Bare Naked",
         "food_id": "942636",
         "food_name": "Fruit & Nut Granola",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bare-naked/fruit-and-nut-granola",
         "servings": {
             "serving": [
@@ -5944,7 +6910,13 @@
         "brand_name": "Chick-fil-A",
         "food_id": "60171",
         "food_name": "Harvest Nut Granola",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/chick-fil-a/harvest-nut-granola",
         "servings": {
             "serving": [
@@ -5974,7 +6946,13 @@
         "brand_name": "Great Value",
         "food_id": "1126552",
         "food_name": "Almond Granola Energy",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/great-value/almond-granola-energy",
         "servings": {
             "serving": [
@@ -6007,7 +6985,13 @@
         "brand_name": "Trader Joe's",
         "food_id": "60546",
         "food_name": "Gluten Free Granola",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/trader-joes/gluten-free-granola",
         "servings": {
             "serving": [
@@ -6038,7 +7022,13 @@
     {
         "food_id": "3132",
         "food_name": "Egg Omelet or Scrambled Egg with Onions, Peppers, Tomatoes and Mushrooms",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/egg-omelet-or-scrambled-egg-with-onions-peppers-tomatoes-and-mushrooms",
         "servings": {
             "serving": [
@@ -6073,7 +7063,13 @@
     {
         "food_id": "33799",
         "food_name": "Egg Omelet",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/egg-omelet",
         "servings": {
             "serving": [
@@ -6109,7 +7105,13 @@
     {
         "food_id": "3124",
         "food_name": "Egg Omelet or Scrambled Egg with Cheese and Ham or Bacon",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/egg-omelet-or-scrambled-egg-with-cheese-and-ham-or-bacon",
         "servings": {
             "serving": [
@@ -6144,7 +7146,13 @@
     {
         "food_id": "3129",
         "food_name": "Egg Omelet or Scrambled Egg with Sausage and Cheese",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/egg-omelet-or-scrambled-egg-with-sausage-and-cheese",
         "servings": {
             "serving": [
@@ -6179,7 +7187,13 @@
     {
         "food_id": "3121",
         "food_name": "Egg Omelet or Scrambled Egg with Vegetables",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/egg-omelet-or-scrambled-egg-with-vegetables-other-than-dark-green-vegetables",
         "servings": {
             "serving": [
@@ -6214,7 +7228,13 @@
     {
         "food_id": "3117",
         "food_name": "Egg Omelet or Scrambled Egg with Cheese",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/egg-omelet-or-scrambled-egg-with-cheese",
         "servings": {
             "serving": [
@@ -6249,7 +7269,13 @@
     {
         "food_id": "3122",
         "food_name": "Egg Omelet or Scrambled Egg with Peppers, Onion and Ham",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/egg-omelet-or-scrambled-egg-with-peppers-onion-and-ham",
         "servings": {
             "serving": [
@@ -6284,7 +7310,13 @@
     {
         "food_id": "3119",
         "food_name": "Egg Omelet or Scrambled Egg with Ham or Bacon",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/egg-omelet-or-scrambled-egg-with-ham-or-bacon",
         "servings": {
             "serving": [
@@ -6320,7 +7352,13 @@
         "brand_name": "O'Charley's",
         "food_id": "189140",
         "food_name": "Spinach Mushroom Omelet without Sides",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/ocharleys/spinach-mushroom-omelet-without-sides",
         "servings": {
             "serving": [
@@ -6347,7 +7385,13 @@
         "brand_name": "Perkins Restaurant",
         "food_id": "850058",
         "food_name": "Smoked Bacon & Ham Omelette",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/perkins-restaurant/smoked-bacon-and-ham-omelette",
         "servings": {
             "serving": [
@@ -6376,7 +7420,13 @@
         "brand_name": "Bob Evans",
         "food_id": "373332",
         "food_name": "Sausage & Cheddar Omelet with Bob Evans Egg Lites",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bob-evans/sausage-and-cheddar-omelet-with-bob-evans-egg-lites",
         "servings": {
             "serving": [
@@ -6404,7 +7454,13 @@
     {
         "food_id": "3130",
         "food_name": "Egg Omelet or Scrambled Egg with Sausage",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/egg-omelet-or-scrambled-egg-with-sausage",
         "servings": {
             "serving": [
@@ -6440,7 +7496,13 @@
         "brand_name": "Bob Evans",
         "food_id": "373507",
         "food_name": "Western Omelet",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bob-evans/western-omelet",
         "servings": {
             "serving": [
@@ -6470,7 +7532,13 @@
         "brand_name": "Bob Evans",
         "food_id": "372688",
         "food_name": "Border Scramble Omelet with Bob Evans Egg Lites",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bob-evans/border-scramble-omelet-with-bob-evans-egg-lites",
         "servings": {
             "serving": [
@@ -6499,7 +7567,13 @@
         "brand_name": "Denny's",
         "food_id": "7106977",
         "food_name": "Philly Cheesesteak Omelette",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/dennys/philly-cheesesteak-omelette",
         "servings": {
             "serving": [
@@ -6529,7 +7603,13 @@
         "brand_name": "Cedarlane Natural Foods",
         "food_id": "2319413",
         "food_name": "Spinach & Mushroom Egg White Omelette",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/cedarlane-natural-foods/spinach-and-mushroom-egg-white-omelette",
         "servings": {
             "serving": [
@@ -6561,7 +7641,13 @@
     {
         "food_id": "3095",
         "food_name": "Poached Egg",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/egg-whole-poached",
         "servings": {
             "serving": [
@@ -6597,7 +7683,13 @@
         "brand_name": "Veestro",
         "food_id": "37181293",
         "food_name": "Poached Mushroom Wrap",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/veestro/poached-mushroom-wrap",
         "servings": {
             "serving": [
@@ -6628,7 +7720,13 @@
     {
         "food_id": "1981",
         "food_name": "Steamed or Poached Croaker",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/croaker-steamed-or-poached",
         "servings": {
             "serving": [
@@ -6663,7 +7761,13 @@
     {
         "food_id": "1998",
         "food_name": "Steamed or Poached Haddock",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/haddock-steamed-or-poached",
         "servings": {
             "serving": [
@@ -6698,7 +7802,13 @@
     {
         "food_id": "1991",
         "food_name": "Steamed or Poached Flounder",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/flounder-steamed-or-poached",
         "servings": {
             "serving": [
@@ -6733,7 +7843,13 @@
     {
         "food_id": "2185",
         "food_name": "Steamed or Poached Snails",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/snails-steamed-or-poached",
         "servings": {
             "serving": [
@@ -6768,7 +7884,13 @@
     {
         "food_id": "2098",
         "food_name": "Steamed or Poached Trout",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/trout-steamed-or-poached",
         "servings": {
             "serving": [
@@ -6803,7 +7925,13 @@
     {
         "food_id": "2164",
         "food_name": "Steamed or Poached Mussels",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/mussels-steamed-or-poached",
         "servings": {
             "serving": [
@@ -6838,7 +7966,13 @@
     {
         "food_id": "1983",
         "food_name": "Steamed or Poached Eel",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/eel-steamed-or-poached",
         "servings": {
             "serving": [
@@ -6873,7 +8007,13 @@
     {
         "food_id": "2052",
         "food_name": "Steamed or Poached Porgy",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/porgy-steamed-or-poached",
         "servings": {
             "serving": [
@@ -6908,7 +8048,13 @@
     {
         "food_id": "2092",
         "food_name": "Steamed or Poached Swordfish",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/swordfish-steamed-or-poached",
         "servings": {
             "serving": [
@@ -6943,7 +8089,13 @@
     {
         "food_id": "2115",
         "food_name": "Steamed or Poached Whiting",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/whiting-steamed-or-poached",
         "servings": {
             "serving": [
@@ -6978,7 +8130,13 @@
     {
         "food_id": "2137",
         "food_name": "Steamed or Poached Abalone",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/abalone-steamed-or-poached",
         "servings": {
             "serving": [
@@ -7013,7 +8171,13 @@
     {
         "food_id": "1960",
         "food_name": "Steamed or Poached Carp",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/carp-steamed-or-poached",
         "servings": {
             "serving": [
@@ -7048,7 +8212,13 @@
     {
         "food_id": "2436",
         "food_name": "Beef Stew with Potatoes and Vegetables in Gravy",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/beef-stew-with-potatoes-and-vegetables-(excluding-carrots-broccoli-and-dark-green-leafy)-gravy",
         "servings": {
             "serving": [
@@ -7083,7 +8253,13 @@
     {
         "food_id": "2434",
         "food_name": "Beef Stew with Potatoes and Vegetables in Tomato-Based Sauce",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/beef-stew-with-potatoes-and-vegetables-(excluding-carrots-broccoli-and-dark-green-leafy)-tomato-based-sauce",
         "servings": {
             "serving": [
@@ -7118,7 +8294,13 @@
     {
         "food_id": "6785",
         "food_name": "Vegetable Stew (without Meat)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/vegetable-stew-without-meat",
         "servings": {
             "serving": [
@@ -7153,7 +8335,13 @@
     {
         "food_id": "6710",
         "food_name": "Cooked Vegetable Type Stew (Including Potatoes, Carrots, Onions and Celery, Fat Added in Cooking)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/vegetables-stew-type-(including-potatoes-carrots-onions-celery)-cooked-fat-added-in-cooking",
         "servings": {
             "serving": [
@@ -7188,7 +8376,13 @@
     {
         "food_id": "1394",
         "food_name": "Stew Meat Beef (Lean Only Eaten)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/beef-stew-meat-cooked-lean-only-eaten",
         "servings": {
             "serving": [
@@ -7223,7 +8417,13 @@
     {
         "food_id": "1702",
         "food_name": "Stewed Chicken Thigh (Skin Eaten)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-thigh-stewed-skin-eaten",
         "servings": {
             "serving": [
@@ -7259,7 +8459,13 @@
         "brand_name": "Au Bon Pain",
         "food_id": "99960",
         "food_name": "Beef and Vegetable Stew (Large)",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/au-bon-pain/beef-and-vegetable-stew-(large)",
         "servings": {
             "serving": [
@@ -7287,7 +8493,13 @@
     {
         "food_id": "1685",
         "food_name": "Stewed Chicken Drumstick (Skin Not Eaten)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-drumstick-stewed-skin-not-eaten",
         "servings": {
             "serving": [
@@ -7322,7 +8534,13 @@
     {
         "food_id": "1629",
         "food_name": "Stewed Chicken",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-stewed-ns-as-to-skin-eaten",
         "servings": {
             "serving": [
@@ -7357,7 +8575,13 @@
     {
         "food_id": "6991",
         "food_name": "Puerto Rican Stew (Sancocho)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/puerto-rican-stew-(sancocho)",
         "servings": {
             "serving": [
@@ -7392,7 +8616,13 @@
     {
         "food_id": "40574",
         "food_name": "Dumpling with Mutton Stew (Navajo)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/dumpling-with-mutton-stew-(navajo)",
         "servings": {
             "serving": [
@@ -7426,7 +8656,13 @@
     {
         "food_id": "2433",
         "food_name": "Beef Stew with Potatoes and Vegetables (Including Carrots, Broccoli, and/or Dark-Green Leafy) in Tomato-Based Sauce",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/beef-stew-with-potatoes-and-vegetables-(including-carrots-broccoli-and-or-dark-green-leafy)-tomato-based-sauce",
         "servings": {
             "serving": [
@@ -7461,7 +8697,13 @@
     {
         "food_id": "3020",
         "food_name": "Chunky Style Chicken Vegetable Stew Type Soup with Noodles",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-vegetable-soup-with-noodles-stew-type-chunky-style",
         "servings": {
             "serving": [
@@ -7496,7 +8738,13 @@
     {
         "food_id": "2495",
         "food_name": "Lamb or Mutton Stew with Potatoes and Vegetables in Tomato-Based Sauce (Including Carrots, Broccoli, and/or Dark-Green Leafy)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/lamb-or-mutton-stew-with-potatoes-and-vegetables-(including-carrots-broccoli-and-or-dark-green-leafy)-tomato-based-sauce",
         "servings": {
             "serving": [
@@ -7531,7 +8779,13 @@
     {
         "food_id": "6151",
         "food_name": "Stewed Tomatoes (Canned)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/tomatoes-from-canned-stewed",
         "servings": {
             "serving": [
@@ -7566,7 +8820,13 @@
     {
         "food_id": "3043",
         "food_name": "Clam Chowder",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/clam-chowder",
         "servings": {
             "serving": [
@@ -7601,7 +8861,13 @@
     {
         "food_id": "3050",
         "food_name": "New England Clam Chowder",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/clam-chowder-new-england",
         "servings": {
             "serving": [
@@ -7636,7 +8902,13 @@
     {
         "food_id": "3044",
         "food_name": "Manhattan Clam Chowder",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/clam-chowder-manhattan",
         "servings": {
             "serving": [
@@ -7671,7 +8943,13 @@
     {
         "food_id": "3040",
         "food_name": "Fish Chowder",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/fish-chowder",
         "servings": {
             "serving": [
@@ -7706,7 +8984,13 @@
     {
         "food_id": "5827",
         "food_name": "Potato Chowder",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/potato-chowder",
         "servings": {
             "serving": [
@@ -7741,7 +9025,13 @@
     {
         "food_id": "35055",
         "food_name": "Chunky Chicken Mushroom Corn Chowder",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/chunky-chicken-mushroom-corn-chowder",
         "servings": {
             "serving": [
@@ -7772,7 +9062,13 @@
     {
         "food_id": "35054",
         "food_name": "Chunky Chicken Corn Chowder",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/chunky-chicken-corn-chowder",
         "servings": {
             "serving": [
@@ -7801,7 +9097,13 @@
     {
         "food_id": "35057",
         "food_name": "Potato Ham Chowder",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/potato-ham-chowder",
         "servings": {
             "serving": [
@@ -7832,7 +9134,13 @@
         "brand_name": "Trader Joe's",
         "food_id": "61490",
         "food_name": "Roasted Corn Tortilla Chowder",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/trader-joes/roasted-corn-tortilla-chowder",
         "servings": {
             "serving": [
@@ -7861,7 +9169,13 @@
         "brand_name": "San Francisco Soup Company",
         "food_id": "88284",
         "food_name": "Green Chili Chicken Chowder (Regular)",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/san-francisco-soup-company/green-chili-chicken-chowder-(regular)",
         "servings": {
             "serving": [
@@ -7891,7 +9205,13 @@
         "brand_name": "San Francisco Soup Company",
         "food_id": "88301",
         "food_name": "Southwestern Corn Chowder (Regular)",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/san-francisco-soup-company/southwestern-corn-chowder-(regular)",
         "servings": {
             "serving": [
@@ -7921,7 +9241,13 @@
         "brand_name": "Cosi",
         "food_id": "65695",
         "food_name": "New England Clam Chowder (Regular)",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/cosi/new-england-clam-chowder-(regular)",
         "servings": {
             "serving": [
@@ -7948,7 +9274,13 @@
         "brand_name": "Trader Joe's",
         "food_id": "77818",
         "food_name": "Maryland Crab & Corn Chowder",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/trader-joes/maryland-crab-and-corn-chowder",
         "servings": {
             "serving": [
@@ -7975,7 +9307,13 @@
     {
         "food_id": "35190",
         "food_name": "Turkey Breast Meat",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/turkey-breast-meat",
         "servings": {
             "serving": [
@@ -8011,7 +9349,13 @@
     {
         "food_id": "1927",
         "food_name": "Deli Turkey or Chicken Breast Meat",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/turkey-or-chicken-breast-prepackaged-or-deli-luncheon-meat",
         "servings": {
             "serving": [
@@ -8046,7 +9390,13 @@
     {
         "food_id": "34552",
         "food_name": "Turkey Meat",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/turkey-meat",
         "servings": {
             "serving": [
@@ -8082,7 +9432,13 @@
         "brand_name": "Oscar Mayer",
         "food_id": "44533",
         "food_name": "Thin Sliced Turkey Breast",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/oscar-mayer/thin-sliced-turkey-breast",
         "servings": {
             "serving": [
@@ -8111,7 +9467,13 @@
     {
         "food_id": "34553",
         "food_name": "Turkey Meat (Cooked, Roasted)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/turkey-meat-(cooked-roasted)",
         "servings": {
             "serving": [
@@ -8147,7 +9509,13 @@
         "brand_name": "Healthy Ones",
         "food_id": "67410",
         "food_name": "Deli Thin Sliced Smoked Turkey Breast",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/healthy-ones/deli-thin-sliced-smoked-turkey-breast",
         "servings": {
             "serving": [
@@ -8175,7 +9543,13 @@
     {
         "food_id": "34572",
         "food_name": "Turkey Dark Meat",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/turkey-dark-meat",
         "servings": {
             "serving": [
@@ -8210,7 +9584,13 @@
         "brand_name": "Jennie-O",
         "food_id": "55968",
         "food_name": "Lean Ground Turkey",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/jennie-o/lean-ground-turkey",
         "servings": {
             "serving": [
@@ -8240,7 +9620,13 @@
         "brand_name": "Butterball",
         "food_id": "31379",
         "food_name": "Oven Roasted White Turkey",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/butterball/oven-roasted-white-turkey",
         "servings": {
             "serving": [
@@ -8268,7 +9654,13 @@
         "brand_name": "Kroger",
         "food_id": "59811",
         "food_name": "Deli Thin Smoked Turkey Breast",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/kroger/deli-thin-smoked-turkey-breast",
         "servings": {
             "serving": [
@@ -8298,7 +9690,13 @@
         "brand_name": "Boar's Head",
         "food_id": "27345",
         "food_name": "Maple Glazed Honey Coat Turkey Breast",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/boars-head/maple-glazed-honey-coat-turkey-breast",
         "servings": {
             "serving": [
@@ -8326,7 +9724,13 @@
     {
         "food_id": "1785",
         "food_name": "Ground Turkey",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/turkey-ground",
         "servings": {
             "serving": [
@@ -8361,7 +9765,13 @@
     {
         "food_id": "34576",
         "food_name": "Turkey Breast Meat and Skin",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/turkey-breast-meat-and-skin",
         "servings": {
             "serving": [
@@ -8395,7 +9805,13 @@
     {
         "food_id": "1743",
         "food_name": "Light Turkey Meat (Skin Not Eaten)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/turkey-light-meat-cooked-skin-not-eaten",
         "servings": {
             "serving": [
@@ -8430,7 +9846,13 @@
     {
         "food_id": "34658",
         "food_name": "Turkey Leg Meat and Skin (Young Tom)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/turkey-leg-meat-and-skin-(young-tom)",
         "servings": {
             "serving": [
@@ -8465,7 +9887,13 @@
         "brand_name": "Zacky Farms",
         "food_id": "27121",
         "food_name": "Turkey Breast Cutlet",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/zacky-farms/turkey-breast-cutlet",
         "servings": {
             "serving": [
@@ -8493,7 +9921,13 @@
     {
         "food_id": "34660",
         "food_name": "Turkey Wing Meat and Skin (Young Tom)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/turkey-wing-meat-and-skin-(young-tom)",
         "servings": {
             "serving": [
@@ -8527,7 +9961,13 @@
     {
         "food_id": "2297",
         "food_name": "Meatballs with Sauce (Mixture)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/meatballs-with-sauce-(mixture)",
         "servings": {
             "serving": [
@@ -8563,7 +10003,13 @@
         "brand_name": "Rosina",
         "food_id": "82376",
         "food_name": "Italian Style Meatballs",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/rosina/italian-style-meatballs",
         "servings": {
             "serving": [
@@ -8597,7 +10043,13 @@
         "brand_name": "Great Value",
         "food_id": "95564",
         "food_name": "Homestyle Meatballs",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/great-value/homestyle-meatballs",
         "servings": {
             "serving": [
@@ -8633,7 +10085,13 @@
         "brand_name": "Subway",
         "food_id": "68267019",
         "food_name": "Meatball Pizza",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/subway/meatball-pizza",
         "servings": {
             "serving": [
@@ -8664,7 +10122,13 @@
         "brand_name": "Sheetz",
         "food_id": "68756810",
         "food_name": "Meatball Mac Platter",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/sheetz/meatball-mac-platter",
         "servings": {
             "serving": [
@@ -8695,7 +10159,13 @@
         "brand_name": "Goose's",
         "food_id": "68780",
         "food_name": "Italian Style Meatballs",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/gooses/italian-style-meatballs",
         "servings": {
             "serving": [
@@ -8724,7 +10194,13 @@
     {
         "food_id": "1405",
         "food_name": "Lean or Extra Lean Ground Beef Meatballs",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/ground-beef-meatballs-meat-only-cooked-lean-or-extra-lean",
         "servings": {
             "serving": [
@@ -8760,7 +10236,13 @@
         "brand_name": "Subway",
         "food_id": "68266807",
         "food_name": "Meatball Marinara Salad",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/subway/meatball-marinara-salad",
         "servings": {
             "serving": [
@@ -8791,7 +10273,13 @@
         "brand_name": "Just Perfect",
         "food_id": "56495",
         "food_name": "Italian Style Turkey Meatballs",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/just-perfect/italian-style-turkey-meatballs",
         "servings": {
             "serving": [
@@ -8819,7 +10307,13 @@
     {
         "food_id": "1859",
         "food_name": "Bologna",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/bologna",
         "servings": {
             "serving": [
@@ -8855,7 +10349,13 @@
         "brand_name": "Oscar Mayer",
         "food_id": "70588",
         "food_name": "Thick Cut Beef Bologna",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/oscar-mayer/thick-cut-beef-bologna",
         "servings": {
             "serving": [
@@ -8886,7 +10386,13 @@
         "brand_name": "Bar-S Foods",
         "food_id": "524963",
         "food_name": "Classic Bologna",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bar-s-foods/classic-bologna",
         "servings": {
             "serving": [
@@ -8916,7 +10422,13 @@
         "brand_name": "Boar's Head",
         "food_id": "76407",
         "food_name": "Beef Bologna",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/boars-head/beef-bologna",
         "servings": {
             "serving": [
@@ -8947,7 +10459,13 @@
         "brand_name": "Oscar Mayer",
         "food_id": "527449",
         "food_name": "Beef Bologna Cold Cuts",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/oscar-mayer/beef-bologna-cold-cuts",
         "servings": {
             "serving": [
@@ -8976,7 +10494,13 @@
         "brand_name": "Bar-S Foods",
         "food_id": "122264",
         "food_name": "Thick Sliced Bologna",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bar-s-foods/thick-sliced-bologna",
         "servings": {
             "serving": [
@@ -9009,7 +10533,13 @@
         "brand_name": "Gwaltney",
         "food_id": "92203",
         "food_name": "Great Chicken Bolony",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/gwaltney/great-chicken-bolony",
         "servings": {
             "serving": [
@@ -9042,7 +10572,13 @@
         "brand_name": "Oscar Mayer",
         "food_id": "8116824",
         "food_name": "Thick Cut Bologna",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/oscar-mayer/thick-cut-bologna",
         "servings": {
             "serving": [
@@ -9072,7 +10608,13 @@
         "brand_name": "Wunderbar",
         "food_id": "49726",
         "food_name": "Deli Sliced Bologna",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/wunderbar/deli-sliced-bologna",
         "servings": {
             "serving": [
@@ -9100,7 +10642,13 @@
     {
         "food_id": "40607",
         "food_name": "Beef Bologna (Low Fat)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/beef-bologna-(low-fat)",
         "servings": {
             "serving": [
@@ -9136,7 +10684,13 @@
         "brand_name": "Oscar Mayer",
         "food_id": "510743",
         "food_name": "Thin Sliced Bologna",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/oscar-mayer/thin-sliced-bologna",
         "servings": {
             "serving": [
@@ -9166,7 +10720,13 @@
         "brand_name": "Fischer's",
         "food_id": "528474",
         "food_name": "Regular Sliced Bologna made with Turkey, Chicken & Pork",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/fischers/regular-sliced-bologna-made-with-turkey-chicken-and-pork",
         "servings": {
             "serving": [
@@ -9195,7 +10755,13 @@
         "brand_name": "Boar's Head",
         "food_id": "240385",
         "food_name": "28% Lower Sodium Bologna",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/boars-head/28%25-lower-sodium-bologna",
         "servings": {
             "serving": [
@@ -9232,7 +10798,13 @@
         "brand_name": "Bar-S Foods",
         "food_id": "528377",
         "food_name": "Turkey Bologna",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/bar-s-foods/turkey-bologna",
         "servings": {
             "serving": [
@@ -9260,7 +10832,13 @@
         "brand_name": "Klement's",
         "food_id": "2065786",
         "food_name": "Ring Bologna",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/klements/ring-bologna",
         "servings": {
             "serving": [
@@ -9289,7 +10867,13 @@
         "brand_name": "Oscar Mayer",
         "food_id": "97333",
         "food_name": "Thick Cut Chicken & Pork Bologna",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/oscar-mayer/thick-cut-chicken-and-pork-bologna",
         "servings": {
             "serving": [
@@ -9318,7 +10902,13 @@
     {
         "food_id": "1876",
         "food_name": "Pepperoni",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/pepperoni",
         "servings": {
             "serving": [
@@ -9354,7 +10944,13 @@
         "brand_name": "Kroger",
         "food_id": "1686566",
         "food_name": "Deli Thin Sliced Pepperoni",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/kroger/deli-thin-sliced-pepperoni",
         "servings": {
             "serving": [
@@ -9384,7 +10980,13 @@
         "brand_name": "Boar's Head",
         "food_id": "404492",
         "food_name": "Sandwich Style Pepperoni",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/boars-head/sandwich-style-pepperoni",
         "servings": {
             "serving": [
@@ -9417,7 +11019,13 @@
         "brand_name": "Applegate Farms",
         "food_id": "61467",
         "food_name": "Pepperoni Stick",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/applegate-farms/pepperoni-stick",
         "servings": {
             "serving": [
@@ -9447,7 +11055,13 @@
         "brand_name": "Hormel",
         "food_id": "25789",
         "food_name": "Turkey Pepperoni 70% Less Fat",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/hormel/turkey-pepperoni-70%25-less-fat",
         "servings": {
             "serving": [
@@ -9482,7 +11096,13 @@
         "brand_name": "Margherita",
         "food_id": "2765495",
         "food_name": "Italian Style Pepperoni",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/margherita/italian-style-pepperoni",
         "servings": {
             "serving": [
@@ -9512,7 +11132,13 @@
         "brand_name": "Hormel",
         "food_id": "527409",
         "food_name": "Pepperoni Minis",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/hormel/pepperoni-minis",
         "servings": {
             "serving": [
@@ -9541,7 +11167,13 @@
         "brand_name": "Hormel",
         "food_id": "101808",
         "food_name": "Sandwich Style Uncured Pepperoni",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/hormel/sandwich-style-uncured-pepperoni",
         "servings": {
             "serving": [
@@ -9570,7 +11202,13 @@
         "brand_name": "Kretschmar",
         "food_id": "64606",
         "food_name": "Deli Pepperoni Slices",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/kretschmar/deli-pepperoni-slices",
         "servings": {
             "serving": [
@@ -9598,7 +11236,13 @@
         "brand_name": "Jack Link's",
         "food_id": "158785",
         "food_name": "Deli Cuts Sausage Bites Pepperoni",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/jack-links/deli-cuts-sausage-bites-pepperoni",
         "servings": {
             "serving": [
@@ -9627,7 +11271,13 @@
     {
         "food_id": "1646",
         "food_name": "Roasted Broiled or Baked Chicken Breast (Skin Not Eaten)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-breast-roasted-broiled-or-baked-skin-not-eaten",
         "servings": {
             "serving": [
@@ -9662,7 +11312,13 @@
     {
         "food_id": "34498",
         "food_name": "Chicken Meat (Roasting)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/chicken-meat-(roasting)",
         "servings": {
             "serving": [
@@ -9697,7 +11353,13 @@
     {
         "food_id": "1645",
         "food_name": "Roasted Broiled or Baked Chicken Breast (Skin Eaten)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-breast-roasted-broiled-or-baked-skin-eaten",
         "servings": {
             "serving": [
@@ -9732,7 +11394,13 @@
     {
         "food_id": "1663",
         "food_name": "Roasted Broiled or Baked Chicken Leg (Skin Eaten)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-leg-(drumstick-and-thigh)-roasted-broiled-or-baked-skin-eaten",
         "servings": {
             "serving": [
@@ -9768,7 +11436,13 @@
         "brand_name": "Oscar Mayer",
         "food_id": "80365",
         "food_name": "Deli Fresh Oven Roasted Chicken Breast Cuts",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/oscar-mayer/deli-fresh-oven-roasted-chicken-breast-cuts",
         "servings": {
             "serving": [
@@ -9798,7 +11472,13 @@
         "brand_name": "Land O' Frost",
         "food_id": "52376",
         "food_name": "Oven Roasted Chicken Breast",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/land-o-frost/oven-roasted-chicken-breast",
         "servings": {
             "serving": [
@@ -9826,7 +11506,13 @@
     {
         "food_id": "34422",
         "food_name": "Chicken Dark Meat and Skin (Broilers or Fryers, Roasted, Cooked)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/chicken-dark-meat-and-skin-(broilers-or-fryers-roasted-cooked)",
         "servings": {
             "serving": [
@@ -9860,7 +11546,13 @@
     {
         "food_id": "419178",
         "food_name": "Rotisserie Chicken",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-rotisserie-ns-as-to-skin-eaten",
         "servings": {
             "serving": [
@@ -9896,7 +11588,13 @@
         "brand_name": "Oscar Mayer",
         "food_id": "52276",
         "food_name": "Oven Roasted Chicken Breast Sandwich Meat",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/oscar-mayer/oven-roasted-chicken-breast-sandwich-meat",
         "servings": {
             "serving": [
@@ -9923,7 +11621,13 @@
     {
         "food_id": "34501",
         "food_name": "Chicken Giblets (Roasting, Simmered, Cooked)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/chicken-giblets-(roasting-simmered-cooked)",
         "servings": {
             "serving": [
@@ -9957,7 +11661,13 @@
     {
         "food_id": "34398",
         "food_name": "Chicken Meat (Broilers or Fryers, Roasted)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/chicken-meat-(broilers-or-fryers-roasted)",
         "servings": {
             "serving": [
@@ -9992,7 +11702,13 @@
     {
         "food_id": "34496",
         "food_name": "Chicken Meat and Skin (Roasting)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/chicken-meat-and-skin-(roasting)",
         "servings": {
             "serving": [
@@ -10028,7 +11744,13 @@
         "brand_name": "Shaw's",
         "food_id": "80488",
         "food_name": "Traditional Whole Roasted Chicken",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/shaws/traditional-whole-roasted-chicken",
         "servings": {
             "serving": [
@@ -10057,7 +11779,13 @@
     {
         "food_id": "1681",
         "food_name": "Roasted Broiled or Baked Chicken Drumstick (Skin Eaten)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-drumstick-roasted-broiled-or-baked-skin-eaten",
         "servings": {
             "serving": [
@@ -10092,7 +11820,13 @@
     {
         "food_id": "1700",
         "food_name": "Roasted Broiled or Baked Chicken Thigh (Skin Not Eaten)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-thigh-roasted-broiled-or-baked-skin-not-eaten",
         "servings": {
             "serving": [
@@ -10127,7 +11861,13 @@
     {
         "food_id": "1517",
         "food_name": "Bacon",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/bacon-cooked",
         "servings": {
             "serving": [
@@ -10163,7 +11903,13 @@
         "brand_name": "America's Choice",
         "food_id": "71486",
         "food_name": "Bacon Thick Sliced",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/americas-choice/bacon-thick-sliced",
         "servings": {
             "serving": [
@@ -10193,7 +11939,13 @@
         "brand_name": "Oscar Mayer",
         "food_id": "25711",
         "food_name": "Traditional Bacon",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/oscar-mayer/traditional-bacon",
         "servings": {
             "serving": [
@@ -10223,7 +11975,13 @@
         "brand_name": "Kroger",
         "food_id": "92382",
         "food_name": "Fully Cooked Bacon",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/kroger/fully-cooked-bacon",
         "servings": {
             "serving": [
@@ -10255,7 +12013,13 @@
     {
         "food_id": "36234",
         "food_name": "Bacon (Cured, Pan-Fried, Cooked)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/bacon-(cured-pan-fried-cooked)",
         "servings": {
             "serving": [
@@ -10292,7 +12056,13 @@
         "brand_name": "Smithfield",
         "food_id": "3595285",
         "food_name": "Thick Cut Bacon",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/smithfield/thick-cut-bacon",
         "servings": {
             "serving": [
@@ -10322,7 +12092,13 @@
         "brand_name": "Kirkland Signature",
         "food_id": "317669",
         "food_name": "Fully Cooked Bacon",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/kirkland-signature/fully-cooked-bacon",
         "servings": {
             "serving": [
@@ -10351,7 +12127,13 @@
         "brand_name": "Hormel",
         "food_id": "44799",
         "food_name": "Black Label Bacon Thick Slices",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/hormel/black-label-bacon-thick-slices",
         "servings": {
             "serving": [
@@ -10381,7 +12163,13 @@
         "brand_name": "Smithfield",
         "food_id": "675330",
         "food_name": "Naturally Hickory Smoked Bacon",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/smithfield/naturally-hickory-smoked-bacon",
         "servings": {
             "serving": [
@@ -10411,7 +12199,13 @@
         "brand_name": "Great Value",
         "food_id": "3232799",
         "food_name": "Fully Cooked Hickory Smoked Bacon",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/great-value/fully-cooked-hickory-smoked-bacon",
         "servings": {
             "serving": [
@@ -10446,7 +12240,13 @@
         "brand_name": "Wright Brand",
         "food_id": "101841",
         "food_name": "Naturally Applewood Smoked Sliced Bacon",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/wright-brand/naturally-applewood-smoked-sliced-bacon",
         "servings": {
             "serving": [
@@ -10477,7 +12277,13 @@
         "brand_name": "Hormel",
         "food_id": "3073530",
         "food_name": "Black Label Fully Cooked Bacon",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/hormel/black-label-fully-cooked-bacon",
         "servings": {
             "serving": [
@@ -10507,7 +12313,13 @@
         "brand_name": "Hormel",
         "food_id": "2573501",
         "food_name": "Original Uncured Bacon",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/hormel/original-uncured-bacon",
         "servings": {
             "serving": [
@@ -10536,7 +12348,13 @@
         "brand_name": "Farmland Foods",
         "food_id": "177795",
         "food_name": "Thick Sliced Bacon",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/farmland-foods/thick-sliced-bacon",
         "servings": {
             "serving": [
@@ -10565,7 +12383,13 @@
         "brand_name": "Oscar Mayer",
         "food_id": "4953255",
         "food_name": "Fully Cooked Bacon",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/oscar-mayer/fully-cooked-bacon",
         "servings": {
             "serving": [
@@ -10594,7 +12418,13 @@
         "brand_name": "Wright Brand",
         "food_id": "1672638",
         "food_name": "Natural Hickory Smoked Bacon",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/wright-brand/natural-hickory-smoked-bacon",
         "servings": {
             "serving": [
@@ -10623,7 +12453,13 @@
         "brand_name": "Fresh & Easy",
         "food_id": "63145",
         "food_name": "Beef Chili with Beans",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/fresh-and-easy/beef-chili-with-beans",
         "servings": {
             "serving": [
@@ -10653,7 +12489,13 @@
         "brand_name": "Runza",
         "food_id": "783054",
         "food_name": "Homemade Chili (Bowl)",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/runza/homemade-chili-(bowl)",
         "servings": {
             "serving": [
@@ -10681,7 +12523,13 @@
     {
         "food_id": "2193",
         "food_name": "Chili Con Carne with Beans",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chili-con-carne-with-beans",
         "servings": {
             "serving": [
@@ -10716,7 +12564,13 @@
     {
         "food_id": "2196",
         "food_name": "Chili Con Carne with Beans and Cheese",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chili-con-carne-with-beans-and-cheese",
         "servings": {
             "serving": [
@@ -10752,7 +12606,13 @@
         "brand_name": "Nalley",
         "food_id": "60469",
         "food_name": "Hot Chili Con Carne with Beans",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/nalley/hot-chili-con-carne-with-beans",
         "servings": {
             "serving": [
@@ -10781,7 +12641,13 @@
     {
         "food_id": "35001",
         "food_name": "Chicken Stock",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/chicken-stock",
         "servings": {
             "serving": [
@@ -10814,7 +12680,13 @@
     {
         "food_id": "3002",
         "food_name": "Chicken Broth (Home Recipe)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-broth-without-tomato-home-recipe",
         "servings": {
             "serving": [
@@ -10849,7 +12721,13 @@
     {
         "food_id": "2975",
         "food_name": "Beef Broth (Home Recipe)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/beef-broth-without-tomato-home-recipe",
         "servings": {
             "serving": [
@@ -10884,7 +12762,13 @@
     {
         "food_id": "3001",
         "food_name": "Chicken Broth, Bouillon or Consomme",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-broth-bouillon-or-consomme",
         "servings": {
             "serving": [
@@ -10920,7 +12804,13 @@
         "brand_name": "Health Valley",
         "food_id": "47477",
         "food_name": "Fat Free Vegetable Broth",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/health-valley/fat-free-vegetable-broth",
         "servings": {
             "serving": [
@@ -10950,7 +12840,13 @@
         "brand_name": "Pacific Natural Foods",
         "food_id": "52746",
         "food_name": "Organic Vegetable Broth",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/pacific-natural-foods/organic-vegetable-broth",
         "servings": {
             "serving": [
@@ -10978,7 +12874,13 @@
     {
         "food_id": "34996",
         "food_name": "Beef Stock",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/beef-stock",
         "servings": {
             "serving": [
@@ -11013,7 +12915,13 @@
     {
         "food_id": "35000",
         "food_name": "Chicken Broth or Bouillon Soup (with Equal Volume Water, Dehydrated)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/chicken-broth-or-bouillon-soup-(with-equal-volume-water-dehydrated)",
         "servings": {
             "serving": [
@@ -11049,7 +12957,13 @@
         "brand_name": "College Inn",
         "food_id": "148833",
         "food_name": "Beef Broth",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/college-inn/beef-broth",
         "servings": {
             "serving": [
@@ -11079,7 +12993,13 @@
         "brand_name": "Streit's",
         "food_id": "251173",
         "food_name": "Chicken Consomme",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/streits/chicken-consomme",
         "servings": {
             "serving": [
@@ -11108,7 +13028,13 @@
         "brand_name": "Full Circle",
         "food_id": "1661620",
         "food_name": "Fat Free Chicken Broth",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/full-circle/fat-free-chicken-broth",
         "servings": {
             "serving": [
@@ -11138,7 +13064,13 @@
         "brand_name": "Great Value",
         "food_id": "2815953",
         "food_name": "Fat Free Less Sodium Chicken Broth",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/great-value/fat-free-less-sodium-chicken-broth",
         "servings": {
             "serving": [
@@ -11169,7 +13101,13 @@
         "brand_name": "Herb-Ox",
         "food_id": "1248565",
         "food_name": "Vegetable Bouillon",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/herb-ox/vegetable-bouillon",
         "servings": {
             "serving": [
@@ -11198,7 +13136,13 @@
     {
         "food_id": "34962",
         "food_name": "Chicken Stock (Canned)",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/usda/chicken-stock-(canned)",
         "servings": {
             "serving": [
@@ -11233,7 +13177,13 @@
     {
         "food_id": "6030",
         "food_name": "Watercress Broth with Shrimp",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/watercress-broth-with-shrimp",
         "servings": {
             "serving": [
@@ -11269,7 +13219,13 @@
         "brand_name": "Trader Joe's",
         "food_id": "48932",
         "food_name": "Organic Vegetable Broth",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/trader-joes/organic-vegetable-broth",
         "servings": {
             "serving": [
@@ -11299,7 +13255,13 @@
         "brand_name": "Swanson",
         "food_id": "251176",
         "food_name": "99% Fat Free Beef Broth",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/swanson/99%25-fat-free-beef-broth",
         "servings": {
             "serving": [
@@ -11326,7 +13288,13 @@
     {
         "food_id": "3342",
         "food_name": "Dry Vegetarian Bouillon",
-        "food_type": "Generic",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/generic/vegetarian-bouillon-dry",
         "servings": {
             "serving": [
@@ -11362,7 +13330,13 @@
         "brand_name": "Kroger",
         "food_id": "102292",
         "food_name": "Beef Broth",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/kroger/beef-broth",
         "servings": {
             "serving": [
@@ -11393,7 +13367,13 @@
         "brand_name": "Swanson",
         "food_id": "83211",
         "food_name": "Organic Vegetable Broth",
-        "food_type": "Brand",
+        "food_type": [
+            "Generic",
+            "dry",
+            "Meat",
+            "Rendang",
+            "Beef"
+        ],
         "food_url": "https://www.fatsecret.com/calories-nutrition/swanson/organic-vegetable-broth",
         "servings": {
             "serving": [
