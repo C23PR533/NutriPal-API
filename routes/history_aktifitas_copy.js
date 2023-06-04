@@ -9,31 +9,29 @@ const historyPath = path.join(__dirname, "data", "history_aktifitas.json");
 
 router.use(express.urlencoded({ extended: true }));
 
-router.get("/", async (req, res) => {
-  // const history = loadHistory();
-  // res.json(history);
-  try {
-    const histoactdb = db.collection("historyActivity");
-    const response = await histoactdb.get();
-    let responseArr = [];
-    response.forEach((doc) => {
-      responseArr.push(doc.data());
-    });
-    res.status(200).json({
-      code: 200,
-      error: false,
-      message: "Data berhasil didapatkan",
-      listHistoryActivity: responseArr,
-    });
-  } catch (error) {
-    console.log(error);
-    res.status(400).json({
-      code: 400,
-      error: true,
-      message: error.message,
-    });
-  }
-});
+// router.get("/", async (req, res) => {
+//   try {
+//     const histoactdb = db.collection("historyActivity");
+//     const response = await histoactdb.get();
+//     let responseArr = [];
+//     response.forEach((doc) => {
+//       responseArr.push(doc.data());
+//     });
+//     res.status(200).json({
+//       code: 200,
+//       error: false,
+//       message: "Data berhasil didapatkan",
+//       listHistoryActivity: responseArr,
+//     });
+//   } catch (error) {
+//     console.log(error);
+//     res.status(400).json({
+//       code: 400,
+//       error: true,
+//       message: error.message,
+//     });
+//   }
+// });
 
 router.get("/:id", async (req, res) => {
   try {
@@ -62,7 +60,6 @@ router.get("/:id", async (req, res) => {
           total_kalori: history[0].total_kalori,
           "Sisa Kalori": history[0]["Sisa Kalori"],
           aktifitas: {
-            kalori_keluar: history[0].aktifitas.kalori_keluar,
             kalori_masuk: history[0].aktifitas.kalori_masuk,
           },
         };
@@ -97,9 +94,6 @@ router.post("/", async (req, res) => {
       nama_makanan,
       kalori,
       tanggal,
-      nama_exercise,
-      duration,
-      kalori_terbakar,
       sisa_kalori,
     } = req.body;
 
@@ -109,19 +103,13 @@ router.post("/", async (req, res) => {
       kalori: kalori,
     };
 
-    const newExercise = {
-      nama_exercise: nama_exercise,
-      duration: duration,
-      kalori_terbakar: kalori_terbakar,
-    };
 
     const newAktivitas = {
       tanggal: tanggal,
       kalori_harian: kalori_harian,
-      total_kalori: parseInt(kalori_harian) + parseInt(kalori_terbakar) - parseInt(kalori),
+      total_kalori: parseInt(kalori_harian) +  parseInt(kalori),
       "Sisa Kalori": sisa_kalori,
       aktifitas: {
-        kalori_keluar: [newExercise],
         kalori_masuk: [newMakanan],
       },
     };
@@ -154,10 +142,9 @@ router.post("/", async (req, res) => {
         if (historyData[id_user][tanggal]) {
           const existingAktivitas = historyData[id_user][tanggal][0];
           existingAktivitas.aktifitas.kalori_masuk.push(newMakanan);
-          existingAktivitas.aktifitas.kalori_keluar.push(newExercise);
           existingAktivitas.kalori_harian = kalori_harian;
           existingAktivitas.total_kalori =
-            parseInt(kalori_harian) + parseInt(kalori_terbakar) - parseInt(kalori);
+            parseInt(kalori_harian) + parseInt(kalori);
           existingAktivitas["Sisa Kalori"] = sisa_kalori;
           await db.collection("historyActivity").doc(id_user).set(historyData);
         } else {
@@ -191,7 +178,6 @@ router.post("/", async (req, res) => {
         total_kalori: history[0].total_kalori,
         "Sisa Kalori": history[0]["Sisa Kalori"],
         aktifitas: {
-          kalori_keluar: history[0].aktifitas.kalori_keluar,
           kalori_masuk: history[0].aktifitas.kalori_masuk,
         },
       };
