@@ -90,7 +90,9 @@ router.get("/search/:foodName", async (req, res) => {
   const param = convertToCamelCase(req.params.foodName);
   param.toLowerCase();
   const foodsRef = db.collection("foods");
-  const query = foodsRef.where("food_name", ">=", param).where("food_name", "<=", param + "\uf8ff");
+  const query = foodsRef
+    .where("food_name", ">=", param)
+    .where("food_name", "<=", param + "\uf8ff");
   query
     .get()
     .then((snapshot) => {
