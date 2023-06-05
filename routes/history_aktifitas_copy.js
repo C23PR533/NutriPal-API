@@ -84,6 +84,137 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// get data by id
+
+router.get("/:id", async (req, res) => {
+  try {
+    const idCari = req.params.id;
+    const response = await db.collection("historyActivity").doc(req.params.id).get();
+    const histoactdb = db.collection("historyActivity").doc(req.params.id);
+    const data = response.data();
+    const cek = await histoactdb.get(histoactdb);
+    const historyActivity = {
+      id_user: req.params.id,
+      History: [],
+    };
+    if (!cek.exists) {
+      return res.status(404).json({
+        code: 404,
+        error: true,
+        message: `Data History Activity dengan id ${idCari} tidak ditemukan`,
+      });
+    }
+
+    const historyArr = Object.values(data[req.params.id]);
+      historyArr.forEach((history) => {
+        const historyItem = {
+          tanggal: history[0].tanggal,
+          kalori_harian: history[0].kalori_harian,
+          total_kalori: history[0].total_kalori,
+          "Sisa Kalori": history[0]["Sisa Kalori"],
+          aktifitas: {
+            kalori_masuk: history[0].aktifitas.kalori_masuk,
+          },
+        };
+        historyActivity.History.push(historyItem);
+      });
+    // const histoactdb = db.collection("historyActivity").doc(req.params.id).get();
+    // const response = await histoactdb.get(histoactdb);
+
+    res.status(200).json({
+      code: 200,
+      error: false,
+      message: `Data History Activity dengan id ${idCari} di temukan`,
+      listHistoryActivity: historyActivity,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({
+      code: 400,
+      error: true,
+      message: error.message,
+    });
+  }
+});
+
+// get data by id and tanggal 
+router.get("/:id/:tanggal", async (req, res) => {
+  try {
+    const idCari = req.params.id;
+    const tanggalCari = req.params.tanggal;
+
+    const response = await db
+      .collection("historyActivity")
+      .doc(req.params.id)
+      .get();
+
+    const data = response.data();
+
+    if (!data) {
+      return res.status(404).json({
+        code: 404,
+        error: true,
+        message: `Data History Activity dengan id ${idCari} tidak ditemukan`,
+      });
+    }
+
+    const historyArr = Object.values(data[req.params.id]);
+    const foundHistory = historyArr.find(
+      (history) => history[0].tanggal === tanggalCari
+    );
+
+    if (!foundHistory) {
+      return res.status(404).json({
+        code: 404,
+        error: true,
+        message: `Data History Activity dengan id ${idCari} dan tanggal ${tanggalCari} tidak ditemukan`,
+      });
+    }
+
+    const historyActivity = {
+      id_user: idCari,
+      History: [
+        {
+          tanggal: foundHistory["0"].tanggal,
+          kalori_harian: foundHistory.kalori_harian,
+          total_kalori: foundHistory.total_kalori,
+          sisa_kalori: foundHistory["0"]["Sisa Kalori"],
+          aktifitas: {
+            kalori_masuk: foundHistory["0"].aktifitas.kalori_masuk,
+          },
+        },
+      ],
+    };
+
+    for (let i = 0; i < 9; i++) {
+      const makanan = foundHistory[i];
+
+      if (makanan) {
+        const makananObj = {
+          id_makanan: makanan.id_makanan,
+          nama_makanan: makanan.nama_makanan,
+          waktu: makanan.waktu,
+          kalori: makanan.kalori,
+        };  
+      }
+    }
+
+    res.status(200).json({
+      code: 200,
+      error: false,
+      message: `Data History Activity dengan id ${idCari} dan tanggal ${tanggalCari} ditemukan`,
+      listHistoryActivity: historyActivity,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({
+      code: 400,
+      error: true,
+      message: error.message,
+    });
+  }
+});
+
 router.post("/", async (req, res) => {
   const idHistoAct = req.body.id_user;
   try {
