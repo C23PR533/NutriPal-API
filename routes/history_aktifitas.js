@@ -58,7 +58,7 @@ router.get("/:id", async (req, res) => {
           tanggal: history[0].tanggal,
           kalori_harian: history[0].kalori_harian,
           total_kalori: history[0].total_kalori,
-          "Sisa Kalori": history[0]["Sisa Kalori"],
+          sisa_kalori: history[0]["Sisa Kalori"],
           aktifitas: {
             kalori_masuk: history[0].aktifitas.kalori_masuk,
           },
@@ -94,6 +94,7 @@ router.post("/", async (req, res) => {
       nama_makanan,
       kalori,
       tanggal,
+      waktu,
       sisa_kalori,
     } = req.body;
 
@@ -101,13 +102,15 @@ router.post("/", async (req, res) => {
       id_makanan: id_makanan,
       nama_makanan: nama_makanan,
       kalori: kalori,
+      waktu: waktu,
     };
 
 
     const newAktivitas = {
       tanggal: tanggal,
+      waktu: waktu,
       kalori_harian: kalori_harian,
-      total_kalori: parseInt(kalori_harian) +  parseInt(kalori),
+      total_kalori: parseInt(kalori_harian) + parseInt(kalori),
       "Sisa Kalori": sisa_kalori,
       aktifitas: {
         kalori_masuk: [newMakanan],
@@ -121,6 +124,7 @@ router.post("/", async (req, res) => {
       "nama_makanan",
       "kalori",
       "tanggal",
+      "waktu",
       "sisa_kalori",
     ];
 
