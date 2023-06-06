@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const fetch = require("node-fetch");
 const { Firestore } = require("@google-cloud/firestore");
 const fs = require("fs");
 const db = new Firestore();
@@ -86,6 +87,40 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// router.get("/search/:foodName", async (req, res) => {
+//   const param = convertToCamelCase(req.params.foodName);
+//   param.toLowerCase();
+//   const foodsRef = db.collection("foods");
+//   const query = foodsRef
+//     .where("food_name", ">=", param)
+//     .where("food_name", "<=", param + "\uf8ff");
+//   query
+//     .get()
+//     .then((snapshot) => {
+//       if (snapshot.empty) {
+//         res.status(404).json({
+//           error: true,
+//           message: `Data Makanan dengan nama ${param} tidak ditemukan`,
+//         });
+//         return;
+//       }
+//       const makanan = [];
+//       snapshot.forEach((doc) => {
+//         const id = doc.id;
+//         const data = doc.data();
+//         makanan.push({ id, ...data });
+//       });
+//       res.status(200).json({
+//         code: 200,
+//         message: "Data berhasil didapatkan",
+//         data: makanan,
+//       });
+//     })
+//     .catch((error) => {
+//       console.log("Error getting documents:", error);
+//     });
+// });
+
 router.get("/search/:foodName", async (req, res) => {
   const param = convertToCamelCase(req.params.foodName);
   param.toLowerCase();
@@ -118,6 +153,22 @@ router.get("/search/:foodName", async (req, res) => {
     .catch((error) => {
       console.log("Error getting documents:", error);
     });
+});
+
+router.get("/get-json-data/search", async (req, res) => {
+  try {
+    const response = await fetch(
+      "https://c23pr533.github.io/dataFood/foods.json"
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch JSON data");
+    }
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    console.error("Error fetching JSON data:", error);
+    res.status(500).json({ error: "Failed to fetch JSON data" });
+  }
 });
 
 router.put("/:id", async (req, res) => {
