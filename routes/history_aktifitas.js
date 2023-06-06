@@ -1,37 +1,11 @@
 const express = require("express");
-const fs = require("fs");
-const path = require("path");
 const router = express.Router();
 const { Firestore } = require("@google-cloud/firestore");
 const db = new Firestore();
 
-const historyPath = path.join(__dirname, "data", "history_aktifitas.json");
 
 router.use(express.urlencoded({ extended: true }));
 
-// router.get("/", async (req, res) => {
-//   try {
-//     const histoactdb = db.collection("historyActivity");
-//     const response = await histoactdb.get();
-//     let responseArr = [];
-//     response.forEach((doc) => {
-//       responseArr.push(doc.data());
-//     });
-//     res.status(200).json({
-//       code: 200,
-//       error: false,
-//       message: "Data berhasil didapatkan",
-//       listHistoryActivity: responseArr,
-//     });
-//   } catch (error) {
-//     console.log(error);
-//     res.status(400).json({
-//       code: 400,
-//       error: true,
-//       message: error.message,
-//     });
-//   }
-// });
 
 router.get("/:id", async (req, res) => {
   try {
@@ -53,18 +27,18 @@ router.get("/:id", async (req, res) => {
     }
 
     const historyArr = Object.values(data[req.params.id]);
-      historyArr.forEach((history) => {
-        const historyItem = {
-          tanggal: history[0].tanggal,
-          kalori_harian: history[0].kalori_harian,
-          total_kalori: history[0].total_kalori,
-          "Sisa Kalori": history[0]["Sisa Kalori"],
-          aktifitas: {
-            kalori_masuk: history[0].aktifitas.kalori_masuk,
-          },
-        };
-        historyActivity.History.push(historyItem);
-      });
+    historyArr.forEach((history) => {
+      const historyItem = {
+        tanggal: history[0].tanggal,
+        kalori_harian: history[0].kalori_harian,
+        total_kalori: history[0].total_kalori,
+        "Sisa Kalori": history[0]["Sisa Kalori"],
+        aktifitas: {
+          kalori_masuk: history[0].aktifitas.kalori_masuk,
+        },
+      };
+      historyActivity.History.push(historyItem);
+    });
     // const histoactdb = db.collection("historyActivity").doc(req.params.id).get();
     // const response = await histoactdb.get(histoactdb);
 
@@ -106,18 +80,18 @@ router.get("/:id", async (req, res) => {
     }
 
     const historyArr = Object.values(data[req.params.id]);
-      historyArr.forEach((history) => {
-        const historyItem = {
-          tanggal: history[0].tanggal,
-          kalori_harian: history[0].kalori_harian,
-          total_kalori: history[0].total_kalori,
-          "Sisa Kalori": history[0]["Sisa Kalori"],
-          aktifitas: {
-            kalori_masuk: history[0].aktifitas.kalori_masuk,
-          },
-        };
-        historyActivity.History.push(historyItem);
-      });
+    historyArr.forEach((history) => {
+      const historyItem = {
+        tanggal: history[0].tanggal,
+        kalori_harian: history[0].kalori_harian,
+        total_kalori: history[0].total_kalori,
+        "Sisa Kalori": history[0]["Sisa Kalori"],
+        aktifitas: {
+          kalori_masuk: history[0].aktifitas.kalori_masuk,
+        },
+      };
+      historyActivity.History.push(historyItem);
+    });
     // const histoactdb = db.collection("historyActivity").doc(req.params.id).get();
     // const response = await histoactdb.get(histoactdb);
 
@@ -195,7 +169,7 @@ router.get("/:id/:tanggal", async (req, res) => {
           nama_makanan: makanan.nama_makanan,
           waktu: makanan.waktu,
           kalori: makanan.kalori,
-        };  
+        };
       }
     }
 
@@ -225,6 +199,7 @@ router.post("/", async (req, res) => {
       nama_makanan,
       kalori,
       tanggal,
+      waktu,
       sisa_kalori,
     } = req.body;
 
@@ -232,14 +207,14 @@ router.post("/", async (req, res) => {
       id_makanan: id_makanan,
       nama_makanan: nama_makanan,
       kalori: kalori,
+      waktu: waktu,
     };
-
 
     const newAktivitas = {
       tanggal: tanggal,
       kalori_harian: kalori_harian,
-      total_kalori: parseInt(kalori_harian) +  parseInt(kalori),
-      "Sisa Kalori": sisa_kalori,
+      total_kalori: parseInt(kalori),
+      "Sisa Kalori": parseInt(kalori_harian) - parseInt(kalori),
       aktifitas: {
         kalori_masuk: [newMakanan],
       },
@@ -251,8 +226,8 @@ router.post("/", async (req, res) => {
       "id_makanan",
       "nama_makanan",
       "kalori",
+      "waktu",
       "tanggal",
-      "sisa_kalori",
     ];
 
     for (const field of requiredFields) {
@@ -274,9 +249,8 @@ router.post("/", async (req, res) => {
           const existingAktivitas = historyData[id_user][tanggal][0];
           existingAktivitas.aktifitas.kalori_masuk.push(newMakanan);
           existingAktivitas.kalori_harian = kalori_harian;
-          existingAktivitas.total_kalori =
-            parseInt(kalori_harian) + parseInt(kalori);
-          existingAktivitas["Sisa Kalori"] = sisa_kalori;
+          existingAktivitas.total_kalori += parseInt(kalori);
+          existingAktivitas["Sisa Kalori"] = parseInt(kalori_harian) - existingAktivitas.total_kalori;
           await db.collection("historyActivity").doc(id_user).set(historyData);
         } else {
           historyData[id_user][tanggal] = [newAktivitas];
@@ -319,6 +293,7 @@ router.post("/", async (req, res) => {
       code: 200,
       error: false,
       message: `Data History Activity dengan id ${idHistoAct} berhasil ditambahkan`,
+      history: historyActivity,
     });
   } catch (error) {
     console.log(error);
@@ -456,10 +431,5 @@ router.delete("/:id", async (req, res) => {
     });
   }
 });
-
-// function saveHistory(dataHistory) {
-//   const data = JSON.stringify(dataHistory, null, 2);
-//   fs.writeFileSync(historyPath, data, 'utf8');
-// }
 
 module.exports = router;
