@@ -32,7 +32,7 @@ router.get("/:id", async (req, res) => {
         tanggal: history[0].tanggal,
         kalori_harian: history[0].kalori_harian,
         total_kalori: history[0].total_kalori,
-        "Sisa Kalori": history[0]["Sisa Kalori"],
+        "sisa_kalori": history[0]["sisa_kalori"],
         aktifitas: {
           kalori_masuk: history[0].aktifitas.kalori_masuk,
         },
@@ -85,7 +85,7 @@ router.get("/:id", async (req, res) => {
         tanggal: history[0].tanggal,
         kalori_harian: history[0].kalori_harian,
         total_kalori: history[0].total_kalori,
-        "Sisa Kalori": history[0]["Sisa Kalori"],
+        "sisa_kalori": history[0]["sisa_kalori"],
         aktifitas: {
           kalori_masuk: history[0].aktifitas.kalori_masuk,
         },
@@ -152,7 +152,7 @@ router.get("/:id/:tanggal", async (req, res) => {
           tanggal: foundHistory["0"].tanggal,
           kalori_harian: foundHistory.kalori_harian,
           total_kalori: foundHistory.total_kalori,
-          sisa_kalori: foundHistory["0"]["Sisa Kalori"],
+          sisa_kalori: foundHistory["0"]["sisa_kalori"],
           aktifitas: {
             kalori_masuk: foundHistory["0"].aktifitas.kalori_masuk,
           },
@@ -214,7 +214,7 @@ router.post("/", async (req, res) => {
       tanggal: tanggal,
       kalori_harian: kalori_harian,
       total_kalori: parseInt(kalori),
-      "Sisa Kalori": parseInt(kalori_harian) - parseInt(kalori),
+      "sisa_kalori": parseInt(kalori_harian) - parseInt(kalori),
       aktifitas: {
         kalori_masuk: [newMakanan],
       },
@@ -250,7 +250,7 @@ router.post("/", async (req, res) => {
           existingAktivitas.aktifitas.kalori_masuk.push(newMakanan);
           existingAktivitas.kalori_harian = kalori_harian;
           existingAktivitas.total_kalori += parseInt(kalori);
-          existingAktivitas["Sisa Kalori"] = parseInt(kalori_harian) - existingAktivitas.total_kalori;
+          existingAktivitas["sisa_kalori"] = parseInt(kalori_harian) - existingAktivitas.total_kalori;
           await db.collection("historyActivity").doc(id_user).set(historyData);
         } else {
           historyData[id_user][tanggal] = [newAktivitas];
@@ -281,7 +281,7 @@ router.post("/", async (req, res) => {
         tanggal: history[0].tanggal,
         kalori_harian: history[0].kalori_harian,
         total_kalori: history[0].total_kalori,
-        "Sisa Kalori": history[0]["Sisa Kalori"],
+        "sisa_kalori": history[0]["sisa_kalori"],
         aktifitas: {
           kalori_masuk: history[0].aktifitas.kalori_masuk,
         },
@@ -293,7 +293,6 @@ router.post("/", async (req, res) => {
       code: 200,
       error: false,
       message: `Data History Activity dengan id ${idHistoAct} berhasil ditambahkan`,
-      history: historyActivity,
     });
   } catch (error) {
     console.log(error);
@@ -325,7 +324,7 @@ router.put("/:id_user", async (req, res) => {
       kalori_masuk: [],
       tanggal: tanggal,
       kalori_keluar: [],
-      "Sisa Kalori": sisa_kalori,
+      "sisa_kalori": sisa_kalori,
     };
 
     if (Array.isArray(id_makanan)) {
