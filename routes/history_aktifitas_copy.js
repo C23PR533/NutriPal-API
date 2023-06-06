@@ -150,8 +150,8 @@ router.get("/:id/:tanggal", async (req, res) => {
       History: [
         {
           tanggal: foundHistory["0"].tanggal,
-          kalori_harian: foundHistory.kalori_harian,
-          total_kalori: foundHistory.total_kalori,
+          kalori_harian: foundHistory["0"].kalori_harian,
+          total_kalori: foundHistory["0"].total_kalori,
           sisa_kalori: foundHistory["0"]["sisa_kalori"],
           aktifitas: {
             kalori_masuk: foundHistory["0"].aktifitas.kalori_masuk,
@@ -212,9 +212,9 @@ router.post("/", async (req, res) => {
 
     const newAktivitas = {
       tanggal: tanggal,
-      kalori_harian: kalori_harian,
+      kalori_harian: parseInt(kalori_harian),
       total_kalori: parseInt(kalori),
-      "sisa_kalori": parseInt(kalori_harian) - parseInt(kalori),
+      "sisa_kalori": kalori_harian - parseInt(kalori),
       aktifitas: {
         kalori_masuk: [newMakanan],
       },
@@ -248,7 +248,7 @@ router.post("/", async (req, res) => {
         if (historyData[id_user][tanggal]) {
           const existingAktivitas = historyData[id_user][tanggal][0];
           existingAktivitas.aktifitas.kalori_masuk.push(newMakanan);
-          existingAktivitas.kalori_harian = kalori_harian;
+          existingAktivitas.kalori_harian = parseInt(kalori_harian);
           existingAktivitas.total_kalori += parseInt(kalori);
           existingAktivitas["sisa_kalori"] = parseInt(kalori_harian) - existingAktivitas.total_kalori;
           await db.collection("historyActivity").doc(id_user).set(historyData);
