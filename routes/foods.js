@@ -151,7 +151,11 @@ router.get("/search/:foodName", async (req, res) => {
       });
     })
     .catch((error) => {
-      console.log("Error getting documents:", error);
+      console.log(error);
+      res.status(400).json({
+        error: true,
+        message: error.message,
+      });
     });
 });
 
@@ -161,13 +165,24 @@ router.get("/get-json-data/search", async (req, res) => {
       "https://c23pr533.github.io/dataFood/foods.json"
     );
     if (!response.ok) {
-      throw new Error("Failed to fetch JSON data");
+      return res.status(404).json({
+        error: true,
+        message: `Data makanan tidak ditemukan`,
+      });
     }
+
     const data = await response.json();
-    res.json(data);
+    res.status(200).json({
+      code: 200,
+      message: "Data berhasil didapatkan",
+      data: data,
+    });
   } catch (error) {
-    console.error("Error fetching JSON data:", error);
-    res.status(500).json({ error: "Failed to fetch JSON data" });
+    console.log(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
   }
 });
 
@@ -176,9 +191,7 @@ router.get("/get-json-data/search/:foodName", async (req, res) => {
     const response = await fetch(
       "https://c23pr533.github.io/dataFood/foods.json"
     );
-    if (!response.ok) {
-      throw new Error("Failed to fetch JSON data");
-    }
+
     const data = await response.json();
 
     const { foodName } = req.params;
@@ -187,10 +200,17 @@ router.get("/get-json-data/search/:foodName", async (req, res) => {
       return foodData.includes(foodName.toLowerCase());
     });
 
-    res.json(filteredData);
+    res.status(200).json({
+      code: 200,
+      message: "Data berhasil didapatkan",
+      data: filteredData,
+    });
   } catch (error) {
-    console.error("Error fetching JSON data:", error);
-    res.status(500).json({ error: "Failed to fetch JSON data" });
+    console.log(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
   }
 });
 
