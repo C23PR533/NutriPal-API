@@ -11,6 +11,8 @@ Follow the instructions below to use the API effectively.
 
 ## Foods
 - ### [GET] All foods
+Send a GET request to `/foods/get-json-data/search/` to retrieve all foods.
+
 Request:
 ```
   [GET] /foods/get-json-data/search
