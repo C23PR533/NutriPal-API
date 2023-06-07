@@ -70,13 +70,13 @@ router.get("/:id", async (req, res) => {
     if (!response.exists) {
       return res.status(404).json({
         error: true,
-        message: `Data User Preference dengan id ${idParams} tidak ditemukan`,
+        message: `Data Makanan dengan id ${idParams} tidak ditemukan`,
       });
     }
     res.status(200).json({
       error: false,
       message: `Data Makanan dengan id ${idParams} berhasil didapatkan`,
-      listUserPreferences: response.data(),
+      listFoodsData: response.data(),
     });
   } catch (error) {
     console.log(error);
@@ -199,6 +199,47 @@ router.get("/get-json-data/search/:foodName", async (req, res) => {
       const foodData = item.food_name.toLowerCase();
       return foodData.includes(foodName.toLowerCase());
     });
+
+    if (filteredData.length === 0) {
+      return res.status(404).json({
+        code: 404,
+        error: true,
+        message: `Data Makanan dengan nama ${foodName} tidak ditemukan`,
+      });
+    }
+
+    res.status(200).json({
+      code: 200,
+      message: "Data berhasil didapatkan",
+      data: filteredData,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
+  }
+});
+
+router.get("/get-json-data/search/food_id/:food_id", async (req, res) => {
+  try {
+    const response = await fetch(
+      "https://c23pr533.github.io/dataFood/foods.json"
+    );
+
+    const data = await response.json();
+
+    const { food_id } = req.params;
+    const filteredData = data.filter((item) => item.food_id === food_id);
+
+    if (filteredData.length === 0) {
+      return res.status(404).json({
+        code: 404,
+        error: true,
+        message: `Data Makanan dengan id ${food_id} tidak ditemukan`,
+      });
+    }
 
     res.status(200).json({
       code: 200,
