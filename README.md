@@ -5,7 +5,7 @@ NutriPal-API is a REST API that provides essential functionalities for nutrition
 Follow the instructions below to use the API effectively.
 
 - Local Host: Run with Postman, local IP and Port:5000 `http://127.0.0.1:8000` or `http://localhost:8000`
-- Online Domain : not published yet
+- Online Domain (beta) : https://nutripal-api-beta-v1-dt3pitfd4q-et.a.run.app/
 
 # Endpoint Routes
 
