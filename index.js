@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 
 const dataDiriRoutes = require("./routes/data_diri");
 const userPreference = require("./routes/user_preferences");
-const history_aktifitas = require("./routes/history_aktifitas");
+// const history_aktifitas = require("./routes/history_aktifitas");
 const foodRoutes = require("./routes/foods");
 const foodsFavorite = require("./routes/foods_like");
 
@@ -32,7 +32,7 @@ const db = admin.firestore();
 
 app.use("/datadiri", dataDiriRoutes);
 app.use("/userpreferences", userPreference);
-app.use("/history_aktifitas", history_aktifitas);
+// app.use("/history_aktifitas", history_aktifitas);
 app.use("/foods", foodRoutes);
 app.use("/foodsFavorite", foodsFavorite);
 

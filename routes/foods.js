@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const fetch = require("node-fetch");
 const { Firestore } = require("@google-cloud/firestore");
 const fs = require("fs");
 const db = new Firestore();
@@ -69,13 +70,13 @@ router.get("/:id", async (req, res) => {
     if (!response.exists) {
       return res.status(404).json({
         error: true,
-        message: `Data User Preference dengan id ${idParams} tidak ditemukan`,
+        message: `Data Makanan dengan id ${idParams} tidak ditemukan`,
       });
     }
     res.status(200).json({
       error: false,
       message: `Data Makanan dengan id ${idParams} berhasil didapatkan`,
-      listUserPreferences: response.data(),
+      listFoodsData: response.data(),
     });
   } catch (error) {
     console.log(error);
@@ -86,11 +87,47 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// router.get("/search/:foodName", async (req, res) => {
+//   const param = convertToCamelCase(req.params.foodName);
+//   param.toLowerCase();
+//   const foodsRef = db.collection("foods");
+//   const query = foodsRef
+//     .where("food_name", ">=", param)
+//     .where("food_name", "<=", param + "\uf8ff");
+//   query
+//     .get()
+//     .then((snapshot) => {
+//       if (snapshot.empty) {
+//         res.status(404).json({
+//           error: true,
+//           message: `Data Makanan dengan nama ${param} tidak ditemukan`,
+//         });
+//         return;
+//       }
+//       const makanan = [];
+//       snapshot.forEach((doc) => {
+//         const id = doc.id;
+//         const data = doc.data();
+//         makanan.push({ id, ...data });
+//       });
+//       res.status(200).json({
+//         code: 200,
+//         message: "Data berhasil didapatkan",
+//         data: makanan,
+//       });
+//     })
+//     .catch((error) => {
+//       console.log("Error getting documents:", error);
+//     });
+// });
+
 router.get("/search/:foodName", async (req, res) => {
   const param = convertToCamelCase(req.params.foodName);
   param.toLowerCase();
   const foodsRef = db.collection("foods");
-  const query = foodsRef.where("food_name", ">=", param).where("food_name", "<=", param + "\uf8ff");
+  const query = foodsRef
+    .where("food_name", ">=", param)
+    .where("food_name", "<=", param + "\uf8ff");
   query
     .get()
     .then((snapshot) => {
@@ -114,8 +151,108 @@ router.get("/search/:foodName", async (req, res) => {
       });
     })
     .catch((error) => {
-      console.log("Error getting documents:", error);
+      console.log(error);
+      res.status(400).json({
+        error: true,
+        message: error.message,
+      });
     });
+});
+
+router.get("/get-json-data/search", async (req, res) => {
+  try {
+    const response = await fetch(
+      "https://c23pr533.github.io/dataFood/foods.json"
+    );
+    if (!response.ok) {
+      return res.status(404).json({
+        error: true,
+        message: `Data makanan tidak ditemukan`,
+      });
+    }
+
+    const data = await response.json();
+    res.status(200).json({
+      code: 200,
+      message: "Data berhasil didapatkan",
+      data: data,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
+  }
+});
+
+router.get("/get-json-data/search/:foodName", async (req, res) => {
+  try {
+    const response = await fetch(
+      "https://c23pr533.github.io/dataFood/foods.json"
+    );
+
+    const data = await response.json();
+
+    const { foodName } = req.params;
+    const filteredData = data.filter((item) => {
+      const foodData = item.food_name.toLowerCase();
+      return foodData.includes(foodName.toLowerCase());
+    });
+
+    if (filteredData.length === 0) {
+      return res.status(404).json({
+        code: 404,
+        error: true,
+        message: `Data Makanan dengan nama ${foodName} tidak ditemukan`,
+      });
+    }
+
+    res.status(200).json({
+      code: 200,
+      message: "Data berhasil didapatkan",
+      data: filteredData,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
+  }
+});
+
+router.get("/get-json-data/search/food_id/:food_id", async (req, res) => {
+  try {
+    const response = await fetch(
+      "https://c23pr533.github.io/dataFood/foods.json"
+    );
+
+    const data = await response.json();
+
+    const { food_id } = req.params;
+    const filteredData = data.filter((item) => item.food_id === food_id);
+
+    if (filteredData.length === 0) {
+      return res.status(404).json({
+        code: 404,
+        error: true,
+        message: `Data Makanan dengan id ${food_id} tidak ditemukan`,
+      });
+    }
+
+    res.status(200).json({
+      code: 200,
+      message: "Data berhasil didapatkan",
+      data: filteredData,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({
+      error: true,
+      message: error.message,
+    });
+  }
 });
 
 router.put("/:id", async (req, res) => {
