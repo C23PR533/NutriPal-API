@@ -171,6 +171,29 @@ router.get("/get-json-data/search", async (req, res) => {
   }
 });
 
+router.get("/get-json-data/search/:foodName", async (req, res) => {
+  try {
+    const response = await fetch(
+      "https://c23pr533.github.io/dataFood/foods.json"
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch JSON data");
+    }
+    const data = await response.json();
+
+    const { foodName } = req.params;
+    const filteredData = data.filter((item) => {
+      const foodData = item.food_name.toLowerCase();
+      return foodData.includes(foodName.toLowerCase());
+    });
+
+    res.json(filteredData);
+  } catch (error) {
+    console.error("Error fetching JSON data:", error);
+    res.status(500).json({ error: "Failed to fetch JSON data" });
+  }
+});
+
 router.put("/:id", async (req, res) => {
   try {
     const id = req.params.id;
