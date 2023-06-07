@@ -9,6 +9,7 @@ Follow the instructions below to use the API effectively.
 
 # Endpoint Routes
 
+## Foods
 - ### [GET] Search foods
 Send a GET request to `/foods/get-json-data/search/` to retrieve all foods by name.
 
@@ -33,34 +34,45 @@ Response:
                 "servings": {
                     "serving": [
                         {
-                            "calcium": "126",
+                            "calcium": "59",
+                            "calories": "120",
+                            "carbohydrate": "21.26",
             ....
-                            "vitamin_c": "2.2"
-                        }
-                    ]
-                }
-            },
-            ....
-                    ]
-                }
-            },
             {
                 "food_id": "39055",
                 "food_name": "Hamburger or Hotdog Rolls",
                 "food_type": [
                     "Generic",
             ....
-                        {
-                            "calcium": "59",
-                            "calories": "120",
-                            "carbohydrate": "21.26",
-                             ....
-                            "vitamin_c": "0.0"
-                        }
-                    ]
-                }
-            }
-        ]
-    }
+```
+
+## User Preferences
+- ### [GET] User Preferences by id_user
+Send a GET request to `/userpreferences/:id_user` to retrieve user preferences data by id_user.
+
+Request:
+```
+  [GET] /userpreferences/:id_user
+```
+
+Response:
+```
+{
+    "birthdate": "01-06-2023",
+    "disease": [
+        "hypertension",
+        "Heart",
+        "Obesity"
+    ],
+    "gender": "Male",
+    "favoriteFood": [
+        "Nasi Goreng",
+        "Mie"
+    ],
+    "weight": "60",
+    "id_user": "JFp2NUp3lMZek3s574GS1CQ9XN62",
+    "activityLevel": "1.2",
+    "goals": "0",
+    "height": "168"
 }
 ```
