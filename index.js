@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 
 const authMiddleware = require('./middleware/authMiddleware');
 
+const loginUser = require("./routes/login_user");
 const dataDiriRoutes = require("./routes/data_diri");
 const userPreference = require("./routes/user_preferences");
 const history_aktifitas = require("./routes/history_aktifitas");
@@ -34,6 +35,7 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
+app.use("/login", loginUser);
 app.use("/datadiri", dataDiriRoutes);
 app.use("/userpreferences", userPreference);
 app.use("/history_aktifitas", history_aktifitas);
