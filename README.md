@@ -171,6 +171,30 @@ Response:
   "message": "Data berhasil ditambahkan"
 }
 ```
+- ### ✏️ [POST] Add Photo Profile
+Adds new photo profile to the bucket "nutripall".
+Request:
+```
+  [POST] /datadiri/photoprofile/:id_user
+```
+Request Body:
+```
+  - foto (file) = (id_user auto).jpg
+```
+Response Code:
+```
+  - 200 (OK) if the upload is success
+  - 500 (Internal Server Error) if the server has some problem
+```
+Response:
+```
+{
+  "code": 200,
+  "message": 'File berhasil disimpan.', url: publicUrl
+}
+```
+
+
 - ### 🔄 [PUT] Update User Data
 Updates data in the collection "dataDiri" based on the provided ID.
 Request:
