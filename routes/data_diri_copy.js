@@ -113,7 +113,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 // update data end
-
+// 
 // delete data start
 router.delete("/:id", async (req, res) => {
   try {
