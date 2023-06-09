@@ -23,7 +23,8 @@ router.post("/", async (req, res) => {
 
     for (const field in userJson) {
       if (!userJson[field]) {
-        return res.status(401).json({
+        return res.status(400).json({
+          code: 400,
           error: true,
           message: `${field} harus diisi`,
         });
@@ -32,12 +33,14 @@ router.post("/", async (req, res) => {
 
     await db.collection("userPreferences").doc(id).set(userJson);
     res.status(200).json({
+      code: 200,
       error: false,
       message: "Data telah ditambahkan",
     });
   } catch (error) {
     console.log(error);
     res.status(400).json({
+      code: 400,
       error: true,
       message: error.message,
     });
@@ -53,6 +56,7 @@ router.get("/", async (req, res) => {
       responseArr.push(doc.data());
     });
     res.status(200).json({
+      code: 200,
       error: false,
       message: "Data berhasil didapatkan",
       listUserPreferences: responseArr,
@@ -60,6 +64,7 @@ router.get("/", async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(400).json({
+      code: 400,
       error: true,
       message: error.message,
     });
@@ -74,12 +79,14 @@ router.get("/:id", async (req, res) => {
 
     if (!response.exists) {
       return res.status(404).json({
+        code: 404,
         error: true,
         message: `Data User Preference dengan id ${idUserPre} tidak ditemukan`,
       });
     }
 
     res.status(200).json({
+      code: 200,
       error: false,
       message: `Data User Preference dengan id ${idUserPre} berhasil didapatkan`,
       listUserPreferences: response.data(),
@@ -88,6 +95,7 @@ router.get("/:id", async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(400).json({
+      code: 400,
       error: true,
       message: error.message,
     });
@@ -111,7 +119,8 @@ router.put("/:id", async (req, res) => {
 
     for (const field in userJson) {
       if (!userJson[field]) {
-        return res.status(401).json({
+        return res.status(400).json({
+          code: 400,
           error: true,
           message: `${field} harus diisi`,
         });
@@ -121,12 +130,14 @@ router.put("/:id", async (req, res) => {
     await db.collection("userPreferences").doc(idParams).update(userJson);
 
     res.status(200).json({
+      code: 200,
       error: false,
       message: `Data User Preference dengan id ${idParams} telah diupdate`,
     });
   } catch (error) {
     console.log(error);
     res.status(400).json({
+      code: 400,
       error: true,
       message: error.message,
     });
@@ -141,12 +152,14 @@ router.delete("/:id", async (req, res) => {
       .doc(req.params.id)
       .delete();
     res.status(200).json({
+      code: 200,
       error: false,
       message: `Data User Preference dengan id ${idParams} telah dihapus`,
     });
   } catch (error) {
     console.log(error);
     res.status(400).json({
+      code: 400,
       error: true,
       message: error.message,
     });
