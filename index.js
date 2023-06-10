@@ -29,8 +29,5 @@ const db = admin.firestore();
 
 app.use("/datadiri", dataDiriRoutes);
 // app.use("/userpreferences", userPreference);
-app.use("/history_aktifitas", history_aktifitas);
-app.use("/foods", foodRoutes);
-app.use("/foodsFavorite", foodsFavorite);
 
 app.listen(PORT, () => console.log(`Server berjalan di ${PORT}`));
