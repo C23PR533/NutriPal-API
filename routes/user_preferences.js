@@ -31,6 +31,31 @@ router.post("/", async (req, res) => {
       }
     }
 
+    if (userJson.height <= 53 && userJson.weight <= 2.7) {
+      return res.status(400).json({
+        code: 400,
+        error: true,
+        message:
+          "Tinggi badan harus lebih dari 53 cm dan Berat badan harus lebih dari 2,7 kg",
+      });
+    }
+
+    if (userJson.height <= 53) {
+      return res.status(400).json({
+        code: 400,
+        error: true,
+        message: "Tinggi badan harus lebih dari 53 cm",
+      });
+    }
+
+    if (userJson.weight <= 2.7) {
+      return res.status(400).json({
+        code: 400,
+        error: true,
+        message: "Berat badan harus lebih dari 2,7 kg",
+      });
+    }
+
     await db.collection("userPreferences").doc(id).set(userJson);
     res.status(200).json({
       code: 200,
@@ -125,6 +150,31 @@ router.put("/:id", async (req, res) => {
           message: `${field} harus diisi`,
         });
       }
+    }
+
+    if (userJson.height <= 53 && userJson.weight <= 2.7) {
+      return res.status(400).json({
+        code: 400,
+        error: true,
+        message:
+          "Tinggi badan harus lebih dari 53 cm dan Berat badan harus lebih dari 2,7 kg",
+      });
+    }
+
+    if (userJson.height <= 53) {
+      return res.status(400).json({
+        code: 400,
+        error: true,
+        message: "Tinggi badan harus lebih dari 53 cm",
+      });
+    }
+
+    if (userJson.weight <= 2.7) {
+      return res.status(400).json({
+        code: 400,
+        error: true,
+        message: "Berat badan harus lebih dari 2,7 kg",
+      });
     }
 
     await db.collection("userPreferences").doc(idParams).update(userJson);
