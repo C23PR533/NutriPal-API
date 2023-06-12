@@ -17,8 +17,12 @@ router.post("/", async (req, res) => {
       gender: req.body.gender,
       birthdate: req.body.birthdate,
       activityLevel: req.body.activityLevel,
-      disease: req.body.disease || [],
-      favoriteFood: req.body.favoriteFood || [],
+      disease: Array.isArray(req.body.disease)
+        ? req.body.disease
+        : [req.body.disease],
+      favoriteFood: Array.isArray(req.body.favoriteFood)
+        ? req.body.favoriteFood
+        : [req.body.favoriteFood],
     };
 
     for (const field in userJson) {
@@ -138,8 +142,12 @@ router.put("/:id", async (req, res) => {
       gender: req.body.gender,
       birthdate: req.body.birthdate,
       activityLevel: req.body.activityLevel,
-      disease: req.body.disease || [],
-      favoriteFood: req.body.favoriteFood || [],
+      disease: Array.isArray(req.body.disease)
+        ? req.body.disease
+        : [req.body.disease],
+      favoriteFood: Array.isArray(req.body.favoriteFood)
+        ? req.body.favoriteFood
+        : [req.body.favoriteFood],
     };
 
     for (const field in userJson) {
