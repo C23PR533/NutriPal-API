@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const path = require('path');
 const { Firestore } = require("@google-cloud/firestore");
 const multer = require('multer');
 const { Storage } = require('@google-cloud/storage');
@@ -146,41 +147,97 @@ router.delete("/:id", async (req, res) => {
 
 
 // post data diri photo start
-const upload = multer({ storage: multer.memoryStorage() });
 const storage = new Storage({
   projectId: 'nutripal-e746c',
   keyFilename: './kredensial.json',
 });
+
+const upload = multer({
+  storage: multer.memoryStorage(),
+  fileFilter: (req, file, callback) => {
+    const filetypes = /jpeg|jpg|png/;
+    const mimetype = filetypes.test(file.mimetype);
+    const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+    if (mimetype && extname) {
+      return callback(null, true);
+    }
+    callback({code:400, message: 'Error: Jenis file tidak diizinkan!'});
+  },
+});
+
+// router.post('/photoprofile/:id', upload.single('photo'), async (req, res) => {
+//   try {
+//     const bucketName = 'nutripall';
+//     const file = req.file;
+//     const id = req.params.id;
+//     const originalFileName = file.originalname;
+//     const originalFileExtension = originalFileName.split('.').pop();
+//     const fileName = `${id}.${originalFileExtension}`;
+//     const bucket = storage.bucket(bucketName);
+//     const blob = bucket.file(fileName);
+
+//     // Hapus file yang sudah ada jika id sama
+//     await blob.delete().catch(() => {});
+
+//     const stream = blob.createWriteStream({
+//       metadata: {
+//         contentType: file.mimetype,
+//       },
+//       resumable: false, // Tidak mendukung resume jika diinterupsi
+//     });
+
+//     stream.on('error', (err) => {
+//       console.error(err);
+//       res.status(500).json({code:500, message: 'Gagal menyimpan file.' });
+//     });
+
+//     stream.on('finish', () => {
+//       const publicUrl = `https://storage.googleapis.com/${bucketName}/${fileName}`;
+//       res.json({code:200, message: 'File berhasil disimpan.', url: publicUrl });
+//     });
+
+//     stream.end(file.buffer);
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({code:500, message: 'Terjadi kesalahan saat menyimpan file.' });
+//   }
+// });
 
 router.post('/photoprofile/:id', upload.single('photo'), async (req, res) => {
   try {
     const bucketName = 'nutripall';
     const file = req.file;
     const id = req.params.id;
-    const fileName = `${id}.jpg`;
+    const originalFileName = file.originalname;
+    const originalFileExtension = originalFileName.split('.').pop();
+    const fileName = `${id}.${originalFileExtension}`;
     const bucket = storage.bucket(bucketName);
     const blob = bucket.file(fileName);
+
+    // Hapus file yang sudah ada jika id sama
+    await blob.delete().catch(() => {});
 
     const stream = blob.createWriteStream({
       metadata: {
         contentType: file.mimetype,
       },
+      resumable: false, // Tidak mendukung resume jika diinterupsi
     });
 
     stream.on('error', (err) => {
       console.error(err);
-      res.status(500).json({code:500, message: 'Gagal menyimpan file.' });
+      res.status(500).set('Content-Type', 'application/json').json({code:500, message: 'Gagal menyimpan file.' });
     });
 
     stream.on('finish', () => {
-      const publicUrl = `https://storage.googleapis.com/${bucketName}/${fileName}`;
+      const publicUrl = `https://storage.cloud.google.com/${bucketName}/${fileName}`;
       res.json({code:200, message: 'File berhasil disimpan.', url: publicUrl });
     });
 
     stream.end(file.buffer);
   } catch (err) {
     console.error(err);
-    res.status(500).json({code:500, message: 'Terjadi kesalahan saat menyimpan file.' });
+    res.status(500).set('Content-Type', 'application/json').json({code:500, message: 'Terjadi kesalahan saat menyimpan file.' });
   }
 });
 
