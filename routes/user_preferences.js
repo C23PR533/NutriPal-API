@@ -32,7 +32,7 @@ router.post("/", async (req, res) => {
         return res.status(400).json({
           code: 400,
           error: true,
-          message: `${field} harus diisi`,
+          message: `${field} must be filled in`,
         });
       }
     }
@@ -42,7 +42,7 @@ router.post("/", async (req, res) => {
         code: 400,
         error: true,
         message:
-          "Tinggi badan harus lebih dari 53 cm dan Berat badan harus lebih dari 2,7 kg",
+          "The height must be greater than 53 cm and the weight must be greater than 2.7 kg",
       });
     }
 
@@ -50,7 +50,7 @@ router.post("/", async (req, res) => {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "Tinggi badan harus lebih dari 53 cm",
+        message: "The height must be greater than 53 cm",
       });
     }
 
@@ -58,7 +58,7 @@ router.post("/", async (req, res) => {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "Berat badan harus lebih dari 2,7 kg",
+        message: "The weight must be greater than 2.7 kg",
       });
     }
 
@@ -66,7 +66,7 @@ router.post("/", async (req, res) => {
     res.status(200).json({
       code: 200,
       error: false,
-      message: "Data telah ditambahkan",
+      message: "data has been added",
     });
   } catch (error) {
     console.log(error);
@@ -89,7 +89,7 @@ router.get("/", async (req, res) => {
     res.status(200).json({
       code: 200,
       error: false,
-      message: "Data berhasil didapatkan",
+      message: "data has been successfully obtained",
       listUserPreferences: responseArr,
     });
   } catch (error) {
@@ -112,14 +112,14 @@ router.get("/:id", async (req, res) => {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: `Data User Preference dengan id ${idUserPre} tidak ditemukan`,
+        message: `User Preference data with id ${idUserPre} not found`,
       });
     }
 
     res.status(200).json({
       code: 200,
       error: false,
-      message: `Data User Preference dengan id ${idUserPre} berhasil didapatkan`,
+      message: `User Preference data with id ${idUserPre} successfully obtained`,
       listUserPreferences: response.data(),
     });
     // res.send(response.data());
@@ -157,7 +157,7 @@ router.put("/:id", async (req, res) => {
         return res.status(400).json({
           code: 400,
           error: true,
-          message: `${field} harus diisi`,
+          message: `${field} must be filled in`,
         });
       }
     }
@@ -167,7 +167,7 @@ router.put("/:id", async (req, res) => {
         code: 400,
         error: true,
         message:
-          "Tinggi badan harus lebih dari 53 cm dan Berat badan harus lebih dari 2,7 kg",
+          "The height must be greater than 53 cm and the weight must be greater than 2.7 kg",
       });
     }
 
@@ -175,7 +175,7 @@ router.put("/:id", async (req, res) => {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "Tinggi badan harus lebih dari 53 cm",
+        message: "The height must be greater than 53 cm",
       });
     }
 
@@ -183,7 +183,7 @@ router.put("/:id", async (req, res) => {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "Berat badan harus lebih dari 2,7 kg",
+        message: "The weight must be greater than 2.7 kg",
       });
     }
 
@@ -192,7 +192,7 @@ router.put("/:id", async (req, res) => {
     res.status(200).json({
       code: 200,
       error: false,
-      message: `Data User Preference dengan id ${idParams} telah diupdate`,
+      message: `User Preference data with id ${idParams} has been update`,
     });
   } catch (error) {
     console.log(error);
@@ -214,7 +214,7 @@ router.delete("/:id", async (req, res) => {
     res.status(200).json({
       code: 200,
       error: false,
-      message: `Data User Preference dengan id ${idParams} telah dihapus`,
+      message: `User Preference data with id ${idParams} has been deleted`,
     });
   } catch (error) {
     console.log(error);

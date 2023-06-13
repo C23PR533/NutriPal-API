@@ -41,7 +41,7 @@ router.post("/", (req, res) => {
         res.status(200).json({
           code: 200,
           error: false,
-          message: "Id Token dan UID berhasil didapatkan",
+          message: "id Token and uid have been successfully obtained",
           data:
           {
             uid: uid,

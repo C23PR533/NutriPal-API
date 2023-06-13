@@ -38,7 +38,7 @@ router.post("/fromjson", async (req, res) => {
         }
       }
 
-      res.send("Data berhasil diunggah ke Firestore");
+      res.send("Data has been successfully uploaded to Firestore");
     });
   } catch (error) {
     console.log(error);
@@ -70,12 +70,12 @@ router.get("/:id", async (req, res) => {
     if (!response.exists) {
       return res.status(404).json({
         error: true,
-        message: `Data Makanan dengan id ${idParams} tidak ditemukan`,
+        message: `Food data with ID ${idParams} not found`,
       });
     }
     res.status(200).json({
       error: false,
-      message: `Data Makanan dengan id ${idParams} berhasil didapatkan`,
+      message: `Food data with ID ${idParams} has been successfully found`,
       listFoodsData: response.data(),
     });
   } catch (error) {
@@ -87,39 +87,6 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// router.get("/search/:foodName", async (req, res) => {
-//   const param = convertToCamelCase(req.params.foodName);
-//   param.toLowerCase();
-//   const foodsRef = db.collection("foods");
-//   const query = foodsRef
-//     .where("food_name", ">=", param)
-//     .where("food_name", "<=", param + "\uf8ff");
-//   query
-//     .get()
-//     .then((snapshot) => {
-//       if (snapshot.empty) {
-//         res.status(404).json({
-//           error: true,
-//           message: `Data Makanan dengan nama ${param} tidak ditemukan`,
-//         });
-//         return;
-//       }
-//       const makanan = [];
-//       snapshot.forEach((doc) => {
-//         const id = doc.id;
-//         const data = doc.data();
-//         makanan.push({ id, ...data });
-//       });
-//       res.status(200).json({
-//         code: 200,
-//         message: "Data berhasil didapatkan",
-//         data: makanan,
-//       });
-//     })
-//     .catch((error) => {
-//       console.log("Error getting documents:", error);
-//     });
-// });
 
 router.get("/search/:foodName", async (req, res) => {
   const param = convertToCamelCase(req.params.foodName);
@@ -134,7 +101,7 @@ router.get("/search/:foodName", async (req, res) => {
       if (snapshot.empty) {
         res.status(404).json({
           error: true,
-          message: `Data Makanan dengan nama ${param} tidak ditemukan`,
+          message: `Food data with name ${param} was not found`,
         });
         return;
       }
@@ -146,7 +113,7 @@ router.get("/search/:foodName", async (req, res) => {
       });
       res.status(200).json({
         code: 200,
-        message: "Data berhasil didapatkan",
+        message: "The data has been successfully obtained",
         data: makanan,
       });
     })
@@ -167,14 +134,14 @@ router.get("/get-json-data/search", async (req, res) => {
     if (!response.ok) {
       return res.status(404).json({
         error: true,
-        message: `Data makanan tidak ditemukan`,
+        message: `The food data was not found`,
       });
     }
 
     const data = await response.json();
     res.status(200).json({
       code: 200,
-      message: "Data berhasil didapatkan",
+      message: "The data has been successfully obtained",
       data: data,
     });
   } catch (error) {
@@ -204,13 +171,13 @@ router.get("/get-json-data/search/:foodName", async (req, res) => {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: `Data Makanan dengan nama ${foodName} tidak ditemukan`,
+        message: `Food data with the name ${foodName} not found`,
       });
     }
 
     res.status(200).json({
       code: 200,
-      message: "Data berhasil didapatkan",
+      message: "The data has been successfully obtained",
       data: filteredData,
     });
   } catch (error) {
@@ -237,13 +204,13 @@ router.get("/get-json-data/search/food_id/:food_id", async (req, res) => {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: `Data Makanan dengan id ${food_id} tidak ditemukan`,
+        message: `Food data with id ${food_id} not found`,
       });
     }
 
     res.status(200).json({
       code: 200,
-      message: "Data berhasil didapatkan",
+      message: "The data has been successfully obtained",
       data: filteredData,
     });
   } catch (error) {

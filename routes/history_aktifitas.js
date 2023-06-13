@@ -22,7 +22,7 @@ router.get("/:id", async (req, res) => {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: `Data History Activity dengan id ${idCari} tidak ditemukan`,
+        message: `History Activity data with id ${idCari} not found`,
       });
     }
 
@@ -45,7 +45,7 @@ router.get("/:id", async (req, res) => {
     res.status(200).json({
       code: 200,
       error: false,
-      message: `Data History Activity dengan id ${idCari} di temukan`,
+      message: `History Activity data with id ${idCari} not found`,
       listHistoryActivity: historyActivity,
     });
   } catch (error) {
@@ -75,7 +75,7 @@ router.get("/:id", async (req, res) => {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: `Data History Activity dengan id ${idCari} tidak ditemukan`,
+        message: `History Activity data with id ${idCari} not found`,
       });
     }
 
@@ -98,7 +98,7 @@ router.get("/:id", async (req, res) => {
     res.status(200).json({
       code: 200,
       error: false,
-      message: `Data History Activity dengan id ${idCari} di temukan`,
+      message: `History Activity data with id ${idCari} not found`,
       listHistoryActivity: historyActivity,
     });
   } catch (error) {
@@ -128,7 +128,7 @@ router.get("/:id/:tanggal", async (req, res) => {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: `Data History Activity dengan id ${idCari} tidak ditemukan`,
+        message: `History Activity data with id ${idCari} not found`,
       });
     }
 
@@ -141,7 +141,7 @@ router.get("/:id/:tanggal", async (req, res) => {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: `Data History Activity dengan id ${idCari} dan tanggal ${tanggalCari} tidak ditemukan`,
+        message: `History Activity data with id ${idCari} and date ${tanggalCari} not found`,
       });
     }
 
@@ -176,7 +176,7 @@ router.get("/:id/:tanggal", async (req, res) => {
     res.status(200).json({
       code: 200,
       error: false,
-      message: `Data History Activity dengan id ${idCari} dan tanggal ${tanggalCari} ditemukan`,
+      message: `History Activity data with id ${idCari} and date ${tanggalCari} found`,
       listHistoryActivity: historyActivity,
     });
   } catch (error) {
@@ -292,7 +292,7 @@ router.post("/", async (req, res) => {
     res.status(200).json({
       code: 200,
       error: false,
-      message: `Data History Activity dengan id ${idHistoAct} berhasil ditambahkan`,
+      message: `History Activity data with id ${idHistoAct} successfully added`,
     });
   } catch (error) {
     console.log(error);
@@ -382,7 +382,7 @@ router.put("/:id_user", async (req, res) => {
 
     for (const field of requiredFields) {
       if (!req.body[field]) {
-        const errorMessage = `${field} harus diisi`;
+        const errorMessage = `${field} must be filled in`;
         return res.status(401).json({
           error: true,
           message: errorMessage,
@@ -397,7 +397,7 @@ router.put("/:id_user", async (req, res) => {
     res.status(200).json({
       code: 200,
       error: false,
-      message: `Data History Activity dengan id ${idHistoAct} berhasil diperbarui`,
+      message: `History Activity data with id ${idHistoAct} successfully updated`,
     });
   } catch (error) {
     console.log(error);
@@ -419,7 +419,7 @@ router.delete("/:id", async (req, res) => {
     res.status(200).json({
       code: 200,
       error: false,
-      message: `Data History Activity dengan id ${idHistoAct} telah dihapus`,
+      message: `History Activity data with id ${idHistoAct} been deleted"`,
     });
   } catch (error) {
     console.log(error);

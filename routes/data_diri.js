@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
     });
     res
       .status(200)
-      .json({ code: 200, message: "data diri berhasil didapatkan", data: responseArr });
+      .json({ code: 200, message: "data has been successfully obtained", data: responseArr });
   } catch (error) {
     console.log(error);
     res.status(400).json({ code: error.code, message: error.message });
@@ -32,19 +32,10 @@ router.get("/:id", async (req, res) => {
     const idParams = req.params.id;
     const userpredb = db.collection("dataDiri").doc(req.params.id);
     const response = await userpredb.get(userpredb);
-    if (!id) {
-      throw { code: 403, message: "Unautenticated" };
-    }
-    if (id !== idParams) {
-      throw { code: 403, message: "Unautenticated" };
-    }
-    if (!response.exists) {
-      throw { code: 200, message: "data tidak ditemukan" };
-    }
     const data = response.data;
     res
       .status(200)
-      .json({ code: 200, message: "data di temukan", data: response.data() });
+      .json({ code: 200, message: "data has been found", data: response.data() });
     // res.send(response.data());
   } catch (error) {
     console.log(error);
@@ -59,13 +50,6 @@ router.post("/", async (req, res) => {
     const id = req.body.id_user;
     const { id_user, nama, nomor_hp, email, foto_profile, gender, birthdate } =
       req.body;
-    if (!id_user) {
-      throw { code: 403, message: "Unautenticated" };
-    }
-    if (!nama) {
-      throw { code: 400, message: "nama tidak boleh kosong" };
-    }
-
     const newDataDiri = {
       id_user,
       nama,
@@ -76,7 +60,7 @@ router.post("/", async (req, res) => {
       birthdate,
     };
     const response = await db.collection("dataDiri").doc(id).set(newDataDiri);
-    res.status(200).json({ code: 200, message: "Data berhasil ditambahkan" });
+    res.status(200).json({ code: 200, message: "data has been successfully added" });
   } catch (error) {
     res.status(400).json({ code: error.code, message: error.message });
   }
@@ -89,12 +73,6 @@ router.put("/:id", async (req, res) => {
     const id = req.body.id_user;
     const idParams = req.params.id;
     const { nama, nomor_hp, email, foto_profile, gender, birthdate } = req.body;
-    if (!id) {
-      throw { code: 403, message: "Unautenticated" };
-    }
-    if (id !== idParams) {
-      throw { code: 403, message: "Unautenticated" };
-    }
     const newDataDiri = {
       nama,
       nomor_hp,
@@ -107,7 +85,7 @@ router.put("/:id", async (req, res) => {
       .collection("dataDiri")
       .doc(req.params.id)
       .update(newDataDiri, { ignoreUndefinedProperties: true });
-    res.status(200).json({ code: 200, message: "data berhasil di update" });
+    res.status(200).json({ code: 200, message: "data has been successfully updated" });
   } catch (error) {
     res.status(400).json({ code: error.code, error: error.message });
   }
@@ -120,24 +98,13 @@ router.delete("/:id", async (req, res) => {
     const id = req.body.id_user;
     const idParams = req.params.id;
 
-    if (!id) {
-      throw { code: 403, message: "Unautenticated" };
-    }
-
-    if (!idParams) {
-      throw { code: 400, message: "id tidak boleh kosong" };
-    }
-
-    if (id !== idParams) {
-      throw { code: 403, message: "Unautenticated" };
-    }
     const userpredb = db.collection("dataDiri").doc(req.params.id);
     const user = await userpredb.get();
     if (!user.exists) {
-      return res.status(404).json({ code: 404, message: "id tidak ditemukan" });
+      return res.status(404).json({ code: 404, message: "id not found" });
     }
     await userpredb.delete();
-    res.status(200).json({ code: 200, message: "data berhasil di hapus" });
+    res.status(200).json({ code: 200, message: "data has been successfully deleted" });
   } catch (error) {
     res.status(400).json({ code: error.code, message: error.message });
   }
@@ -175,18 +142,18 @@ router.post('/photoprofile/:id', upload.single('photo'), async (req, res) => {
 
     stream.on('error', (err) => {
       console.error(err);
-      res.status(500).set('Content-Type', 'application/json').json({code:500, message: 'Gagal menyimpan file.' });
+      res.status(500).set('Content-Type', 'application/json').json({code:500, message: 'Failed to save the file' });
     });
 
     stream.on('finish', () => {
       const publicUrl = `https://storage.cloud.google.com/${bucketName}/${fileName}`;
-      res.json({code:200, message: 'File berhasil disimpan.', url: publicUrl });
+      res.json({code:200, message: 'File has been successfully saved', url: publicUrl });
     });
 
     stream.end(file.buffer);
   } catch (err) {
     console.error(err);
-    res.status(500).set('Content-Type', 'application/json').json({code:500, message: 'Terjadi kesalahan saat menyimpan file.' });
+    res.status(500).set('Content-Type', 'application/json').json({code:500, message: 'An error occurred while saving the file' });
   }
 });
 
