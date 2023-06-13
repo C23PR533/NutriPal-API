@@ -157,30 +157,36 @@ router.post('/photoprofile/:id', upload.single('photo'), async (req, res) => {
     const bucketName = 'nutripall';
     const file = req.file;
     const id = req.params.id;
-    const fileName = `${id}.jpg`;
+    const originalFileName = file.originalname;
+    const originalFileExtension = originalFileName.split('.').pop();
+    const fileName = `${id}.${originalFileExtension}`;
     const bucket = storage.bucket(bucketName);
     const blob = bucket.file(fileName);
+
+    // Hapus file yang sudah ada jika id sama
+    await blob.delete().catch(() => {});
 
     const stream = blob.createWriteStream({
       metadata: {
         contentType: file.mimetype,
       },
+      resumable: false, // Tidak mendukung resume jika diinterupsi
     });
 
     stream.on('error', (err) => {
       console.error(err);
-      res.status(500).json({code:500, message: 'Gagal menyimpan file.' });
+      res.status(500).set('Content-Type', 'application/json').json({code:500, message: 'Gagal menyimpan file.' });
     });
 
     stream.on('finish', () => {
-      const publicUrl = `https://storage.googleapis.com/${bucketName}/${fileName}`;
+      const publicUrl = `https://storage.cloud.google.com/${bucketName}/${fileName}`;
       res.json({code:200, message: 'File berhasil disimpan.', url: publicUrl });
     });
 
     stream.end(file.buffer);
   } catch (err) {
     console.error(err);
-    res.status(500).json({code:500, message: 'Terjadi kesalahan saat menyimpan file.' });
+    res.status(500).set('Content-Type', 'application/json').json({code:500, message: 'Terjadi kesalahan saat menyimpan file.' });
   }
 });
 
