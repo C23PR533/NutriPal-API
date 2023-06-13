@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const dataDiriRoutes = require("./routes/data_diri_copy");
+const dataDiriRoutes = require("./routes/data_diri");
 // const userPreference = require("./routes/user_preferences");
 
 const app = express();
