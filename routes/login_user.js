@@ -35,12 +35,18 @@ router.post("/", (req, res) => {
     .then((userCredentials) => {
       const user = userCredentials.user;
 
+      const uid = user.uid;
+
       user.getIdToken().then((idToken) => {
         res.status(200).json({
           code: 200,
           error: false,
-          message: "Id Token berhasil didapatkan",
-          idToken,
+          message: "Id Token dan UID berhasil didapatkan",
+          data:
+          {
+            uid: uid,
+            idToken: idToken
+          }
         });
       });
     })
