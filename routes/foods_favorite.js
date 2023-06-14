@@ -51,22 +51,18 @@ router.post("/:id_user", async (req, res) => {
       calories,
     };
 
-    const foodsFavoriteRef = db.collection("foodsFavorite").doc(id_user);
-    const foodsFavoriteDoc = await foodsFavoriteRef.get();
+    const userPrefRef = db.collection("userPreferences").doc(id_user);
+    const userPrefDoc = await userPrefRef.get();
 
-    if (!foodsFavoriteDoc.exists) {
-      await foodsFavoriteRef.set({
-        [id_user]: { favoriteFoods: [newFavoriteFood] },
+    if (!userPrefDoc.exists) {
+      await userPrefRef.set({
+        favoriteFood: { [food_id]: newFavoriteFood },
       });
     } else {
-      const foodsFavoriteData = foodsFavoriteDoc.data();
-      const favoriteFoods = foodsFavoriteData[id_user]?.favoriteFoods || [];
+      const userPrefData = userPrefDoc.data();
+      const favoriteFoods = userPrefData.favoriteFood || {};
 
-      const isDuplicate = favoriteFoods.some(
-        (food) => food.food_id === food_id
-      );
-
-      if (isDuplicate) {
+      if (favoriteFoods[food_id]) {
         return res.status(400).json({
           code: 400,
           error: true,
@@ -74,9 +70,9 @@ router.post("/:id_user", async (req, res) => {
         });
       }
 
-      favoriteFoods.push(newFavoriteFood);
+      favoriteFoods[food_id] = newFavoriteFood;
 
-      await foodsFavoriteRef.set({ [id_user]: { favoriteFoods } }, { merge: true });
+      await userPrefRef.set({ favoriteFood: favoriteFoods }, { merge: true });
     }
 
     res.status(201).json({
@@ -107,7 +103,7 @@ router.get("/:id_user", async (req, res) => {
       });
     }
 
-    const foodsFavoriteRef = db.collection("foodsFavorite").doc(id_user);
+    const foodsFavoriteRef = db.collection("userPreferences").doc(id_user);
     const foodsFavoriteDoc = await foodsFavoriteRef.get();
 
     if (!foodsFavoriteDoc.exists) {
@@ -119,7 +115,7 @@ router.get("/:id_user", async (req, res) => {
     }
 
     const foodsFavoriteData = foodsFavoriteDoc.data();
-    const favoriteFoods = foodsFavoriteData[id_user]?.favoriteFoods || [];
+    const favoriteFoods = foodsFavoriteData.favoriteFood || {};
 
     const result = {
       id_user: id_user,
@@ -153,7 +149,7 @@ router.get("/:id_user/:food_id", async (req, res) => {
       });
     }
 
-    const foodsFavoriteRef = db.collection("foodsFavorite").doc(id_user);
+    const foodsFavoriteRef = db.collection("userPreferences").doc(id_user);
     const foodsFavoriteDoc = await foodsFavoriteRef.get();
 
     if (!foodsFavoriteDoc.exists) {
@@ -165,9 +161,9 @@ router.get("/:id_user/:food_id", async (req, res) => {
     }
 
     const foodsFavoriteData = foodsFavoriteDoc.data();
-    const favoriteFoods = foodsFavoriteData[id_user]?.favoriteFoods || [];
+    const favoriteFoods = foodsFavoriteData.favoriteFood || {};
 
-    const selectedFood = favoriteFoods.find((food) => food.food_id === food_id);
+    const selectedFood = favoriteFoods[food_id];
 
     if (!selectedFood) {
       return res.status(404).json({
@@ -183,7 +179,7 @@ router.get("/:id_user/:food_id", async (req, res) => {
         {
           food_name: selectedFood.food_name,
           calories: selectedFood.calories,
-          food_id: selectedFood.food_id,
+          food_id: food_id,
         },
       ],
     };
@@ -201,7 +197,6 @@ router.get("/:id_user/:food_id", async (req, res) => {
     });
   }
 });
-
 
 router.delete("/:id_user/:food_id", async (req, res) => {
   try {
@@ -224,7 +219,7 @@ router.delete("/:id_user/:food_id", async (req, res) => {
       });
     }
 
-    const foodsFavoriteRef = db.collection("foodsFavorite").doc(id_user);
+    const foodsFavoriteRef = db.collection("userPreferences").doc(id_user);
     const foodsFavoriteDoc = await foodsFavoriteRef.get();
 
     if (!foodsFavoriteDoc.exists) {
@@ -236,16 +231,19 @@ router.delete("/:id_user/:food_id", async (req, res) => {
     }
 
     const foodsFavoriteData = foodsFavoriteDoc.data();
-    const favoriteFoods = foodsFavoriteData[id_user]?.favoriteFoods || [];
+    const favoriteFoods = foodsFavoriteData.favoriteFood || {};
 
-    const updatedFavoriteFoods = favoriteFoods.filter(
-      (food) => food.food_id !== food_id
-    );
+    if (!favoriteFoods[food_id]) {
+      return res.status(404).json({
+        code: 404,
+        error: true,
+        message: "Makanan favorit tidak ditemukan",
+      });
+    }
 
-    await foodsFavoriteRef.set(
-      { [id_user]: { favoriteFoods: updatedFavoriteFoods } },
-      { merge: true }
-    );
+    delete favoriteFoods[food_id];
+
+    await foodsFavoriteRef.update({ favoriteFood: favoriteFoods });
 
     res.status(200).json({
       code: 200,
@@ -261,6 +259,7 @@ router.delete("/:id_user/:food_id", async (req, res) => {
     });
   }
 });
+
 
 
 module.exports = router;
