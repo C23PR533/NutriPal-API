@@ -18,5 +18,5 @@ steps:
             '--platform',
             'managed',
             '--allow-unauthenticated']
-  images: 
+  - images: 
     gcr.io/$PROJECT_ID/nutripall
