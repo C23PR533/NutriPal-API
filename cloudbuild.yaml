@@ -13,7 +13,7 @@ steps:
       - 'deploy'
       - 'nutripall'
       - '--image=gcr.io/nutripal-e746c/nutripall'
-      - '--region=asia-southeast1'
+      - '--region=us-central1'
       - '--platform=managed'
       - '--allow-unauthenticated'
 images:
