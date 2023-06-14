@@ -8,8 +8,7 @@ steps:
   # Deploy container image to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
-      [
-       'beta',
+       ['beta',
        'run',
        'deploy',
        'nutripall',
@@ -18,7 +17,6 @@ steps:
         'asia-northeast2',
        '--platform',
         'managed',
-       '--allow-unauthenticated'
-      ]
+       '--allow-unauthenticated']
 images:
    'gcr.io/nutripal-e746c/nutripall'
