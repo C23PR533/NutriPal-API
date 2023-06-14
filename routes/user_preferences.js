@@ -5,7 +5,7 @@ const authMiddleware = require("../middleware/authMiddleware");
 const admin = require("firebase-admin");
 
 const db = new Firestore();
-router.use(authMiddleware);
+// router.use(authMiddleware);
 
 router.use(express.urlencoded({ extended: true }));
 
@@ -103,20 +103,16 @@ router.get("/", async (req, res) => {
   }
 });
 
+// lama end
+
+// baru start
+
 router.get("/:user_id", validateFirebaseUid, async (req, res) => {
   try {
     const idUserPre = req.params.user_id;
+    const uid = req.user.uid;
     const userpredb = db.collection("userPreferences").doc(req.params.user_id);
-    const response = await userpredb.get(userpredb);
-
-    // Mendapatkan token akses dari header atau query parameter
-    const token = req.headers.authorization || req.query.token;
-
-    // Verifikasi token akses menggunakan Firebase Admin SDK
-    const decodedToken = await admin.auth().verifyIdToken(token);
-
-    // Mengambil UID pengguna dari token akses yang diverifikasi
-    const uid = decodedToken.uid;
+    const response = await userpredb.get();
 
     // Memeriksa apakah UID pengguna sesuai dengan ID pengguna yang diminta
     if (uid !== idUserPre) {
@@ -141,7 +137,6 @@ router.get("/:user_id", validateFirebaseUid, async (req, res) => {
       message: `User Preference data with id ${idUserPre} successfully obtained`,
       listUserPreferences: response.data(),
     });
-    // res.send(response.data());
   } catch (error) {
     console.log(error);
     res.status(400).json({
@@ -152,9 +147,21 @@ router.get("/:user_id", validateFirebaseUid, async (req, res) => {
   }
 });
 
-router.put("/:id", async (req, res) => {
+// put baru start
+router.put("/:user_id", validateFirebaseUid, async (req, res) => {
   try {
-    const idParams = req.params.id;
+    const idParams = req.params.user_id;
+    const uid = req.user.uid;
+
+    // Memeriksa apakah UID pengguna sesuai dengan ID pengguna yang diminta
+    if (uid !== idParams) {
+      return res.status(401).json({
+        code: 401,
+        error: true,
+        message: "Unauthorized access",
+      });
+    }
+
     const userJson = {
       id_user: req.body.id_user,
       goals: req.body.goals,
@@ -211,7 +218,7 @@ router.put("/:id", async (req, res) => {
     res.status(200).json({
       code: 200,
       error: false,
-      message: `User Preference data with id ${idParams} has been update`,
+      message: `User Preference data with id ${idParams} has been updated`,
     });
   } catch (error) {
     console.log(error);
@@ -222,6 +229,8 @@ router.put("/:id", async (req, res) => {
     });
   }
 });
+
+// put baru end
 
 router.delete("/:id", async (req, res) => {
   try {
