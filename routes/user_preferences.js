@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { Firestore } = require("@google-cloud/firestore");
 const authMiddleware = require("../middleware/authMiddleware");
+const admin = require("firebase-admin");
 
 const db = new Firestore();
 router.use(authMiddleware);
@@ -102,11 +103,29 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/:user_id", validateFirebaseUid, async (req, res) => {
   try {
-    const idUserPre = req.params.id;
-    const userpredb = db.collection("userPreferences").doc(req.params.id);
+    const idUserPre = req.params.user_id;
+    const userpredb = db.collection("userPreferences").doc(req.params.user_id);
     const response = await userpredb.get(userpredb);
+
+    // Mendapatkan token akses dari header atau query parameter
+    const token = req.headers.authorization || req.query.token;
+
+    // Verifikasi token akses menggunakan Firebase Admin SDK
+    const decodedToken = await admin.auth().verifyIdToken(token);
+
+    // Mengambil UID pengguna dari token akses yang diverifikasi
+    const uid = decodedToken.uid;
+
+    // Memeriksa apakah UID pengguna sesuai dengan ID pengguna yang diminta
+    if (uid !== idUserPre) {
+      return res.status(401).json({
+        code: 401,
+        error: true,
+        message: "Unauthorized access",
+      });
+    }
 
     if (!response.exists) {
       return res.status(404).json({
