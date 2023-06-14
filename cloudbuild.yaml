@@ -1,0 +1,21 @@
+steps:
+#build container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build','-t','gcr.io/$PROJECT_ID/nutripall','.']
+#push the container image to container registry 
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push','gcr.io/$PROJECT_ID/nutripall']
+#deploy container image to cloud run
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['beta',
+            'run',
+            'deploy',
+            'nutripall',
+            '--image',
+            'gcr.io/$PROJECT_ID/nutripall',
+            '--region',
+            'asia-southeast2',
+            '--platform',
+            'managed',
+            '--allow-unauthenticated']
+  images: - gcr.io/$PROJECT_ID/nutripall
