@@ -11,21 +11,13 @@ router.use(express.urlencoded({ extended: true }));
 router.post("/:id_user", async (req, res) => {
   try {
     const id_user = req.params.id_user;
-    const { food_id, food_name, calories } = req.body;
+    const { food_name } = req.body;
 
     if (!id_user) {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "id_user must be filled",
-      });
-    }
-
-    if (!food_id) {
-      return res.status(400).json({
-        code: 400,
-        error: true,
-        message: "food_id must be filled",
+        message: "id_user harus diisi",
       });
     }
 
@@ -33,64 +25,48 @@ router.post("/:id_user", async (req, res) => {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "food_name must be filled",
+        message: "food_name harus diisi",
       });
     }
 
-    if (!calories) {
-      return res.status(400).json({
-        code: 400,
-        error: true,
-        message: "calories must be filled",
-      });
-    }
-
-    const newFavoriteFood = {
-      food_id,
-      food_name,
-      calories,
-    };
-
-    const foodsFavoriteRef = db.collection("foodsFavorite").doc(id_user);
+    const foodsFavoriteRef = db.collection("userPreferences").doc(id_user);
     const foodsFavoriteDoc = await foodsFavoriteRef.get();
 
     if (!foodsFavoriteDoc.exists) {
       await foodsFavoriteRef.set({
-        [id_user]: { favoriteFoods: [newFavoriteFood] },
+        favoriteFood: [food_name],
       });
     } else {
-      const foodsFavoriteData = foodsFavoriteDoc.data();
-      const favoriteFoods = foodsFavoriteData[id_user]?.favoriteFoods || [];
+      const userPrefData = foodsFavoriteDoc.data();
+      const favoriteFoods = userPrefData.favoriteFood || [];
 
-      const isDuplicate = favoriteFoods.some(
-        (food) => food.food_id === food_id
-      );
+      const isDuplicate = favoriteFoods.includes(food_name);
 
       if (isDuplicate) {
         return res.status(400).json({
           code: 400,
           error: true,
-          message: "Favorite food already exists",
+          message: "Makanan favorit sudah ada",
         });
       }
 
-      favoriteFoods.push(newFavoriteFood);
+      favoriteFoods.push(food_name);
 
-      await foodsFavoriteRef.set({ [id_user]: { favoriteFoods } }, { merge: true });
+      await foodsFavoriteRef.update({ favoriteFood: favoriteFoods });
     }
 
     res.status(201).json({
       code: 201,
       error: false,
-      message: "Favorite food has been successfully added",
-      data: newFavoriteFood,
+      message: "Makanan favorit berhasil ditambahkan",
+      data: { food_name },
     });
   } catch (error) {
     console.log(error);
     res.status(500).json({
       code: 500,
       error: true,
-      message: "An error occurred on the server",
+      message: "Terjadi kesalahan pada server",
     });
   }
 });
@@ -103,23 +79,23 @@ router.get("/:id_user", async (req, res) => {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "id_user must be filled in",
+        message: "id_user harus diisi",
       });
     }
 
-    const foodsFavoriteRef = db.collection("foodsFavorite").doc(id_user);
+    const foodsFavoriteRef = db.collection("userPreferences").doc(id_user);
     const foodsFavoriteDoc = await foodsFavoriteRef.get();
 
     if (!foodsFavoriteDoc.exists) {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: "Favorite food data not found",
+        message: "Data makanan favorit tidak ditemukan",
       });
     }
 
     const foodsFavoriteData = foodsFavoriteDoc.data();
-    const favoriteFoods = foodsFavoriteData[id_user]?.favoriteFoods || [];
+    const favoriteFoods = foodsFavoriteData.favoriteFood || {};
 
     const result = {
       id_user: id_user,
@@ -128,52 +104,60 @@ router.get("/:id_user", async (req, res) => {
 
     res.status(200).json({
       error: false,
-      message: "data has been successfully obtained",
+      message: "Data berhasil didapatkan",
       data: result,
     });
   } catch (error) {
     console.log(error);
     res.status(500).json({
       error: true,
-      message: "An error occurred on the server",
+      message: "Terjadi kesalahan pada server",
     });
   }
 });
 
-router.get("/:id_user/:food_id", async (req, res) => {
+router.get("/:id_user/:food_name", async (req, res) => {
   try {
     const id_user = req.params.id_user;
-    const food_id = req.params.food_id;
+    const food_name = req.params.food_name;
 
-    if (!id_user || !food_id) {
+    if (!id_user) {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "id_user and food_id must be filled in",
+        message: "id_user harus diisi",
       });
     }
 
-    const foodsFavoriteRef = db.collection("foodsFavorite").doc(id_user);
-    const foodsFavoriteDoc = await foodsFavoriteRef.get();
+    if (!food_name) {
+      return res.status(400).json({
+        code: 400,
+        error: true,
+        message: "food_name harus diisi",
+      });
+    }
 
-    if (!foodsFavoriteDoc.exists) {
+    const userPrefRef = db.collection("userPreferences").doc(id_user);
+    const userPrefDoc = await userPrefRef.get();
+
+    if (!userPrefDoc.exists) {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: "The favorite food data was not found",
+        message: "Data makanan favorit tidak ditemukan",
       });
     }
 
-    const foodsFavoriteData = foodsFavoriteDoc.data();
-    const favoriteFoods = foodsFavoriteData[id_user]?.favoriteFoods || [];
+    const userPrefData = userPrefDoc.data();
+    const favoriteFoods = userPrefData.favoriteFood || [];
 
-    const selectedFood = favoriteFoods.find((food) => food.food_id === food_id);
+    const selectedFood = favoriteFoods.find((food) => food === food_name);
 
     if (!selectedFood) {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: "The favorite food was not found",
+        message: "Makanan favorit tidak ditemukan",
       });
     }
 
@@ -181,86 +165,91 @@ router.get("/:id_user/:food_id", async (req, res) => {
       id_user: id_user,
       favoriteFoods: [
         {
-          food_name: selectedFood.food_name,
-          calories: selectedFood.calories,
-          food_id: selectedFood.food_id,
+          food_name: selectedFood,
         },
       ],
     };
 
     res.status(200).json({
       error: false,
-      message: "The data has been successfully obtained",
+      message: "Data berhasil didapatkan",
       data: result,
     });
   } catch (error) {
     console.log(error);
     res.status(500).json({
       error: true,
-      message: "The server encountered an error",
+      message: "Terjadi kesalahan pada server",
     });
   }
 });
 
 
-router.delete("/:id_user/:food_id", async (req, res) => {
+router.delete("/:id_user/:food_name", async (req, res) => {
   try {
     const id_user = req.params.id_user;
-    const food_id = req.params.food_id;
+    const food_name = req.params.food_name;
 
     if (!id_user) {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "id_user must be filled",
+        message: "id_user harus diisi",
       });
     }
 
-    if (!food_id) {
+    if (!food_name) {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "food_id must be filled",
+        message: "food_name harus diisi",
       });
     }
 
-    const foodsFavoriteRef = db.collection("foodsFavorite").doc(id_user);
+    const foodsFavoriteRef = db.collection("userPreferences").doc(id_user);
     const foodsFavoriteDoc = await foodsFavoriteRef.get();
 
     if (!foodsFavoriteDoc.exists) {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: "The favorite food data was not found",
+        message: "Data makanan favorit tidak ditemukan",
       });
     }
 
     const foodsFavoriteData = foodsFavoriteDoc.data();
-    const favoriteFoods = foodsFavoriteData[id_user]?.favoriteFoods || [];
+    const favoriteFoods = foodsFavoriteData.favoriteFood || [];
 
-    const updatedFavoriteFoods = favoriteFoods.filter(
-      (food) => food.food_id !== food_id
-    );
+    const foodIndex = favoriteFoods.findIndex((food) => food === food_name);
 
-    await foodsFavoriteRef.set(
-      { [id_user]: { favoriteFoods: updatedFavoriteFoods } },
-      { merge: true }
-    );
+    if (foodIndex === -1) {
+      return res.status(404).json({
+        code: 404,
+        error: true,
+        message: "Makanan favorit tidak ditemukan",
+      });
+    }
+
+    favoriteFoods.splice(foodIndex, 1);
+
+    await foodsFavoriteRef.update({ favoriteFood: favoriteFoods });
 
     res.status(200).json({
       code: 200,
       error: false,
-      message: "The favorite food has been successfully deleted",
+      message: "Makanan favorit berhasil dihapus",
     });
   } catch (error) {
     console.log(error);
     res.status(500).json({
       code: 500,
       error: true,
-      message: "The server encountered an error",
+      message: "Terjadi kesalahan pada server",
     });
   }
 });
+
+
 
 
 module.exports = router;
