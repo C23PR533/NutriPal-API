@@ -9,7 +9,7 @@ const db = new Firestore();
 
 router.use(express.urlencoded({ extended: true }));
 
-router.post("/", async (req, res) => {
+router.post("/:user_id", async (req, res) => {
   try {
     const id = req.body.id_user;
     const userJson = {

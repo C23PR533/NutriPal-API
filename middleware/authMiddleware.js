@@ -10,9 +10,9 @@ module.exports = validateFirebaseUid = async (req, res, next) => {
 
   if (!uid) {
     return res.status(401).json({
-      code: 401,
+      code:401,
       error: true,
-      message: "Unauthorized accesss",
+      message: "Unauthorized access",
     });
   }
 
@@ -29,7 +29,7 @@ module.exports = validateFirebaseUid = async (req, res, next) => {
     return res.status(401).json({
       code: 401,
       error: true,
-      message: "Unauthorized acces",
+      message: "Unauthorized access",
 });
   }
 };
