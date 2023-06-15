@@ -9,8 +9,20 @@ const db = new Firestore();
 
 router.use(express.urlencoded({ extended: true }));
 
-router.post("/:user_id", async (req, res) => {
+router.post("/:user_id", validateFirebaseUid, async (req, res) => {
   try {
+    const idParams = req.params.user_id;
+    const uid = req.user.uid;
+
+    // Memeriksa apakah UID pengguna sesuai dengan ID pengguna yang diminta
+    if (uid !== idParams) {
+      return res.status(401).json({
+        code: 401,
+        error: true,
+        message: "Unauthorized access",
+      });
+    }
+
     const id = req.body.id_user;
     const userJson = {
       id_user: req.body.id_user,
@@ -78,31 +90,6 @@ router.post("/:user_id", async (req, res) => {
     });
   }
 });
-
-router.get("/", async (req, res) => {
-  try {
-    const userpredb = db.collection("userPreferences");
-    const response = await userpredb.get();
-    let responseArr = [];
-    response.forEach((doc) => {
-      responseArr.push(doc.data());
-    });
-    res.status(200).json({
-      code: 200,
-      error: false,
-      message: "data has been successfully obtained",
-      listUserPreferences: responseArr,
-    });
-  } catch (error) {
-    console.log(error);
-    res.status(400).json({
-      code: 400,
-      error: true,
-      message: error.message,
-    });
-  }
-});
-
 // lama end
 
 // baru start
@@ -232,9 +219,20 @@ router.put("/:user_id", validateFirebaseUid, async (req, res) => {
 
 // put baru end
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:user_id", validateFirebaseUid, async (req, res) => {
   try {
+    const uid = req.user.uid;
     const idParams = req.params.id;
+
+    // Memeriksa apakah UID pengguna sesuai dengan ID pengguna yang diminta
+    if (uid !== idParams) {
+      return res.status(401).json({
+        code: 401,
+        error: true,
+        message: "Unauthorized access",
+      });
+    }
+
     const userpredb = db
       .collection("userPreferences")
       .doc(req.params.id)

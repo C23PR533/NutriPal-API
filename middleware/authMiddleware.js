@@ -6,7 +6,6 @@ module.exports = validateFirebaseUid = async (req, res, next) => {
   console.log("Checking if request is authorized with Firebase UID");
 
   const uid = req.params.user_id; // Mendapatkan UID dari parameter
-  console.log(uid);
 
   if (!uid) {
     return res.status(401).json({
