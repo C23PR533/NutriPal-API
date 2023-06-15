@@ -222,7 +222,7 @@ router.put("/:user_id", validateFirebaseUid, async (req, res) => {
 router.delete("/:user_id", validateFirebaseUid, async (req, res) => {
   try {
     const uid = req.user.uid;
-    const idParams = req.params.id;
+    const idParams = req.params.user_id;
 
     // Memeriksa apakah UID pengguna sesuai dengan ID pengguna yang diminta
     if (uid !== idParams) {
