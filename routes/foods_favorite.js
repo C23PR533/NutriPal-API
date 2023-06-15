@@ -17,7 +17,7 @@ router.post("/:id_user", async (req, res) => {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "id_user harus diisi",
+        message: "id_user is required",
       });
     }
 
@@ -25,19 +25,19 @@ router.post("/:id_user", async (req, res) => {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "food_name harus diisi",
+        message: "food_name is required",
       });
     }
 
-    const foodsFavoriteRef = db.collection("userPreferences").doc(id_user);
-    const foodsFavoriteDoc = await foodsFavoriteRef.get();
+    const userPrefRef = db.collection("userPreferences").doc(id_user);
+    const userPrefDoc = await userPrefRef.get();
 
-    if (!foodsFavoriteDoc.exists) {
-      await foodsFavoriteRef.set({
+    if (!userPrefDoc.exists) {
+      await userPrefRef.set({
         favoriteFood: [food_name],
       });
     } else {
-      const userPrefData = foodsFavoriteDoc.data();
+      const userPrefData = userPrefDoc.data();
       const favoriteFoods = userPrefData.favoriteFood || [];
 
       const isDuplicate = favoriteFoods.includes(food_name);
@@ -46,19 +46,19 @@ router.post("/:id_user", async (req, res) => {
         return res.status(400).json({
           code: 400,
           error: true,
-          message: "Makanan favorit sudah ada",
+          message: "Favorite food already exists",
         });
       }
 
       favoriteFoods.push(food_name);
 
-      await foodsFavoriteRef.update({ favoriteFood: favoriteFoods });
+      await userPrefRef.update({ favoriteFood: favoriteFoods });
     }
 
     res.status(201).json({
       code: 201,
       error: false,
-      message: "Makanan favorit berhasil ditambahkan",
+      message: "Favorite food added successfully",
       data: { food_name },
     });
   } catch (error) {
@@ -66,7 +66,7 @@ router.post("/:id_user", async (req, res) => {
     res.status(500).json({
       code: 500,
       error: true,
-      message: "Terjadi kesalahan pada server",
+      message: "An error occurred on the server",
     });
   }
 });
@@ -79,7 +79,7 @@ router.get("/:id_user", async (req, res) => {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "id_user harus diisi",
+        message: "id_user is required",
       });
     }
 
@@ -90,7 +90,7 @@ router.get("/:id_user", async (req, res) => {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: "Data makanan favorit tidak ditemukan",
+        message: "Favorite food data not found",
       });
     }
 
@@ -104,14 +104,14 @@ router.get("/:id_user", async (req, res) => {
 
     res.status(200).json({
       error: false,
-      message: "Data berhasil didapatkan",
+      message: "Data successfully obtained",
       data: result,
     });
   } catch (error) {
     console.log(error);
     res.status(500).json({
       error: true,
-      message: "Terjadi kesalahan pada server",
+      message: "An error occurred on the server",
     });
   }
 });
@@ -125,7 +125,7 @@ router.get("/:id_user/:food_name", async (req, res) => {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "id_user harus diisi",
+        message: "id_user is required",
       });
     }
 
@@ -133,7 +133,7 @@ router.get("/:id_user/:food_name", async (req, res) => {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "food_name harus diisi",
+        message: "food_name is required",
       });
     }
 
@@ -144,7 +144,7 @@ router.get("/:id_user/:food_name", async (req, res) => {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: "Data makanan favorit tidak ditemukan",
+        message: "Favorite food data not found",
       });
     }
 
@@ -157,7 +157,7 @@ router.get("/:id_user/:food_name", async (req, res) => {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: "Makanan favorit tidak ditemukan",
+        message: "Favorite food not found",
       });
     }
 
@@ -172,14 +172,14 @@ router.get("/:id_user/:food_name", async (req, res) => {
 
     res.status(200).json({
       error: false,
-      message: "Data berhasil didapatkan",
+      message: "Data successfully obtained",
       data: result,
     });
   } catch (error) {
     console.log(error);
     res.status(500).json({
       error: true,
-      message: "Terjadi kesalahan pada server",
+      message: "An error occurred on the server",
     });
   }
 });
@@ -194,7 +194,7 @@ router.delete("/:id_user/:food_name", async (req, res) => {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "id_user harus diisi",
+        message: "id_user is required",
       });
     }
 
@@ -202,7 +202,7 @@ router.delete("/:id_user/:food_name", async (req, res) => {
       return res.status(400).json({
         code: 400,
         error: true,
-        message: "food_name harus diisi",
+        message: "food_name is required",
       });
     }
 
@@ -213,7 +213,7 @@ router.delete("/:id_user/:food_name", async (req, res) => {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: "Data makanan favorit tidak ditemukan",
+        message: "Favorite food data not found",
       });
     }
 
@@ -226,7 +226,7 @@ router.delete("/:id_user/:food_name", async (req, res) => {
       return res.status(404).json({
         code: 404,
         error: true,
-        message: "Makanan favorit tidak ditemukan",
+        message: "Favorite food not found",
       });
     }
 
@@ -237,14 +237,14 @@ router.delete("/:id_user/:food_name", async (req, res) => {
     res.status(200).json({
       code: 200,
       error: false,
-      message: "Makanan favorit berhasil dihapus",
+      message: "Favorite food successfully deleted",
     });
   } catch (error) {
     console.log(error);
     res.status(500).json({
       code: 500,
       error: true,
-      message: "Terjadi kesalahan pada server",
+      message: "An error occurred on the server",
     });
   }
 });
