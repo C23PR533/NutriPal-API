@@ -235,7 +235,7 @@ router.delete("/:user_id", validateFirebaseUid, async (req, res) => {
 
     const userpredb = db
       .collection("userPreferences")
-      .doc(req.params.id)
+      .doc(req.params.user_id)
       .delete();
     res.status(200).json({
       code: 200,
