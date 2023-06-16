@@ -245,38 +245,7 @@ Response Body:
 ```
 
 ## User Preferences 👤💡
-- ### 🔍 [GET] All User Preferences
-Retrieves all user preferences from the "userPreferences" collection in the database.
-Request:
-```
-  [GET] /userpreferences
-```
-Response Code:
-```
-  - 200 (OK) if the data is retrieved successfully
-  - 400 (Bad Request) if there is an error in the request or the data cannot be retrieved
-```
-Response Body:
-```
-{
-  "error": false,
-  "message": "Data berhasil didapatkan",
-  "listUserPreferences": [
-    {
-      "id_user": "12345",
-      "goals": "lose weight",
-      "height": 170,
-      "weight": 65,
-      "gender": "male",
-      "birthdate": "1990-01-01",
-      "activityLevel": "moderate",
-      "disease": ["diabetes"],
-      "favoriteFood": ["salad", "grilled chicken"]
-    },
-    ...
-  ]
-}
-```
+
 - ### 🔍 [GET] User Preferences by ID User
 Retrieves user preferences from the "userPreferences" collection in the database based on the provided ID.
 Request:
@@ -310,7 +279,7 @@ Response Body:
 Creates user preferences in the "userPreferences" collection in the database.
 Request:
 ```
-  [POST] /userpreferences
+  [POST] /userpreferences/:id_user
 ```
 Request Body:
 ```
