@@ -199,7 +199,7 @@ Response:
   "message": "Data berhasil ditambahkan"
 }
 ```
-- ### ✏️ [POST] Add Photo Profile
+- ### ✏️ [POST] Add or Update Photo Profile
 Adds a new profile photo to the Cloud Storage bucket named "nutripall." Users can also update their profile photo by replacing the existing file in the cloud storage. The updated photo remains associated with a user's profile, identified by their unique ID (:id).
 Request:
 ```
