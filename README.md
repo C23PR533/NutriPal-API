@@ -5,9 +5,37 @@ NutriPal-API is a REST API that provides essential functionalities for nutrition
 Follow the instructions below to use the API effectively.
 
 - Local Host: Run with Postman, local IP and Port:5000 `http://127.0.0.1:8000` or `http://localhost:8000`
-- Online Domain (beta) : https://nutripal-api-beta-v1-dt3pitfd4q-et.a.run.app/
+- Online Domain : https://nutripal-api-v6seqii7ka-et.a.run.app
 
 # Endpoint Routes
+
+## Login
+- ### ✏️ [POST] Login user
+This API endpoint is used for user authentication and login.
+
+Request:
+```
+  [POST] /login
+```
+
+Response Body:
+```
+{
+    "code": 200,
+    "error": false,
+    "message": "id Token and uid have been successfully obtained",
+    "data": {
+        "uid": "2IfuLuIyyOWfgmOaH2ef71izxAQG",
+        "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImM2MGI5ZGUwODBmZmFmYmZjMTgzMzllY2Q0NGFjNzdmN2ZhNGU4ZDMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbnV0cmlwYWwtZTc0NmMiLCJhdWQiOiJudXRyaXBhbC1lNzQ2YyIsImF1dG........"
+    }
+}
+```
+
+Response Code:
+```
+  - 200 (OK) Returned upon successful login and retrieval of credentials.
+  - 404 (Not Found) if the email is not found and/or the password is wrong 
+```
 
 ## Foods 🍽️
 - ### 🔍 [GET] All foods 
@@ -599,6 +627,7 @@ Response Body:
     "calories": 500
   }
 }
+```
 
 - ### 🗑️🔥 [DELETE] Delete Favorite Food by ID User and Food ID
 Deletes a specific favorite food for a user from the "foodsFavorite" collection in the database based on the provided ID.
