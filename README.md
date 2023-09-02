@@ -127,7 +127,7 @@ Response Body:
       "nama": "John Doe",
       "nomor_hp": "081234567890",
       "email": "johndoe@example.com",
-      "foto_profile": "https://example.com/profile.jpg",
+      "foto_profile": "https://storage.googleapis.com/nutripall/0wT11Dp9a.....yGb3s1Flv1.jpg",
       "gender": "Male",
       "birthdate": "1990-01-01"
     },
@@ -136,7 +136,7 @@ Response Body:
       "nama": "Jane Smith",
       "nomor_hp": "087654321098",
       "email": "janesmith@example.com",
-      "foto_profile": "https://example.com/profile.jpg",
+      "foto_profile": "https://storage.googleapis.com/nutripall/0wT11Dp9a.....yGb3s1Flv1.jpg",
       "gender": "Female",
       "birthdate": "1995-05-10"
     }
@@ -164,7 +164,7 @@ Response Body:
     "nama": "John Doe",
     "nomor_hp": "081234567890",
     "email": "johndoe@example.com",
-    "foto_profile": "https://example.com/profile.jpg",
+    "foto_profile": "https://storage.googleapis.com/nutripall/0wT11Dp9a.....yGb3s1Flv1.jpg",
     "gender": "Male",
     "birthdate": "1990-01-01"
   }
@@ -200,14 +200,15 @@ Response:
 }
 ```
 - ### ✏️ [POST] Add Photo Profile
-Adds new photo profile to the bucket "nutripall".
+Adds a new profile photo to the Cloud Storage bucket named "nutripall." Users can also update their profile photo by replacing the existing file in the cloud storage. The updated photo remains associated with a user's profile, identified by their unique ID (:id).
 Request:
 ```
   [POST] /datadiri/photoprofile/:id_user
 ```
 Request Body:
 ```
-  - foto (file) = (id_user auto).jpg
+Content-Type: multipart/form-data
+  - photo (file) = (id_user auto).jpg
 ```
 Response Code:
 ```
@@ -217,8 +218,9 @@ Response Code:
 Response:
 ```
 {
-  "code": 200,
-  "message": 'File berhasil disimpan.', url: publicUrl
+    "code": 200,
+    "message": "File has been successfully saved",
+    "url": "https://storage.cloud.google.com/nutripall/0wT11Dp9a.....yGb3s1Flv1.jpg"
 }
 ```
 
