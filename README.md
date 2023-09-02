@@ -1,4 +1,4 @@
-# NutriPal-API (Beta)
+# NutriPal-API
 NutriPal-API is a REST API that provides essential functionalities for nutrition and wellness management. It enables users to manage their user profiles, track favorite foods, access comprehensive food data, and monitor historical activity. With NutriPal-API, users can make informed dietary choices, maintain personalized preferences, and strive towards a healthier lifestyle.
 
 # How To Use
